@@ -1,0 +1,69 @@
+2026-02-09T16:43:28+08:00
+Running D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin\gbenchmark_vision_spdlog.exe
+Run on (20 X 2112 MHz CPU s)
+CPU Caches:
+  L1 Data 48 KiB (x10)
+  L1 Instruction 32 KiB (x10)
+  L2 Unified 1280 KiB (x10)
+  L3 Unified 25600 KiB (x1)
+-------------------------------------------------------------------------------------------------------------------------
+Benchmark                                                                               Time             CPU   Iterations
+-------------------------------------------------------------------------------------------------------------------------
+VisionSpdlogFixture/image_acquisition/min_time:3.000/threads:1                        521 ns          521 ns      8400000
+VisionSpdlogFixture/image_acquisition/min_time:3.000/threads:2                        783 ns         1560 ns      2443636
+VisionSpdlogFixture/image_acquisition/min_time:3.000/threads:4                       1099 ns         4258 ns       943156
+VisionSpdlogFixture/image_acquisition/min_time:3.000/threads:8                       1305 ns         9583 ns       512000
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:1               652 ns        0.000 ns          500
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:1               627 ns        0.000 ns          500
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:1               709 ns        0.000 ns          500
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:1               741 ns        0.000 ns          500
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:1               684 ns        0.000 ns          500
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:1_mean          683 ns        0.000 ns            5
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:1_median        684 ns        0.000 ns            5
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:1_stddev       44.8 ns        0.000 ns            5
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:1_cv           6.56 %     -nan(ind) %             5
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:2               523 ns        0.000 ns         1000
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:2               483 ns        0.000 ns         1000
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:2               486 ns        0.000 ns         1000
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:2               472 ns        0.000 ns         1000
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:2               463 ns        0.000 ns         1000
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:2_mean          485 ns        0.000 ns            5
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:2_median        483 ns        0.000 ns            5
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:2_stddev       22.9 ns        0.000 ns            5
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:2_cv           4.71 %     -nan(ind) %             5
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:4               408 ns        0.000 ns         2000
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:4               375 ns        0.000 ns         2000
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:4               394 ns        0.000 ns         2000
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:4               366 ns        0.000 ns         2000
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:4               375 ns        0.000 ns         2000
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:4_mean          384 ns        0.000 ns            5
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:4_median        375 ns        0.000 ns            5
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:4_stddev       17.1 ns        0.000 ns            5
+VisionSpdlogFixture/detection_result/iterations:500/repeats:5/threads:4_cv           4.46 %     -nan(ind) %             5
+VisionSpdlogFixture/device_status/iterations:500/repeats:5/threads:1                  742 ns        0.000 ns          500
+VisionSpdlogFixture/device_status/iterations:500/repeats:5/threads:1                  704 ns        0.000 ns          500
+VisionSpdlogFixture/device_status/iterations:500/repeats:5/threads:1                  692 ns        0.000 ns          500
+VisionSpdlogFixture/device_status/iterations:500/repeats:5/threads:1                  714 ns        0.000 ns          500
+VisionSpdlogFixture/device_status/iterations:500/repeats:5/threads:1                  679 ns        0.000 ns          500
+VisionSpdlogFixture/device_status/iterations:500/repeats:5/threads:1_mean             706 ns        0.000 ns            5
+VisionSpdlogFixture/device_status/iterations:500/repeats:5/threads:1_median           704 ns        0.000 ns            5
+VisionSpdlogFixture/device_status/iterations:500/repeats:5/threads:1_stddev          24.1 ns        0.000 ns            5
+VisionSpdlogFixture/device_status/iterations:500/repeats:5/threads:1_cv              3.41 %     -nan(ind) %             5
+VisionSpdlogFixture/alarm_log/iterations:50/repeats:5/threads:1                       546 ns        0.000 ns           50
+VisionSpdlogFixture/alarm_log/iterations:50/repeats:5/threads:1                       414 ns        0.000 ns           50
+VisionSpdlogFixture/alarm_log/iterations:50/repeats:5/threads:1                       394 ns        0.000 ns           50
+VisionSpdlogFixture/alarm_log/iterations:50/repeats:5/threads:1                       488 ns        0.000 ns           50
+VisionSpdlogFixture/alarm_log/iterations:50/repeats:5/threads:1                       404 ns        0.000 ns           50
+VisionSpdlogFixture/alarm_log/iterations:50/repeats:5/threads:1_mean                  449 ns        0.000 ns            5
+VisionSpdlogFixture/alarm_log/iterations:50/repeats:5/threads:1_median                414 ns        0.000 ns            5
+VisionSpdlogFixture/alarm_log/iterations:50/repeats:5/threads:1_stddev               65.6 ns        0.000 ns            5
+VisionSpdlogFixture/alarm_log/iterations:50/repeats:5/threads:1_cv                  14.60 %     -nan(ind) %             5
+VisionSpdlogFixture/production_stats/iterations:25/repeats:5/threads:1                784 ns        0.000 ns           25
+VisionSpdlogFixture/production_stats/iterations:25/repeats:5/threads:1                632 ns        0.000 ns           25
+VisionSpdlogFixture/production_stats/iterations:25/repeats:5/threads:1                992 ns        0.000 ns           25
+VisionSpdlogFixture/production_stats/iterations:25/repeats:5/threads:1                644 ns        0.000 ns           25
+VisionSpdlogFixture/production_stats/iterations:25/repeats:5/threads:1                824 ns        0.000 ns           25
+VisionSpdlogFixture/production_stats/iterations:25/repeats:5/threads:1_mean           775 ns        0.000 ns            5
+VisionSpdlogFixture/production_stats/iterations:25/repeats:5/threads:1_median         784 ns        0.000 ns            5
+VisionSpdlogFixture/production_stats/iterations:25/repeats:5/threads:1_stddev         148 ns        0.000 ns            5
+VisionSpdlogFixture/production_stats/iterations:25/repeats:5/threads:1_cv           19.04 %     -nan(ind) %             5

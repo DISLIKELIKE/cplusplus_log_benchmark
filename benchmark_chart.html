@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日志库性能对比 - ECharts</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .chart-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+            padding: 20px;
+        }
+        .chart-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        #minTimeChart, #iterRepeatChart {
+            width: 100%;
+            height: 500px;
+        }
+        .info {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>C/C++ 日志库性能对比测试</h1>
+
+        <div class="chart-container">
+            <div class="chart-title">场景1: 最小时间测试 (min_time)</div>
+            <div id="minTimeChart"></div>
+            <div class="info">
+                <p><strong>说明：</strong>在固定最小时间内尽可能多地写入日志，主要反映日志库的吞吐量。y轴值为 Google Benchmark - Time (纳秒)。</p>
+                <p><strong>测试线程数：</strong><span id="minTimeThreadsInfo"></span></p>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-title">场景2: 迭代重复测试 (iter_repeat)</div>
+            <div id="iterRepeatChart"></div>
+            <div class="info">
+                <p><strong>说明：</strong>固定迭代次数和重复次数，反映非压力情况下各日志库的表现。y轴值为 Google Benchmark - Time (纳秒)。</p>
+                <p><strong>测试线程数：</strong><span id="iterRepeatThreadsInfo"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="echarts_data.js"></script>
+    <script>
+        // 颜色配置
+        const colors = [
+            '#5470c6', '#91cc75', '#f39c12', '#e6a23c', '#2ecc71',
+            '#3498db', '#9b59b6', '#e74c3c', '#16a085'
+        ];
+
+        function createChart(chartId, threads, data, title) {
+            const chartDom = document.getElementById(chartId);
+            const myChart = echarts.init(chartDom);
+
+            // 准备系列数据
+            const series = [];
+            let colorIndex = 0;
+            for (const [name, values] of Object.entries(data)) {
+                series.push({
+                    name: name,
+                    type: 'bar',
+                    data: values,
+                    itemStyle: {
+                        color: colors[colorIndex % colors.length]
+                    }
+                });
+                colorIndex++;
+            }
+
+            const option = {
+                title: {
+                    text: title,
+                    left: 'center',
+                    textStyle: {
+                        fontSize: 16,
+                        fontWeight: 'bold'
+                    }
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'shadow'
+                    },
+                    formatter: function(params) {
+                        let result = params[0].name + '<br/>';
+                        params.forEach(item => {
+                            result += item.seriesName + ' (线程 ' + item.axisValue + '): ' + item.data + ' ns<br/>';
+                        });
+                        return result;
+                    }
+                },
+                legend: {
+                    data: Object.keys(data),
+                    top: 30,
+                    left: 'center',
+                    textStyle: {
+                        fontSize: 12
+                    }
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '15%',
+                    top: '15%'
+                },
+                xAxis: {
+                    type: 'category',
+                    data: threads,
+                    name: '线程数',
+                    axisLabel: {
+                        fontSize: 12
+                    },
+                    axisTick: {
+                        alignWithLabel: true
+                    }
+                },
+                yAxis: {
+                    type: 'value',
+                    name: 'Time (ns)',
+                    axisLabel: {
+                        fontSize: 11,
+                        formatter: function(value) {
+                            if (value >= 1000000) {
+                                return (value / 1000000).toFixed(0) + ' ms';
+                            } else if (value >= 1000) {
+                                return (value / 1000).toFixed(0) + ' us';
+                            }
+                            return value + ' ns';
+                        }
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#999'
+                        }
+                    }
+                },
+                series: series
+            };
+
+            myChart.setOption(option);
+            window.addEventListener('resize', function() {
+                myChart.resize();
+            });
+        }
+
+        // 显示线程信息
+        function displayThreadInfo(threads, elementId) {
+            const element = document.getElementById(elementId);
+            if (element && threads && threads.length > 0) {
+                element.textContent = threads.join(', ');
+            }
+        }
+
+        // 初始化图表
+        if (typeof minTimeThreads !== 'undefined' && typeof minTimeData !== 'undefined') {
+            displayThreadInfo(minTimeThreads, 'minTimeThreadsInfo');
+            createChart('minTimeChart', minTimeThreads, minTimeData, '最小时间测试 (min_time)');
+        } else {
+            document.getElementById('minTimeChart').innerHTML =
+                '<p style="text-align:center;color:#999;padding:100px;">暂无 min_time 数据</p>';
+        }
+
+        if (typeof iterRepeatThreads !== 'undefined' && typeof iterRepeatData !== 'undefined') {
+            displayThreadInfo(iterRepeatThreads, 'iterRepeatThreadsInfo');
+            createChart('iterRepeatChart', iterRepeatThreads, iterRepeatData, '迭代重复测试 (iter_repeat)');
+        } else {
+            document.getElementById('iterRepeatChart').innerHTML =
+                '<p style="text-align:center;color:#999;padding:100px;">暂无 iter_repeat 数据</p>';
+        }
+    </script>
+</body>
+</html>
