@@ -2,7 +2,7 @@
 #include <thread>
 #include <vector>
 #include "vision_gbenchmark.h"
-#include "haclog.h"
+#include "haclog/haclog.h"
 #include <memory>
 
 // 手动定义函数指针类型
