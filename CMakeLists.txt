@@ -410,6 +410,8 @@ if (benchmark_haclog)
         message("# add vision benchmark: haclog")
         add_gbench(vision_haclog ${gbenchmark_dir}/cpp/vision_haclog)
         target_link_libraries(gbenchmark_vision_haclog haclog vision_log_msg)
+        target_include_directories(gbenchmark_vision_haclog PUBLIC
+            ${CMAKE_CURRENT_LIST_DIR}/_deps/haclog-src/include)
     endif()
 endif()
 
@@ -419,6 +421,9 @@ if (benchmark_fmtlog)
         message("# add vision benchmark: fmtlog drop")
         add_gbench(vision_fmtlog_drop ${gbenchmark_dir}/cpp/vision_fmtlog_drop)
         target_link_libraries(gbenchmark_vision_fmtlog_drop fmtlog vision_log_msg)
+        target_include_directories(gbenchmark_vision_fmtlog_drop PUBLIC
+            ${CMAKE_CURRENT_LIST_DIR}/_deps/fmtlog-src/
+            ${CMAKE_CURRENT_LIST_DIR}/_deps/fmtlog-src/fmt/include)
     endif()
 endif()
 
@@ -428,6 +433,9 @@ if (benchmark_fmtlog)
         message("# add vision benchmark: fmtlog block")
         add_gbench(vision_fmtlog_block ${gbenchmark_dir}/cpp/vision_fmtlog_block)
         target_link_libraries(gbenchmark_vision_fmtlog_block fmtlog vision_log_msg)
+        target_include_directories(gbenchmark_vision_fmtlog_block PUBLIC
+            ${CMAKE_CURRENT_LIST_DIR}/_deps/fmtlog-src/
+            ${CMAKE_CURRENT_LIST_DIR}/_deps/fmtlog-src/fmt/include)
     endif()
 endif()
 
@@ -437,6 +445,8 @@ if (benchmark_easyloggingpp)
         message("# add vision benchmark: easyloggingpp")
         add_gbench(vision_easyloggingpp ${gbenchmark_dir}/cpp/vision_easyloggingpp)
         target_link_libraries(gbenchmark_vision_easyloggingpp easyloggingpp vision_log_msg)
+        target_include_directories(gbenchmark_vision_easyloggingpp PUBLIC
+            ${CMAKE_CURRENT_LIST_DIR}/_deps/easyloggingpp-src/src)
     endif()
 endif()
 
