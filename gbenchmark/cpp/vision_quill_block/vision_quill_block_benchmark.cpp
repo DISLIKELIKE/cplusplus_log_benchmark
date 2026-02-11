@@ -1,15 +1,16 @@
 #include <atomic>
 #include <thread>
 #include <vector>
+
+// bounded blocking will lead benchmark can't finish in my laptop
+#define VISION_MIN_TIME 0
+
 #include "vision_gbenchmark.h"
 #include "quill/Backend.h"
 #include "quill/Frontend.h"
 #include "quill/Logger.h"
 #include "quill/LogMacros.h"
 #include "quill/sinks/FileSink.h"
-
-// bounded blocking will lead benchmark can't finish in my laptop
-#define VISION_MIN_TIME 0
 
 // 手动定义函数指针类型
 typedef void (*fn_VisionImageLog_log_func)(const VisionImageLog& msg);
