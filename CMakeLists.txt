@@ -291,57 +291,6 @@ set(gbenchmark_dir ${CMAKE_CURRENT_LIST_DIR}/gbenchmark)
 # easyloggingpp
 if (benchmark_easyloggingpp)
     add_gbench_with_lib(easyloggingpp ${gbenchmark_dir}/cpp/easyloggingpp ${EASYLOGGINGPP_ROOT})
-    target_link_libraries(gbenchmark_easyloggingpp easyloggingpp)
-endif()
-
-# fmtlog
-if (benchmark_fmtlog)
-    add_gbench_with_lib(fmtlog_drop ${gbenchmark_dir}/cpp/fmtlog_drop ${FMTLOG_ROOT})
-    target_link_libraries(gbenchmark_fmtlog_drop fmtlog)
-
-    add_gbench_with_lib(fmtlog_block ${gbenchmark_dir}/cpp/fmtlog_block ${FMTLOG_ROOT})
-    target_link_libraries(gbenchmark_fmtlog_block fmtlog)
-endif()
-
-# glog
-if (benchmark_glog)
-    add_gbench_with_lib(glog ${gbenchmark_dir}/cpp/glog ${GLOG_ROOT})
-    target_link_libraries(gbenchmark_glog glog)
-endif()
-
-# haclog
-if (benchmark_haclog)
-    add_gbench_with_lib(haclog ${gbenchmark_dir}/cpp/haclog ${HACLOG_ROOT})
-    target_link_libraries(gbenchmark_haclog haclog)
-endif()
-
-# loguru
-if (benchmark_loguru)
-    add_gbench_with_lib(loguru ${gbenchmark_dir}/cpp/loguru ${LOGURU_ROOT})
-    target_link_libraries(gbenchmark_loguru loguru)
-endif()
-
-# quill
-if (benchmark_quill)
-    add_gbench_with_lib(quill_bounded_dropping ${gbenchmark_dir}/cpp/quill_bounded_dropping ${QUILL_ROOT})
-    target_link_libraries(gbenchmark_quill_bounded_dropping quill)
-
-    add_gbench_with_lib(quill_bounded_blocking ${gbenchmark_dir}/cpp/quill_bounded_blocking ${QUILL_ROOT})
-    target_link_libraries(gbenchmark_quill_bounded_blocking quill)
-endif()
-
-# spdlog
-if (benchmark_spdlog)
-    add_gbench_with_lib(spdlog_sync ${gbenchmark_dir}/cpp/spdlog_sync ${SPDLOG_ROOT})
-    target_link_libraries(gbenchmark_spdlog_sync spdlog)
-
-    add_gbench_with_lib(spdlog_async ${gbenchmark_dir}/cpp/spdlog_async ${SPDLOG_ROOT})
-    target_link_libraries(gbenchmark_spdlog_async spdlog)
-endif()
-
-# easyloggingpp
-if (benchmark_easyloggingpp)
-    add_gbench_with_lib(easyloggingpp ${gbenchmark_dir}/cpp/easyloggingpp ${EASYLOGGINGPP_ROOT})
     # 手动添加包含路径
     target_include_directories(gbenchmark_easyloggingpp PRIVATE 
         ${EASYLOGGINGPP_ROOT}/src
@@ -368,6 +317,12 @@ if (benchmark_fmtlog)
     target_link_libraries(gbenchmark_fmtlog_block fmtlog)
 endif()
 
+# glog
+if (benchmark_glog)
+    add_gbench_with_lib(glog ${gbenchmark_dir}/cpp/glog ${GLOG_ROOT})
+    target_link_libraries(gbenchmark_glog glog)
+endif()
+
 # haclog
 if (benchmark_haclog)
     add_gbench_with_lib(haclog ${gbenchmark_dir}/cpp/haclog ${HACLOG_ROOT})
@@ -376,6 +331,30 @@ if (benchmark_haclog)
         ${HACLOG_ROOT}/include
     )
     target_link_libraries(gbenchmark_haclog haclog)
+endif()
+
+# loguru
+if (benchmark_loguru)
+    add_gbench_with_lib(loguru ${gbenchmark_dir}/cpp/loguru ${LOGURU_ROOT})
+    target_link_libraries(gbenchmark_loguru loguru)
+endif()
+
+# quill
+if (benchmark_quill)
+    add_gbench_with_lib(quill_bounded_dropping ${gbenchmark_dir}/cpp/quill_bounded_dropping ${QUILL_ROOT})
+    target_link_libraries(gbenchmark_quill_bounded_dropping quill)
+
+    add_gbench_with_lib(quill_bounded_blocking ${gbenchmark_dir}/cpp/quill_bounded_blocking ${QUILL_ROOT})
+    target_link_libraries(gbenchmark_quill_bounded_blocking quill)
+endif()
+
+# spdlog
+if (benchmark_spdlog)
+    add_gbench_with_lib(spdlog_sync ${gbenchmark_dir}/cpp/spdlog_sync ${SPDLOG_ROOT})
+    target_link_libraries(gbenchmark_spdlog_sync spdlog)
+
+    add_gbench_with_lib(spdlog_async ${gbenchmark_dir}/cpp/spdlog_async ${SPDLOG_ROOT})
+    target_link_libraries(gbenchmark_spdlog_async spdlog)
 endif()
 
 ################################
