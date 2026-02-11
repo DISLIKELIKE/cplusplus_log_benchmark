@@ -339,6 +339,45 @@ if (benchmark_spdlog)
     target_link_libraries(gbenchmark_spdlog_async spdlog)
 endif()
 
+# easyloggingpp
+if (benchmark_easyloggingpp)
+    add_gbench_with_lib(easyloggingpp ${gbenchmark_dir}/cpp/easyloggingpp ${EASYLOGGINGPP_ROOT})
+    # 手动添加包含路径
+    target_include_directories(gbenchmark_easyloggingpp PRIVATE 
+        ${EASYLOGGINGPP_ROOT}/src
+    )
+    target_link_libraries(gbenchmark_easyloggingpp easyloggingpp)
+endif()
+
+# fmtlog
+if (benchmark_fmtlog)
+    add_gbench_with_lib(fmtlog_drop ${gbenchmark_dir}/cpp/fmtlog_drop ${FMTLOG_ROOT})
+    # 手动添加包含路径
+    target_include_directories(gbenchmark_fmtlog_drop PRIVATE 
+        ${FMTLOG_ROOT}
+        ${SPDLOG_ROOT}/include/spdlog/fmt/bundled
+    )
+    target_link_libraries(gbenchmark_fmtlog_drop fmtlog)
+
+    add_gbench_with_lib(fmtlog_block ${gbenchmark_dir}/cpp/fmtlog_block ${FMTLOG_ROOT})
+    # 手动添加包含路径
+    target_include_directories(gbenchmark_fmtlog_block PRIVATE 
+        ${FMTLOG_ROOT}
+        ${SPDLOG_ROOT}/include/spdlog/fmt/bundled
+    )
+    target_link_libraries(gbenchmark_fmtlog_block fmtlog)
+endif()
+
+# haclog
+if (benchmark_haclog)
+    add_gbench_with_lib(haclog ${gbenchmark_dir}/cpp/haclog ${HACLOG_ROOT})
+    # 手动添加包含路径
+    target_include_directories(gbenchmark_haclog PRIVATE 
+        ${HACLOG_ROOT}/include
+    )
+    target_link_libraries(gbenchmark_haclog haclog)
+endif()
+
 ################################
 # vision production line scenario tests
 ################################
