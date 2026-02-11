@@ -266,8 +266,8 @@ endif()
 
 # haclog
 if (benchmark_haclog OR benchmark_vision_haclog)
-    message("# Using local haclog at ${HACLOG_ROOT}")
-    add_subdirectory(${HACLOG_ROOT} haclog EXCLUDE_FROM_ALL)
+    message("# Using local haclog ")
+    add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/_deps/haclog-src haclog EXCLUDE_FROM_ALL)
 endif()
 
 # easyloggingpp
@@ -290,31 +290,30 @@ set(gbenchmark_dir ${CMAKE_CURRENT_LIST_DIR}/gbenchmark)
 
 # easyloggingpp
 if (benchmark_easyloggingpp)
-    add_gbench_with_lib(easyloggingpp ${gbenchmark_dir}/cpp/easyloggingpp ${EASYLOGGINGPP_ROOT})
-    # 手动添加包含路径
-    target_include_directories(gbenchmark_easyloggingpp PRIVATE 
-        ${EASYLOGGINGPP_ROOT}/src
-    )
+    add_gbench(easyloggingpp ${gbenchmark_dir}/cpp/easyloggingpp)
+    add_dependencies(gbenchmark_easyloggingpp easyloggingpp)
     target_link_libraries(gbenchmark_easyloggingpp easyloggingpp)
+    target_include_directories(gbenchmark_easyloggingpp PUBLIC 
+        ${CMAKE_CURRENT_LIST_DIR}/_deps/easyloggingpp-src/src)
 endif()
 
 # fmtlog
 if (benchmark_fmtlog)
-    add_gbench_with_lib(fmtlog_drop ${gbenchmark_dir}/cpp/fmtlog_drop ${FMTLOG_ROOT})
-    # 手动添加包含路径
-    target_include_directories(gbenchmark_fmtlog_drop PRIVATE 
-        ${FMTLOG_ROOT}
-        ${SPDLOG_ROOT}/include/spdlog/fmt/bundled
+    add_gbench(fmtlog_drop ${gbenchmark_dir}/cpp/fmtlog_drop)
+    add_dependencies(gbenchmark_fmtlog_drop fmtlog-static fmt)
+    target_link_libraries(gbenchmark_fmtlog_drop fmtlog-static fmt)
+    target_include_directories(gbenchmark_fmtlog_drop PUBLIC
+        ${CMAKE_CURRENT_LIST_DIR}/_deps/fmtlog-src/
+        ${CMAKE_CURRENT_LIST_DIR}/_deps/fmtlog-src/fmt/include
     )
-    target_link_libraries(gbenchmark_fmtlog_drop fmtlog)
 
-    add_gbench_with_lib(fmtlog_block ${gbenchmark_dir}/cpp/fmtlog_block ${FMTLOG_ROOT})
-    # 手动添加包含路径
-    target_include_directories(gbenchmark_fmtlog_block PRIVATE 
-        ${FMTLOG_ROOT}
-        ${SPDLOG_ROOT}/include/spdlog/fmt/bundled
+    add_gbench(fmtlog_block ${gbenchmark_dir}/cpp/fmtlog_block)
+    add_dependencies(gbenchmark_fmtlog_block fmtlog-static fmt)
+    target_link_libraries(gbenchmark_fmtlog_block fmtlog-static fmt)
+    target_include_directories(gbenchmark_fmtlog_block PUBLIC
+        ${CMAKE_CURRENT_LIST_DIR}/_deps/fmtlog-src/
+        ${CMAKE_CURRENT_LIST_DIR}/_deps/fmtlog-src/fmt/include
     )
-    target_link_libraries(gbenchmark_fmtlog_block fmtlog)
 endif()
 
 # glog
@@ -325,11 +324,9 @@ endif()
 
 # haclog
 if (benchmark_haclog)
-    add_gbench_with_lib(haclog ${gbenchmark_dir}/cpp/haclog ${HACLOG_ROOT})
-    # 手动添加包含路径
-    target_include_directories(gbenchmark_haclog PRIVATE 
-        ${HACLOG_ROOT}/include
-    )
+    add_gbench(haclog ${gbenchmark_dir}/c/haclog)
+     
+	add_dependencies(gbenchmark_haclog haclog)
     target_link_libraries(gbenchmark_haclog haclog)
 endif()
 
