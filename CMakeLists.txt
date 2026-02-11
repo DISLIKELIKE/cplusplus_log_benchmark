@@ -267,6 +267,7 @@ endif()
 # haclog
 if (benchmark_haclog OR benchmark_vision_haclog)
     message("# Using local haclog ")
+    set(BUILD_TESTING OFF CACHE BOOL "" FORCE)
     add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/_deps/haclog-src haclog EXCLUDE_FROM_ALL)
 endif()
 
