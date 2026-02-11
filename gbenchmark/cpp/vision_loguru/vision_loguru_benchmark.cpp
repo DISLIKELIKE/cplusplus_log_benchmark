@@ -371,9 +371,8 @@ public:
 
     void SetUp(const benchmark::State&) {
         std::call_once(g_loguru_vision_init_flag, []() {
-            loguru::init("vision_loguru_benchmark", nullptr, nullptr);
             loguru::add_file("logs/vision_loguru.log", loguru::Truncate, loguru::Verbosity_INFO);
-            loguru::set_flush_interval(100);
+            loguru::g_stderr_verbosity = loguru::Verbosity_INVALID;
             LOG_F(INFO, "Vision loguru benchmark initialized");
         });
     }

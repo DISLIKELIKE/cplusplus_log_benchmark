@@ -189,6 +189,52 @@ function(add_gbench name folder)
 	endif()
 endfunction()
 
+function(add_gbench_with_lib name folder lib_root)
+	message("add gbenchmark ${name} ${folder}")
+	set(name gbenchmark_${name})
+
+	file(GLOB_RECURSE tmp_h ${folder}/*.h)
+	file(GLOB_RECURSE tmp_c ${folder}/*.c)
+	file(GLOB_RECURSE tmp_cpp ${folder}/*.cpp)
+	file(GLOB_RECURSE tmp_cc ${folder}/*.cc)
+
+	if (MSVC OR MINGW)
+		add_executable(${name} ${tmp_h} ${tmp_c} ${tmp_cpp} ${tmp_cc})
+		set_target_properties(${name}
+			PROPERTIES
+			FOLDER "example"
+			VS_DEBUGGER_WORKING_DIRECTORY "$(OutDir)"
+		)
+	else()
+		add_executable(${name} ${tmp_c} ${tmp_cpp} ${tmp_cc})
+		if (APPLE)
+			set_target_properties(${name}
+				PROPERTIES
+				INSTALL_RPATH "@executable_path/../lib"
+			)
+		elseif (UNIX)
+			set_target_properties(${name}
+				PROPERTIES
+				INSTALL_RPATH "\$ORIGIN/../lib"
+			)
+		endif()
+	endif(MSVC OR MINGW)
+
+	add_dependencies(${name} benchmark log_msg)
+	target_include_directories(${name} PRIVATE
+		${folder}
+		${BENCHMARK_ROOT}/include
+		${lib_root}
+		${CMAKE_CURRENT_LIST_DIR})
+	target_link_libraries(${name} benchmark log_msg)
+
+	# save temp object file, such as: asm code
+	if ((${CMAKE_CXX_COMPILER_ID} STREQUAL "GNU") OR
+		(${CMAKE_CXX_COMPILER_ID} STREQUAL "Clang"))
+		target_compile_options(${name} PUBLIC -save-temps=obj)
+	endif()
+endfunction()
+
 ################################
 # original gbenchmark tests (local sources)
 ################################
@@ -244,52 +290,52 @@ set(gbenchmark_dir ${CMAKE_CURRENT_LIST_DIR}/gbenchmark)
 
 # easyloggingpp
 if (benchmark_easyloggingpp)
-    add_gbench(easyloggingpp ${gbenchmark_dir}/cpp/easyloggingpp)
+    add_gbench_with_lib(easyloggingpp ${gbenchmark_dir}/cpp/easyloggingpp ${EASYLOGGINGPP_ROOT})
     target_link_libraries(gbenchmark_easyloggingpp easyloggingpp)
 endif()
 
 # fmtlog
 if (benchmark_fmtlog)
-    add_gbench(fmtlog_drop ${gbenchmark_dir}/cpp/fmtlog_drop)
+    add_gbench_with_lib(fmtlog_drop ${gbenchmark_dir}/cpp/fmtlog_drop ${FMTLOG_ROOT})
     target_link_libraries(gbenchmark_fmtlog_drop fmtlog)
 
-    add_gbench(fmtlog_block ${gbenchmark_dir}/cpp/fmtlog_block)
+    add_gbench_with_lib(fmtlog_block ${gbenchmark_dir}/cpp/fmtlog_block ${FMTLOG_ROOT})
     target_link_libraries(gbenchmark_fmtlog_block fmtlog)
 endif()
 
 # glog
 if (benchmark_glog)
-    add_gbench(glog ${gbenchmark_dir}/cpp/glog)
+    add_gbench_with_lib(glog ${gbenchmark_dir}/cpp/glog ${GLOG_ROOT})
     target_link_libraries(gbenchmark_glog glog)
 endif()
 
 # haclog
 if (benchmark_haclog)
-    add_gbench(haclog ${gbenchmark_dir}/cpp/haclog)
+    add_gbench_with_lib(haclog ${gbenchmark_dir}/cpp/haclog ${HACLOG_ROOT})
     target_link_libraries(gbenchmark_haclog haclog)
 endif()
 
 # loguru
 if (benchmark_loguru)
-    add_gbench(loguru ${gbenchmark_dir}/cpp/loguru)
+    add_gbench_with_lib(loguru ${gbenchmark_dir}/cpp/loguru ${LOGURU_ROOT})
     target_link_libraries(gbenchmark_loguru loguru)
 endif()
 
 # quill
 if (benchmark_quill)
-    add_gbench(quill_bounded_dropping ${gbenchmark_dir}/cpp/quill_bounded_dropping)
+    add_gbench_with_lib(quill_bounded_dropping ${gbenchmark_dir}/cpp/quill_bounded_dropping ${QUILL_ROOT})
     target_link_libraries(gbenchmark_quill_bounded_dropping quill)
 
-    add_gbench(quill_bounded_blocking ${gbenchmark_dir}/cpp/quill_bounded_blocking)
+    add_gbench_with_lib(quill_bounded_blocking ${gbenchmark_dir}/cpp/quill_bounded_blocking ${QUILL_ROOT})
     target_link_libraries(gbenchmark_quill_bounded_blocking quill)
 endif()
 
 # spdlog
 if (benchmark_spdlog)
-    add_gbench(spdlog_sync ${gbenchmark_dir}/cpp/spdlog_sync)
+    add_gbench_with_lib(spdlog_sync ${gbenchmark_dir}/cpp/spdlog_sync ${SPDLOG_ROOT})
     target_link_libraries(gbenchmark_spdlog_sync spdlog)
 
-    add_gbench(spdlog_async ${gbenchmark_dir}/cpp/spdlog_async)
+    add_gbench_with_lib(spdlog_async ${gbenchmark_dir}/cpp/spdlog_async ${SPDLOG_ROOT})
     target_link_libraries(gbenchmark_spdlog_async spdlog)
 endif()
 
