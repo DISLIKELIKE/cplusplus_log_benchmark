@@ -411,6 +411,8 @@ if (benchmark_haclog)
         add_gbench(vision_haclog ${gbenchmark_dir}/cpp/vision_haclog)
 	add_dependencies(gbenchmark_vision_haclog haclog)
         target_link_libraries(gbenchmark_vision_haclog haclog vision_log_msg)
+	target_include_directories(gbenchmark_vision_haclog PUBLIC 
+        	${CMAKE_CURRENT_LIST_DIR}/_deps/haclog-src/src)
     endif()
 endif()
 
