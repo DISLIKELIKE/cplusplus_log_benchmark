@@ -52,30 +52,45 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 ################################
 # Local library paths (请修改此处路径！)
 ################################
-# 请将以下路径修改为您电脑上 spdlog、glog 和 benchmark 源码目录的绝对路径
+# 请将以下路径修改为您电脑上日志库源码目录的绝对路径
+# 如果某个库不存在，可以将对应选项设置为 OFF
 
 set(DEPS_DIR "${CMAKE_SOURCE_DIR}/_deps")
 set(SPDLOG_ROOT "${DEPS_DIR}/spdlog-src" CACHE PATH "Path to local spdlog source")
 set(GLOG_ROOT "${DEPS_DIR}/glog-src" CACHE PATH "Path to local glog source")
 set(BENCHMARK_ROOT "${DEPS_DIR}/benchmark-src" CACHE PATH "Path to local google benchmark source")
+set(FMTLOG_ROOT "${DEPS_DIR}/fmtlog-src" CACHE PATH "Path to local fmtlog source")
+set(QUILL_ROOT "${DEPS_DIR}/quill-src" CACHE PATH "Path to local quill source")
+set(HACLOG_ROOT "${DEPS_DIR}/haclog-src" CACHE PATH "Path to local haclog source")
+set(EASYLOGGINGPP_ROOT "${DEPS_DIR}/easyloggingpp-src" CACHE PATH "Path to local easyloggingpp source")
+set(LOGURU_ROOT "${DEPS_DIR}/loguru-src" CACHE PATH "Path to local loguru source")
 
 ################################
 # options
 ################################
 
-set(benchmark_easyloggingpp OFF CACHE BOOL "generate benchmark: easyloggingpp")
-set(benchmark_fmtlog OFF CACHE BOOL "generate benchmark: fmtlog")
+# 原始通用测试选项 (全部开启)
+set(benchmark_easyloggingpp ON CACHE BOOL "generate benchmark: easyloggingpp")
+set(benchmark_fmtlog ON CACHE BOOL "generate benchmark: fmtlog")
 set(benchmark_glog ON CACHE BOOL "generate benchmark: glog")
-set(benchmark_haclog OFF CACHE BOOL "generate benchmark: haclog")
-set(benchmark_loguru OFF CACHE BOOL "generate benchmark: loguru")
-set(benchmark_nanolog OFF CACHE BOOL "generate benchmark: nanolog")
-set(benchmark_quill OFF CACHE BOOL "generate benchmark: quill")
-set(benchmark_reckless OFF CACHE BOOL "generate benchmark: reckless")
+set(benchmark_haclog ON CACHE BOOL "generate benchmark: haclog")
+set(benchmark_loguru ON CACHE BOOL "generate benchmark: loguru")
+set(benchmark_nanolog ON CACHE BOOL "generate benchmark: nanolog")
+set(benchmark_quill ON CACHE BOOL "generate benchmark: quill")
+set(benchmark_reckless ON CACHE BOOL "generate benchmark: reckless")
 set(benchmark_spdlog ON CACHE BOOL "generate benchmark: spdlog")
 
-# 机器视觉生产线场景测试选项
+# 机器视觉生产线场景测试选项 (全部开启)
 set(benchmark_vision_spdlog ON CACHE BOOL "generate vision benchmark: spdlog")
+set(benchmark_vision_spdlog_async ON CACHE BOOL "generate vision benchmark: spdlog async")
 set(benchmark_vision_glog ON CACHE BOOL "generate vision benchmark: glog")
+set(benchmark_vision_quill_drop ON CACHE BOOL "generate vision benchmark: quill drop")
+set(benchmark_vision_quill_block ON CACHE BOOL "generate vision benchmark: quill block")
+set(benchmark_vision_haclog ON CACHE BOOL "generate vision benchmark: haclog")
+set(benchmark_vision_fmtlog_drop ON CACHE BOOL "generate vision benchmark: fmtlog drop")
+set(benchmark_vision_fmtlog_block ON CACHE BOOL "generate vision benchmark: fmtlog block")
+set(benchmark_vision_easyloggingpp ON CACHE BOOL "generate vision benchmark: easyloggingpp")
+set(benchmark_vision_loguru ON CACHE BOOL "generate vision benchmark: loguru")
 
 ################################
 # log message
@@ -178,15 +193,47 @@ endfunction()
 # logging libraries (local sources)
 ################################
 
-if (benchmark_glog)
+# glog
+if (benchmark_glog OR benchmark_vision_glog)
     message("# Using local glog at ${GLOG_ROOT}")
     set(WITH_GFLAGS OFF CACHE BOOL "" FORCE)
     add_subdirectory(${GLOG_ROOT} glog EXCLUDE_FROM_ALL)
 endif()
 
-if (benchmark_spdlog)
+# spdlog
+if (benchmark_spdlog OR benchmark_vision_spdlog OR benchmark_vision_spdlog_async)
     message("# Using local spdlog at ${SPDLOG_ROOT}")
     add_subdirectory(${SPDLOG_ROOT} spdlog EXCLUDE_FROM_ALL)
+endif()
+
+# fmtlog
+if (benchmark_fmtlog OR benchmark_vision_fmtlog_drop OR benchmark_vision_fmtlog_block)
+    message("# Using local fmtlog at ${FMTLOG_ROOT}")
+    add_subdirectory(${FMTLOG_ROOT} fmtlog EXCLUDE_FROM_ALL)
+endif()
+
+# quill
+if (benchmark_quill OR benchmark_vision_quill_drop OR benchmark_vision_quill_block)
+    message("# Using local quill at ${QUILL_ROOT}")
+    add_subdirectory(${QUILL_ROOT} quill EXCLUDE_FROM_ALL)
+endif()
+
+# haclog
+if (benchmark_haclog OR benchmark_vision_haclog)
+    message("# Using local haclog at ${HACLOG_ROOT}")
+    add_subdirectory(${HACLOG_ROOT} haclog EXCLUDE_FROM_ALL)
+endif()
+
+# easyloggingpp
+if (benchmark_easyloggingpp OR benchmark_vision_easyloggingpp)
+    message("# Using local easyloggingpp at ${EASYLOGGINGPP_ROOT}")
+    add_subdirectory(${EASYLOGGINGPP_ROOT} easyloggingpp EXCLUDE_FROM_ALL)
+endif()
+
+# loguru
+if (benchmark_loguru OR benchmark_vision_loguru)
+    message("# Using local loguru at ${LOGURU_ROOT}")
+    add_subdirectory(${LOGURU_ROOT} loguru EXCLUDE_FROM_ALL)
 endif()
 
 ################################
@@ -195,26 +242,86 @@ endif()
 
 set(gbenchmark_dir ${CMAKE_CURRENT_LIST_DIR}/gbenchmark)
 
-if (benchmark_glog)
-	add_gbench(glog ${gbenchmark_dir}/cpp/glog)
-	add_dependencies(gbenchmark_glog glog)
-	target_link_libraries(gbenchmark_glog glog)
+# easyloggingpp
+if (benchmark_easyloggingpp)
+    add_gbench(easyloggingpp ${gbenchmark_dir}/cpp/easyloggingpp)
+    add_dependencies(gbenchmark_easyleloggingpp easyloggingpp)
+    target_link_libraries(gbenchmark_easyleloggingpp easyloggingpp)
 endif()
 
-if (benchmark_spdlog)
-	add_gbench(spdlog_sync ${gbenchmark_dir}/cpp/spdlog_sync)
-	add_dependencies(gbenchmark_spdlog_sync spdlog)
-	target_link_libraries(gbenchmark_spdlog_sync spdlog)
+# fmtlog
+if (benchmark_fmtlog)
+    add_gbench(fmtlog_drop ${gbenchmark_dir}/cpp/fmtlog_drop)
+    add_dependencies(gbenchmark_fmtlog_drop fmtlog)
+    target_link_libraries(gbenchmark_fmtlog_drop fmtlog)
 
-	add_gbench(spdlog_async ${gbenchmark_dir}/cpp/spdlog_async)
-	add_dependencies(gbenchmark_spdlog_async spdlog)
-	target_link_libraries(gbenchmark_spdlog_async spdlog)
+    add_gbench(fmtlog_block ${gbenchmark_dir}/cpp/fmtlog_block)
+    add_dependencies(gbenchmark_fmtlog_block fmtlog)
+    target_link_libraries(gbenchmark_fmtlog_block fmtlog)
+endif()
+
+# glog
+if (benchmark_glog)
+    add_gbench(glog ${gbenchmark_dir}/cpp/glog)
+    add_dependencies(gbenchmark_glog glog)
+    target_link_libraries(gbenchmark_glog glog)
+endif()
+
+# haclog
+if (benchmark_haclog)
+    add_gbench(haclog ${gbenchmark_dir}/cpp/haclog)
+    add_dependencies(gbenchmark_haclog haclog)
+    target_link_libraries(gbenchmark_haclog haclog)
+endif()
+
+# loguru
+if (benchmark_loguru)
+    add_gbench(loguru ${gbenchmark_dir}/cpp/loguru)
+    add_dependencies(gbenchmark_loguru loguru)
+    target_link_libraries(gbenchmark_loguru loguru)
+endif()
+
+# nanolog
+if (benchmark_nanolog)
+    add_gbench(nanolog ${gbenchmark_dir}/cpp/nanolog)
+    add_dependencies(gbenchmark_nanolog nanolog)
+    target_link_libraries(gbenchmark_nanolog nanolog)
+endif()
+
+# quill
+if (benchmark_quill)
+    add_gbench(quill_bounded_dropping ${gbenchmark_dir}/cpp/quill_bounded_dropping)
+    add_dependencies(gbenchmark_quill_bounded_dropping quill)
+    target_link_libraries(gbenchmark_quill_bounded_dropping quill)
+
+    add_gbench(quill_bounded_blocking ${gbenchmark_dir}/cpp/quill_bounded_blocking)
+    add_dependencies(gbenchmark_quill_bounded_blocking quill)
+    target_link_libraries(gbenchmark_quill_bounded_blocking quill)
+endif()
+
+# reckless
+if (benchmark_reckless)
+    add_gbench(reckless ${gbenchmark_dir}/cpp/reckless)
+    add_dependencies(gbenchmark_reckless reckless)
+    target_link_libraries(gbenchmark_reckless reckless)
+endif()
+
+# spdlog
+if (benchmark_spdlog)
+    add_gbench(spdlog_sync ${gbenchmark_dir}/cpp/spdlog_sync)
+    add_dependencies(gbenchmark_spdlog_sync spdlog)
+    target_link_libraries(gbenchmark_spdlog_sync spdlog)
+
+    add_gbench(spdlog_async ${gbenchmark_dir}/cpp/spdlog_async)
+    add_dependencies(gbenchmark_spdlog_async spdlog)
+    target_link_libraries(gbenchmark_spdlog_async spdlog)
 endif()
 
 ################################
 # vision production line scenario tests
 ################################
 
+# spdlog (sync)
 if (benchmark_spdlog)
     if (benchmark_vision_spdlog)
         message("# add vision benchmark: spdlog")
@@ -225,6 +332,18 @@ if (benchmark_spdlog)
     endif()
 endif()
 
+# spdlog (async)
+if (benchmark_spdlog)
+    if (benchmark_vision_spdlog_async)
+        message("# add vision benchmark: spdlog async")
+        add_gbench(vision_spdlog_async ${gbenchmark_dir}/cpp/vision_spdlog_async)
+        add_dependencies(gbenchmark_vision_spdlog_async spdlog)
+        add_dependencies(gbenchmark_vision_spdlog_async vision_log_msg)
+        target_link_libraries(gbenchmark_vision_spdlog_async spdlog vision_log_msg)
+    endif()
+endif()
+
+# glog
 if (benchmark_glog)
     if (benchmark_vision_glog)
         message("# add vision benchmark: glog")
@@ -235,20 +354,109 @@ if (benchmark_glog)
     endif()
 endif()
 
+# quill (drop)
+if (benchmark_quill)
+    if (benchmark_vision_quill_drop)
+        message("# add vision benchmark: quill drop")
+        add_gbench(vision_quill_drop ${gbenchmark_dir}/cpp/vision_quill_drop)
+        add_dependencies(gbenchmark_vision_quill_drop quill)
+        add_dependencies(gbenchmark_vision_quill_drop vision_log_msg)
+        target_link_libraries(gbenchmark_vision_quill_drop quill vision_log_msg)
+    endif()
+endif()
+
+# quill (block)
+if (benchmark_quill)
+    if (benchmark_vision_quill_block)
+        message("# add vision benchmark: quill block")
+        add_gbench(vision_quill_block ${gbenchmark_dir}/cpp/vision_quill_block)
+        add_dependencies(gbenchmark_vision_quill_block quill)
+        add_dependencies(gbenchmark_vision_quill_block vision_log_msg)
+        target_link_libraries(gbenchmark_vision_quill_block quill vision_log_msg)
+    endif()
+endif()
+
+# haclog
+if (benchmark_haclog)
+    if (benchmark_vision_haclog)
+        message("# add vision benchmark: haclog")
+        add_gbench(vision_haclog ${gbenchmark_dir}/cpp/vision_haclog)
+        add_dependencies(gbenchmark_vision_haclog haclog)
+        add_dependencies(gbenchmark_vision_haclog vision_log_msg)
+        target_link_libraries(gbenchmark_vision_haclog haclog vision_log_msg)
+    endif()
+endif()
+
+# fmtlog (drop)
+if (benchmark_fmtlog)
+    if (benchmark_vision_fmtlog_drop)
+        message("# add vision benchmark: fmtlog drop")
+        add_gbench(vision_fmtlog_drop ${gbenchmark_dir}/cpp/vision_fmtlog_drop)
+        add_dependencies(gbenchmark_vision_fmtlog_drop fmtlog)
+        add_dependencies(gbenchmark_vision_fmtlog_drop vision_log_msg)
+        target_link_libraries(gbenchmark_vision_fmtlog_drop fmtlog vision_log_msg)
+    endif()
+endif()
+
+# fmtlog (block)
+if (benchmark_fmtlog)
+    if (benchmark_vision_fmtlog_block)
+        message("# add vision benchmark: fmtlog block")
+        add_gbench(vision_fmtlog_block ${gbenchmark_dir}/cpp/vision_fmtlog_block)
+        add_dependencies(gbenchmark_vision_fmtlog_block fmtlog)
+        add_dependencies(gbenchmark_vision_fmtlog_block vision_log_msg)
+        target_link_libraries(gbenchmark_vision_fmtlog_block fmtlog vision_log_msg)
+    endif()
+endif()
+
+# easyloggingpp
+if (benchmark_easyloggingpp)
+    if (benchmark_vision_easyloggingpp)
+        message("# add vision benchmark: easyloggingpp")
+        add_gbench(vision_easyloggingpp ${gbenchmark_dir}/cpp/vision_easyloggingpp)
+        add_dependencies(gbenchmark_vision_easyloggingpp easyloggingpp)
+        add_dependencies(gbenchmark_vision_easyloggingpp vision_log_msg)
+        target_link_libraries(gbenchmark_vision_easyloggingpp easyloggingpp vision_log_msg)
+    endif()
+endif()
+
+# loguru
+if (benchmark_loguru)
+    if (benchmark_vision_loguru)
+        message("# add vision benchmark: loguru")
+        add_gbench(vision_loguru ${gbenchmark_dir}/cpp/vision_loguru)
+        add_dependencies(gbenchmark_vision_loguru loguru)
+        add_dependencies(gbenchmark_vision_loguru vision_log_msg)
+        target_link_libraries(gbenchmark_vision_loguru loguru vision_log_msg)
+    endif()
+endif()
+
 ################################
 # summary
 ################################
 
-message("# --------------------------------")
+message("# ========================================")
+message("# Original General Benchmark Tests")
+message("# ========================================")
 message("# benchmark easyloggingpp: ${benchmark_easyloggingpp}")
-message("# benchmark fmtlog: ${benchmark_fmtlog}")
-message("# benchmark glog: ${benchmark_glog}")
-message("# benchmark haclog: ${benchmark_haclog}")
-message("# benchmark loguru: ${benchmark_loguru}")
-message("# benchmark nanolog: ${benchmark_nanolog}")
-message("# benchmark reckless: ${benchmark_reckless}")
-message("# benchmark spdlog: ${benchmark_spdlog}")
-message("# --------------------------------")
-message("# vision benchmark spdlog: ${benchmark_vision_spdlog}")
-message("# vision benchmark glog: ${benchmark_vision_glog}")
-message("# --------------------------------")
+message("# benchmark fmtlog:        ${benchmark_fmtlog}")
+message("# benchmark glog:         ${benchmark_glog}")
+message("# benchmark haclog:       ${benchmark_haclog}")
+message("# benchmark loguru:       ${benchmark_loguru}")
+message("# benchmark nanolog:      ${benchmark_nanolog}")
+message("# benchmark reckless:      ${benchmark_reckless}")
+message("# benchmark spdlog:       ${benchmark_spdlog}")
+message("# ========================================")
+message("# Vision Production Line Benchmark Tests")
+message("# ========================================")
+message("# vision spdlog (sync):     ${benchmark_vision_spdlog}")
+message("# vision spdlog (async):    ${benchmark_vision_spdlog_async}")
+message("# vision glog:              ${benchmark_vision_glog}")
+message("# vision quill (drop):      ${benchmark_vision_quill_drop}")
+message("# vision quill (block):     ${benchmark_vision_quill_block}")
+message("# vision haclog:            ${benchmark_vision_haclog}")
+message("# vision fmtlog (drop):     ${benchmark_vision_fmtlog_drop}")
+message("# vision fmtlog (block):    ${benchmark_vision_fmtlog_block}")
+message("# vision easyloggingpp:     ${benchmark_vision_easyloggingpp}")
+message("# vision loguru:            ${benchmark_vision_loguru}")
+message("# ========================================")
