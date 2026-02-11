@@ -3,7 +3,7 @@
 #include <vector>
 #include "vision_gbenchmark.h"
 #include "haclog/haclog.h"
-#include <memory>
+#include <mutex>
 
 // 手动定义函数指针类型
 typedef void (*fn_VisionImageLog_log_func)(const VisionImageLog& msg);
@@ -21,7 +21,7 @@ std::once_flag g_haclog_vision_init_flag;
 // 图像采集日志函数
 #define VISION_HACLOG_IMAGE_LOG_FUNC(num) \
     void log_image_func##num(const VisionImageLog& msg) { \
-        haclog_info("[IMAGE] ts:%lu, cam:%u, img:%u, %ux%u, exp:%luus, gain:%.2f, status:%s", \
+        HACLOG_INFO("[IMAGE] ts:%lu, cam:%u, img:%u, %ux%u, exp:%luus, gain:%.2f, status:%s", \
             msg.timestamp, msg.camera_id, msg.image_id, msg.width, msg.height, \
             msg.exposure_time, msg.gain, msg.sensor_status); \
     }
@@ -95,7 +95,7 @@ const int n_image_funcs = sizeof(log_image_funcs) / sizeof(log_image_funcs[0]);
 // 检测结果日志函数
 #define VISION_HACLOG_DETECTION_LOG_FUNC(num) \
     void log_detection_func##num(const VisionDetectionLog& msg) { \
-        haclog_info("[DETECTION] ts:%lu, img:%u, rois:%u, defects:%u, conf:%.2f, model:%s, time:%.2fms, status:%s", \
+        HACLOG_INFO("[DETECTION] ts:%lu, img:%u, rois:%u, defects:%u, conf:%.2f, model:%s, time:%.2fms, status:%s", \
             msg.timestamp, msg.image_id, msg.roi_count, msg.defect_count, \
             msg.confidence, msg.model_name, msg.processing_time, msg.result_status); \
     }
@@ -169,7 +169,7 @@ const int n_detection_funcs = sizeof(log_detection_funcs) / sizeof(log_detection
 // 设备状态日志函数
 #define VISION_HACLOG_DEVICE_LOG_FUNC(num) \
     void log_device_func##num(const VisionDeviceLog& msg) { \
-        haclog_info("[DEVICE] ts:%lu, id:%u, type:%s, code:%u, temp:%.1fC, volt:%.1fV, curr:%.1fA, mode:%s", \
+        HACLOG_INFO("[DEVICE] ts:%lu, id:%u, type:%s, code:%u, temp:%.1fC, volt:%.1fV, curr:%.1fA, mode:%s", \
             msg.timestamp, msg.device_id, msg.device_type, msg.status_code, \
             msg.temperature, msg.voltage, msg.current, msg.operation_mode); \
     }
@@ -250,7 +250,7 @@ const int n_device_funcs = sizeof(log_device_funcs) / sizeof(log_device_funcs[0]
             case 3: severity_str = "ERROR"; break; \
             case 4: severity_str = "CRITICAL"; break; \
         } \
-        haclog_error("[ALARM] ts:%lu, id:%u, severity:%s, type:%s, msg:%s, code:%u", \
+        HACLOG_ERROR("[ALARM] ts:%lu, id:%u, severity:%s, type:%s, msg:%s, code:%u", \
             msg.timestamp, msg.alarm_id, severity_str, msg.alarm_type, msg.alarm_message, msg.error_code); \
     }
 
@@ -323,7 +323,7 @@ const int n_alarm_funcs = sizeof(log_alarm_funcs) / sizeof(log_alarm_funcs[0]);
 // 生产统计日志函数
 #define VISION_HACLOG_PRODUCTION_LOG_FUNC(num) \
     void log_production_func##num(const VisionProductionLog& msg) { \
-        haclog_info("[PRODUCTION] ts:%lu, shift:%u, total:%u, pass:%u, fail:%u, rate:%.2f%%, cycle:%.2fs, throughput:%.2f/min", \
+        HACLOG_INFO("[PRODUCTION] ts:%lu, shift:%u, total:%u, pass:%u, fail:%u, rate:%.2f%%, cycle:%.2fs, throughput:%.2f/min", \
             msg.timestamp, msg.shift_id, msg.total_count, msg.pass_count, msg.fail_count, \
             msg.pass_rate, msg.avg_cycle_time, msg.throughput); \
     }
@@ -370,10 +370,22 @@ public:
 
     void SetUp(const benchmark::State&) {
         std::call_once(g_haclog_vision_init_flag, []() {
-            haclog_fp_open("logs/vision_haclog.log");
-            haclog_level_set(HACLOG_LEVEL_INFO);
-            haclog_info("Vision haclog benchmark initialized");
+            static haclog_file_handler_t file_handler = {};
+            if (haclog_file_handler_init(&file_handler, "logs/vision_haclog.log", "w") != 0) {
+                fprintf(stderr, "Failed to open haclog file\n");
+                return;
+            }
+            haclog_handler_set_level((haclog_handler_t *)&file_handler, HACLOG_LEVEL_INFO);
+            haclog_context_add_handler((haclog_handler_t *)&file_handler);
+            haclog_context_set_bytes_buf_size(4 * 1024 * 1024);
+            haclog_backend_run();
+            HACLOG_INFO("Vision haclog benchmark initialized");
         });
+        haclog_thread_context_init();
+    }
+
+    void TearDown(const benchmark::State&) {
+        haclog_thread_context_cleanup();
     }
 
     void LoadTestLogs() {
