@@ -5,6 +5,7 @@
 #include "log_msg/log_msg.h"
 #include "gbenchmark/log_gbenchmark.h"
 #include "easylogging++.h"
+#include <memory>
 
 std::once_flag init_flag;
 

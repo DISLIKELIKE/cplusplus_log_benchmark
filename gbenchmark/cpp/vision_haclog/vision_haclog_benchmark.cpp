@@ -3,6 +3,7 @@
 #include <vector>
 #include "vision_gbenchmark.h"
 #include "haclog.h"
+#include <memory>
 
 // 手动定义函数指针类型
 typedef void (*fn_VisionImageLog_log_func)(const VisionImageLog& msg);
