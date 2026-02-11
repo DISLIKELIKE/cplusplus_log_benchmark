@@ -1,65 +1,3 @@
-
-CMake Error at CMakeLists.txt:255 (add_dependencies):
-  The dependency target "fmtlog" of target "gbenchmark_fmtlog_drop" does not
-  exist.
-
-
-CMake Error at CMakeLists.txt:259 (add_dependencies):
-  The dependency target "fmtlog" of target "gbenchmark_fmtlog_block" does not
-  exist.
-
-
-CMake Error at CMakeLists.txt:395 (add_dependencies):
-  The dependency target "fmtlog" of target "gbenchmark_vision_fmtlog_drop"
-  does not exist.
-
-
-CMake Error at CMakeLists.txt:406 (add_dependencies):
-  The dependency target "fmtlog" of target "gbenchmark_vision_fmtlog_block"
-  does not exist.
-
-
--- Generating done (0.6s)
-CMake Generate step failed.  Build files cannot be regenerated correctly.
-MSBuild version 17.6.3+07e294721 for .NET Framework
-
-  Checking Build System
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/_deps/benchmark-src/src/CMakeList
-  s.txt
-  benchmark.cc
-  benchmark_api_internal.cc
-  benchmark_name.cc
-  benchmark_register.cc
-  benchmark_runner.cc
-  check.cc
-  colorprint.cc
-  commandlineflags.cc
-  complexity.cc
-  console_reporter.cc
-  counter.cc
-  csv_reporter.cc
-  json_reporter.cc
-  perf_counters.cc
-  reporter.cc
-  statistics.cc
-  string_util.cc
-  sysinfo.cc
-D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\_deps\benchmark-src\src\sysinfo.cc(436,31): warning C426
-7: “参数”: 从“size_t”转换到“int”，可能丢失数据 [D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\benchmark\src\b
-enchmark.vcxproj]
-  timers.cc
-  正在生成代码...
-  benchmark.vcxproj -> D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\lib\Release\benchmark.lib
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/_deps/easyloggingpp-src/CMakeList
-  s.txt
-  easylogging++.cc
-  easyloggingpp.vcxproj -> D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\lib\Release\easylogging
-  pp.lib
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/CMakeLists.txt
-  log_msg.cpp
-  log_msg.vcxproj -> D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\lib\Release\log_msg.lib
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/CMakeLists.txt
-  gbenchmark_easyloggingpp.cpp
 D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\gbenchmark\cpp\easyloggingpp\gbenchmark_easyloggingpp.cp
 p(7,10): fatal  error C1083: 无法打开包括文件: “easylogging++.h”: No such file or directory [D:\VSProject\private_cpp_log_bench
 mark\cplusplus_log_benchmark\build\gbenchmark_easyloggingpp.vcxproj]
@@ -73,88 +11,7 @@ splus_log_benchmark\build\gbenchmark_fmtlog_block.vcxproj]
 D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\gbenchmark\cpp\fmtlog_drop\gbenchmark_fmtlog_drop.cpp(10
 ,10): fatal  error C1083: 无法打开包括文件: “fmtlog.h”: No such file or directory [D:\VSProject\private_cpp_log_benchmark\cplus
 plus_log_benchmark\build\gbenchmark_fmtlog_drop.vcxproj]
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/_deps/glog-src/CMakeLists.txt
-  demangle.cc
-  logging.cc
-  raw_logging.cc
-  symbolize.cc
-  utilities.cc
-  vlog_is_on.cc
-  signalhandler.cc
-  port.cc
-  正在生成代码...
-  glogbase.vcxproj -> D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\glog\glogbase.dir\Release\gl
-  ogbase.lib
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/_deps/glog-src/CMakeLists.txt
-  glog.vcxproj -> D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\lib\Release\glog.lib
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/CMakeLists.txt
-  gbenchmark_glog.cpp
-  gbenchmark_glog.vcxproj -> D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin\Release\gbenchmar
-  k_glog.exe
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/_deps/haclog-src/CMakeLists.txt
-  haclog_bytes_buffer.c
-  haclog_context.c
-  haclog_err.c
-  haclog_log.c
-  haclog_os.c
-  haclog_path.c
-  haclog_sleep.c
-  haclog_spinlock.c
-  haclog_stacktrace.c
-  haclog_thread.c
-  haclog_thread_context.c
-  haclog_vsprintf.c
-  haclog_win_gmtime.c
-  haclog_console_handler.c
-  haclog_file_handle.c
-  haclog_file_rotate_handler.c
-  haclog_file_time_rot_handler.c
-  haclog_handler.c
-  正在生成代码...
-  haclog.vcxproj -> D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\lib\Release\haclog.lib
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/CMakeLists.txt
-  gbenchmark_haclog.cpp
-  gbenchmark_haclog.vcxproj -> D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin\Release\gbenchm
-  ark_haclog.exe
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/_deps/loguru-src/CMakeLists.txt
-  loguru.cpp
-  loguru.vcxproj -> D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\lib\Release\loguru.lib
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/CMakeLists.txt
-  gbenchmark_loguru.cpp
-  gbenchmark_loguru.vcxproj -> D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin\Release\gbenchm
-  ark_loguru.exe
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/_deps/quill-src/CMakeLists.txt
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/CMakeLists.txt
-  gbenchmark_quill_bounded_blocking.cpp
-  gbenchmark_quill_bounded_blocking.vcxproj -> D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin
-  \Release\gbenchmark_quill_bounded_blocking.exe
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/CMakeLists.txt
-  gbenchmark_quill_bounded_dropping.cpp
-  gbenchmark_quill_bounded_dropping.vcxproj -> D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin
-  \Release\gbenchmark_quill_bounded_dropping.exe
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/_deps/spdlog-src/CMakeLists.txt
-  spdlog.cpp
-  stdout_sinks.cpp
-  color_sinks.cpp
-  file_sinks.cpp
-  async.cpp
-  cfg.cpp
-  bundled_fmtlib_format.cpp
-  spdlog.vcxproj -> D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\lib\Release\spdlog.lib
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/CMakeLists.txt
-  gbenchmark_spdlog_async.cpp
-  gbenchmark_spdlog_async.vcxproj -> D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin\Release\g
-  benchmark_spdlog_async.exe
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/CMakeLists.txt
-  gbenchmark_spdlog_sync.cpp
-  gbenchmark_spdlog_sync.vcxproj -> D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin\Release\gb
-  enchmark_spdlog_sync.exe
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/CMakeLists.txt
-  vision_log_msg.cpp
-  vision_log_msg.vcxproj -> D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\lib\Release\vision_log
-  _msg.lib
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/CMakeLists.txt
-  vision_easyloggingpp_benchmark.cpp
+
 D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\gbenchmark\cpp\vision_easyloggingpp\vision_easyloggingpp
 _benchmark.cpp(5,10): fatal  error C1083: 无法打开包括文件: “easylogging++.h”: No such file or directory [D:\VSProject\private_
 cpp_log_benchmark\cplusplus_log_benchmark\build\gbenchmark_vision_easyloggingpp.vcxproj]
@@ -168,84 +25,25 @@ enchmark\cplusplus_log_benchmark\build\gbenchmark_vision_fmtlog_block.vcxproj]
 D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\gbenchmark\cpp\vision_fmtlog_drop\vision_fmtlog_drop_ben
 chmark.cpp(7,10): fatal  error C1083: 无法打开包括文件: “fmtlog.h”: No such file or directory [D:\VSProject\private_cpp_log_ben
 chmark\cplusplus_log_benchmark\build\gbenchmark_vision_fmtlog_drop.vcxproj]
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/CMakeLists.txt
-  vision_glog_benchmark.cpp
-  gbenchmark_vision_glog.vcxproj -> D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin\Release\gb
-  enchmark_vision_glog.exe
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/CMakeLists.txt
-  vision_haclog_benchmark.cpp
+
 D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\gbenchmark\cpp\vision_haclog\vision_haclog_benchmark.cpp
 (5,10): fatal  error C1083: 无法打开包括文件: “haclog.h”: No such file or directory [D:\VSProject\private_cpp_log_benchmark\cpl
 usplus_log_benchmark\build\gbenchmark_vision_haclog.vcxproj]
   Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/CMakeLists.txt
   vision_loguru_benchmark.cpp
 D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\gbenchmark\cpp\vision_loguru\vision_loguru_benchmark.cpp
-(14,6): error C2039: "once_flag": 不是 "std" 的成员 [D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\gb
-enchmark_vision_loguru.vcxproj]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\string(24,1): message : 参见“st
-d”的声明 [D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\gbenchmark_vision_loguru.vcxproj]
-D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\gbenchmark\cpp\vision_loguru\vision_loguru_benchmark.cpp
-(14,41): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int [D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchma
-rk\build\gbenchmark_vision_loguru.vcxproj]
-D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\gbenchmark\cpp\vision_loguru\vision_loguru_benchmark.cpp
-(14,16): error C2146: 语法错误: 缺少“;”(在标识符“g_loguru_vision_init_flag”的前面) [D:\VSProject\private_cpp_log_benchmark\cplusplus
-_log_benchmark\build\gbenchmark_vision_loguru.vcxproj]
-D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\gbenchmark\cpp\vision_loguru\vision_loguru_benchmark.cpp
-(371,14): error C2039: "call_once": 不是 "std" 的成员 [D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\
-gbenchmark_vision_loguru.vcxproj]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\string(24,1): message : 参见“st
-d”的声明 [D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\gbenchmark_vision_loguru.vcxproj]
-D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\gbenchmark\cpp\vision_loguru\vision_loguru_benchmark.cpp
-(371,24): error C2065: “g_loguru_vision_init_flag”: 未声明的标识符 [D:\VSProject\private_cpp_log_benchmark\cplusplus_log_bench
-mark\build\gbenchmark_vision_loguru.vcxproj]
-D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\gbenchmark\cpp\vision_loguru\vision_loguru_benchmark.cpp
-(372,21): error C2664: “void loguru::init(int &,char *[],const loguru::Options &)”: 无法将参数 1 从“const char [24]”转换为“int &
+(374,21): error C2664: “void loguru::init(int &,char *[],const loguru::Options &)”: 无法将参数 1 从“const char [24]”转换为“int &
 ” [D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\gbenchmark_vision_loguru.vcxproj]
 D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\_deps\loguru-src\loguru.hpp(501,7): message : 参见“loguru:
 :init”的声明 [D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\gbenchmark_vision_loguru.vcxproj]
 D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\gbenchmark\cpp\vision_loguru\vision_loguru_benchmark.cpp
-(372,21): message : 尝试匹配参数列表“(const char [24], nullptr, nullptr)”时 [D:\VSProject\private_cpp_log_benchmark\cplusplus_lo
+(374,21): message : 尝试匹配参数列表“(const char [24], nullptr, nullptr)”时 [D:\VSProject\private_cpp_log_benchmark\cplusplus_lo
 g_benchmark\build\gbenchmark_vision_loguru.vcxproj]
 D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\gbenchmark\cpp\vision_loguru\vision_loguru_benchmark.cpp
-(374,21): error C2039: "set_flush_interval": 不是 "loguru" 的成员 [D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benc
+(376,21): error C2039: "set_flush_interval": 不是 "loguru" 的成员 [D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benc
 hmark\build\gbenchmark_vision_loguru.vcxproj]
 D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\_deps\loguru-src\loguru.hpp(268,11): message : 参见“loguru
 ”的声明 [D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\gbenchmark_vision_loguru.vcxproj]
 D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\gbenchmark\cpp\vision_loguru\vision_loguru_benchmark.cpp
-(376): error C3861: “set_flush_interval”: 找不到标识符 [D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\
+(378): error C3861: “set_flush_interval”: 找不到标识符 [D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\
 gbenchmark_vision_loguru.vcxproj]
-D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\gbenchmark\cpp\vision_loguru\vision_loguru_benchmark.cpp
-(371,1): error C3861: “call_once”: 找不到标识符 [D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\gbenchm
-ark_vision_loguru.vcxproj]
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/CMakeLists.txt
-  vision_quill_block_benchmark.cpp
-D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\gbenchmark\cpp\vision_quill_block\vision_quill_block_ben
-chmark.cpp(12,1): warning C4005: “VISION_MIN_TIME”: 宏重定义 [D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmar
-k\build\gbenchmark_vision_quill_block.vcxproj]
-D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\gbenchmark\vision_gbenchmark.h(32,1): message : 参见“VISIO
-N_MIN_TIME”的前一个定义 [D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\gbenchmark_vision_quill_block.v
-cxproj]
-  gbenchmark_vision_quill_block.vcxproj -> D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin\Rel
-  ease\gbenchmark_vision_quill_block.exe
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/CMakeLists.txt
-  vision_quill_drop_benchmark.cpp
-  gbenchmark_vision_quill_drop.vcxproj -> D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin\Rele
-  ase\gbenchmark_vision_quill_drop.exe
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/CMakeLists.txt
-  vision_spdlog_benchmark.cpp
-  gbenchmark_vision_spdlog.vcxproj -> D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin\Release\
-  gbenchmark_vision_spdlog.exe
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/CMakeLists.txt
-  vision_spdlog_async_benchmark.cpp
-  gbenchmark_vision_spdlog_async.vcxproj -> D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin\Re
-  lease\gbenchmark_vision_spdlog_async.exe
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/CMakeLists.txt
-  gen_random_data.cpp
-  gen_random_data.vcxproj -> D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin\Release\gen_rando
-  m_data.exe
-  Building Custom Rule D:/VSProject/private_cpp_log_benchmark/cplusplus_log_benchmark/CMakeLists.txt
-  gen_vision_data.cpp
-  gen_vision_data.vcxproj -> D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin\Release\gen_visio
-  n_data.exe
-
-D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark>
