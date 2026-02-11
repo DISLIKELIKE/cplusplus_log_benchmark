@@ -1,0 +1,20 @@
+2026-02-11T16:49:44+08:00
+Running D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin\Release\gbenchmark_easyloggingpp.exe
+Run on (20 X 2112 MHz CPU s)
+CPU Caches:
+  L1 Data 48 KiB (x10)
+  L1 Instruction 32 KiB (x10)
+  L2 Unified 1280 KiB (x10)
+  L3 Unified 25600 KiB (x1)
+---------------------------------------------------------------------------------------------------------------
+Benchmark                                                                     Time             CPU   Iterations
+---------------------------------------------------------------------------------------------------------------
+EasyLoggingFixture/write/iterations:2000/repeats:5/threads:1               2896 ns         7812 ns         2000
+EasyLoggingFixture/write/iterations:2000/repeats:5/threads:1               2323 ns        0.000 ns         2000
+EasyLoggingFixture/write/iterations:2000/repeats:5/threads:1               2237 ns        0.000 ns         2000
+EasyLoggingFixture/write/iterations:2000/repeats:5/threads:1               2227 ns        0.000 ns         2000
+EasyLoggingFixture/write/iterations:2000/repeats:5/threads:1               2300 ns         7812 ns         2000
+EasyLoggingFixture/write/iterations:2000/repeats:5/threads:1_mean          2397 ns         3125 ns            5
+EasyLoggingFixture/write/iterations:2000/repeats:5/threads:1_median        2300 ns        0.000 ns            5
+EasyLoggingFixture/write/iterations:2000/repeats:5/threads:1_stddev         282 ns         4279 ns            5
+EasyLoggingFixture/write/iterations:2000/repeats:5/threads:1_cv           11.78 %        136.93 %             5

@@ -1,0 +1,70 @@
+2026-02-11T16:57:51+08:00
+Running D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin\Release\gbenchmark_vision_loguru.exe
+Run on (20 X 2112 MHz CPU s)
+CPU Caches:
+  L1 Data 48 KiB (x10)
+  L1 Instruction 32 KiB (x10)
+  L2 Unified 1280 KiB (x10)
+  L3 Unified 25600 KiB (x1)
+2026-02-11 16:57:51.029 (   0.001s) [        A9E5A611]             loguru.cpp:841   INFO| Logging to 'logs/vision_loguru.log', mode: 'w', verbosity: 0
+-------------------------------------------------------------------------------------------------------------------------
+Benchmark                                                                               Time             CPU   Iterations
+-------------------------------------------------------------------------------------------------------------------------
+VisionLoguruFixture/image_acquisition/min_time:3.000/threads:1                       4812 ns         4793 ns       867097
+VisionLoguruFixture/image_acquisition/min_time:3.000/threads:2                       4778 ns         9503 ns       440656
+VisionLoguruFixture/image_acquisition/min_time:3.000/threads:4                       5652 ns        20418 ns       215040
+VisionLoguruFixture/image_acquisition/min_time:3.000/threads:8                       6054 ns        26842 ns       152512
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:1              5440 ns        0.000 ns          500
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:1              5485 ns        0.000 ns          500
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:1              5542 ns        31250 ns          500
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:1              5432 ns        0.000 ns          500
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:1              5381 ns        0.000 ns          500
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:1_mean         5456 ns         6250 ns            5
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:1_median       5440 ns        0.000 ns            5
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:1_stddev       60.7 ns        13975 ns            5
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:1_cv           1.11 %        223.61 %             5
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:2              4918 ns        0.000 ns         1000
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:2              4862 ns        0.000 ns         1000
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:2              4906 ns        31250 ns         1000
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:2              5004 ns        0.000 ns         1000
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:2              4966 ns        0.000 ns         1000
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:2_mean         4931 ns         6250 ns            5
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:2_median       4918 ns        0.000 ns            5
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:2_stddev       54.7 ns        13975 ns            5
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:2_cv           1.11 %        223.61 %             5
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:4              5871 ns        0.000 ns         2000
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:4              6294 ns        15625 ns         2000
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:4              6556 ns        23438 ns         2000
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:4              6625 ns        23438 ns         2000
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:4              5999 ns        23438 ns         2000
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:4_mean         6269 ns        17188 ns            5
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:4_median       6294 ns        23438 ns            5
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:4_stddev        332 ns        10186 ns            5
+VisionLoguruFixture/detection_result/iterations:500/repeats:5/threads:4_cv           5.30 %         59.27 %             5
+VisionLoguruFixture/device_status/iterations:500/repeats:5/threads:1                 5527 ns        0.000 ns          500
+VisionLoguruFixture/device_status/iterations:500/repeats:5/threads:1                 5469 ns        0.000 ns          500
+VisionLoguruFixture/device_status/iterations:500/repeats:5/threads:1                 5532 ns        0.000 ns          500
+VisionLoguruFixture/device_status/iterations:500/repeats:5/threads:1                 5447 ns        0.000 ns          500
+VisionLoguruFixture/device_status/iterations:500/repeats:5/threads:1                 5470 ns        31250 ns          500
+VisionLoguruFixture/device_status/iterations:500/repeats:5/threads:1_mean            5489 ns         6250 ns            5
+VisionLoguruFixture/device_status/iterations:500/repeats:5/threads:1_median          5470 ns        0.000 ns            5
+VisionLoguruFixture/device_status/iterations:500/repeats:5/threads:1_stddev          37.8 ns        13975 ns            5
+VisionLoguruFixture/device_status/iterations:500/repeats:5/threads:1_cv              0.69 %        223.61 %             5
+VisionLoguruFixture/alarm_log/iterations:50/repeats:5/threads:1                      4866 ns        0.000 ns           50
+VisionLoguruFixture/alarm_log/iterations:50/repeats:5/threads:1                      4552 ns        0.000 ns           50
+VisionLoguruFixture/alarm_log/iterations:50/repeats:5/threads:1                      4520 ns        0.000 ns           50
+VisionLoguruFixture/alarm_log/iterations:50/repeats:5/threads:1                      4862 ns        0.000 ns           50
+VisionLoguruFixture/alarm_log/iterations:50/repeats:5/threads:1                      4524 ns        0.000 ns           50
+VisionLoguruFixture/alarm_log/iterations:50/repeats:5/threads:1_mean                 4665 ns        0.000 ns            5
+VisionLoguruFixture/alarm_log/iterations:50/repeats:5/threads:1_median               4552 ns        0.000 ns            5
+VisionLoguruFixture/alarm_log/iterations:50/repeats:5/threads:1_stddev                182 ns        0.000 ns            5
+VisionLoguruFixture/alarm_log/iterations:50/repeats:5/threads:1_cv                   3.91 %     -nan(ind) %             5
+VisionLoguruFixture/production_stats/iterations:25/repeats:5/threads:1               5772 ns        0.000 ns           25
+VisionLoguruFixture/production_stats/iterations:25/repeats:5/threads:1               5628 ns        0.000 ns           25
+VisionLoguruFixture/production_stats/iterations:25/repeats:5/threads:1               5640 ns        0.000 ns           25
+VisionLoguruFixture/production_stats/iterations:25/repeats:5/threads:1               5652 ns        0.000 ns           25
+VisionLoguruFixture/production_stats/iterations:25/repeats:5/threads:1               5632 ns        0.000 ns           25
+VisionLoguruFixture/production_stats/iterations:25/repeats:5/threads:1_mean          5665 ns        0.000 ns            5
+VisionLoguruFixture/production_stats/iterations:25/repeats:5/threads:1_median        5640 ns        0.000 ns            5
+VisionLoguruFixture/production_stats/iterations:25/repeats:5/threads:1_stddev        60.6 ns        0.000 ns            5
+VisionLoguruFixture/production_stats/iterations:25/repeats:5/threads:1_cv            1.07 %     -nan(ind) %             5

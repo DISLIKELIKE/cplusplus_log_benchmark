@@ -1,0 +1,1 @@
+bash: ./bin/Release/gbenchmark_vision_easyloggingpp: No such file or directory
