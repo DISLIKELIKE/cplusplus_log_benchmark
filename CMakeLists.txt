@@ -245,8 +245,8 @@ set(gbenchmark_dir ${CMAKE_CURRENT_LIST_DIR}/gbenchmark)
 # easyloggingpp
 if (benchmark_easyloggingpp)
     add_gbench(easyloggingpp ${gbenchmark_dir}/cpp/easyloggingpp)
-    add_dependencies(gbenchmark_easyleloggingpp easyloggingpp)
-    target_link_libraries(gbenchmark_easyleloggingpp easyloggingpp)
+    add_dependencies(gbenchmark_easyloggingpp easyloggingpp)
+    target_link_libraries(gbenchmark_easyloggingpp easyloggingpp)
 endif()
 
 # fmtlog
