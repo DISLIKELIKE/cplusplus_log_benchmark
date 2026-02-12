@@ -1,4 +1,4 @@
-2026-02-11T16:52:03+08:00
+2026-02-11T18:56:14+08:00
 Running D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin\Release\gbenchmark_loguru.exe
 Run on (20 X 2112 MHz CPU s)
 CPU Caches:
@@ -6,56 +6,56 @@ CPU Caches:
   L1 Instruction 32 KiB (x10)
   L2 Unified 1280 KiB (x10)
   L3 Unified 25600 KiB (x1)
-2026-02-11 16:52:03.203 (   0.016s) [        AC17B3AA]             loguru.cpp:841   INFO| Logging to 'logs/gbenchmark_loguru.log', mode: 'w', verbosity: 0
+2026-02-11 18:56:14.497 (   0.015s) [        2A3E4403]             loguru.cpp:841   INFO| Logging to 'logs/gbenchmark_loguru.log', mode: 'w', verbosity: 0
 ----------------------------------------------------------------------------------------------------------
 Benchmark                                                                Time             CPU   Iterations
 ----------------------------------------------------------------------------------------------------------
-LoguruFixture/write/iterations:2000/repeats:5/threads:1               4698 ns        0.000 ns         2000
-LoguruFixture/write/iterations:2000/repeats:5/threads:1               4653 ns         7812 ns         2000
-LoguruFixture/write/iterations:2000/repeats:5/threads:1               4564 ns         7812 ns         2000
-LoguruFixture/write/iterations:2000/repeats:5/threads:1               4606 ns        0.000 ns         2000
-LoguruFixture/write/iterations:2000/repeats:5/threads:1               4609 ns         7812 ns         2000
-LoguruFixture/write/iterations:2000/repeats:5/threads:1_mean          4626 ns         4688 ns            5
-LoguruFixture/write/iterations:2000/repeats:5/threads:1_median        4609 ns         7812 ns            5
-LoguruFixture/write/iterations:2000/repeats:5/threads:1_stddev        51.2 ns         4279 ns            5
-LoguruFixture/write/iterations:2000/repeats:5/threads:1_cv            1.11 %         91.29 %             5
-LoguruFixture/write/iterations:2000/repeats:5/threads:5               4928 ns        21875 ns        10000
-LoguruFixture/write/iterations:2000/repeats:5/threads:5               4943 ns        28125 ns        10000
-LoguruFixture/write/iterations:2000/repeats:5/threads:5               4990 ns        23438 ns        10000
-LoguruFixture/write/iterations:2000/repeats:5/threads:5               5200 ns        28125 ns        10000
-LoguruFixture/write/iterations:2000/repeats:5/threads:5               5058 ns        23438 ns        10000
-LoguruFixture/write/iterations:2000/repeats:5/threads:5_mean          5024 ns        25000 ns            5
-LoguruFixture/write/iterations:2000/repeats:5/threads:5_median        4990 ns        23438 ns            5
-LoguruFixture/write/iterations:2000/repeats:5/threads:5_stddev         111 ns         2923 ns            5
-LoguruFixture/write/iterations:2000/repeats:5/threads:5_cv            2.20 %         11.69 %             5
-LoguruFixture/write/iterations:2000/repeats:5/threads:10              5728 ns        31250 ns        20000
-LoguruFixture/write/iterations:2000/repeats:5/threads:10              5613 ns        28125 ns        20000
-LoguruFixture/write/iterations:2000/repeats:5/threads:10              5778 ns        27344 ns        20000
-LoguruFixture/write/iterations:2000/repeats:5/threads:10              5696 ns        33594 ns        20000
-LoguruFixture/write/iterations:2000/repeats:5/threads:10              5715 ns        27344 ns        20000
-LoguruFixture/write/iterations:2000/repeats:5/threads:10_mean         5706 ns        29531 ns            5
-LoguruFixture/write/iterations:2000/repeats:5/threads:10_median       5715 ns        28125 ns            5
-LoguruFixture/write/iterations:2000/repeats:5/threads:10_stddev       60.2 ns         2784 ns            5
-LoguruFixture/write/iterations:2000/repeats:5/threads:10_cv           1.06 %          9.43 %             5
-LoguruFixture/write/iterations:2000/repeats:5/threads:20              5710 ns        31250 ns        40000
-LoguruFixture/write/iterations:2000/repeats:5/threads:20              5689 ns        28906 ns        40000
-LoguruFixture/write/iterations:2000/repeats:5/threads:20              5687 ns        24219 ns        40000
-LoguruFixture/write/iterations:2000/repeats:5/threads:20              5681 ns        29688 ns        40000
-LoguruFixture/write/iterations:2000/repeats:5/threads:20              5746 ns        29297 ns        40000
-LoguruFixture/write/iterations:2000/repeats:5/threads:20_mean         5703 ns        28672 ns            5
-LoguruFixture/write/iterations:2000/repeats:5/threads:20_median       5689 ns        29297 ns            5
-LoguruFixture/write/iterations:2000/repeats:5/threads:20_stddev       26.7 ns         2644 ns            5
-LoguruFixture/write/iterations:2000/repeats:5/threads:20_cv           0.47 %          9.22 %             5
-LoguruFixture/write/iterations:2000/repeats:5/threads:40              6041 ns        27734 ns        80000
-LoguruFixture/write/iterations:2000/repeats:5/threads:40              5742 ns        28906 ns        80000
-LoguruFixture/write/iterations:2000/repeats:5/threads:40              5601 ns        28516 ns        80000
-LoguruFixture/write/iterations:2000/repeats:5/threads:40              5636 ns        27539 ns        80000
-LoguruFixture/write/iterations:2000/repeats:5/threads:40              5674 ns        31055 ns        80000
-LoguruFixture/write/iterations:2000/repeats:5/threads:40_mean         5739 ns        28750 ns            5
-LoguruFixture/write/iterations:2000/repeats:5/threads:40_median       5674 ns        28516 ns            5
-LoguruFixture/write/iterations:2000/repeats:5/threads:40_stddev        177 ns         1404 ns            5
-LoguruFixture/write/iterations:2000/repeats:5/threads:40_cv           3.08 %          4.88 %             5
-LoguruFixture/write/min_time:3.000/threads:1                          4610 ns         4619 ns       926897
-LoguruFixture/write/min_time:3.000/threads:2                          5084 ns         9809 ns       430080
-LoguruFixture/write/min_time:3.000/threads:4                          5084 ns        19640 ns       210824
-LoguruFixture/write/min_time:3.000/threads:8                          5651 ns        29733 ns       138736
+LoguruFixture/write/iterations:2000/repeats:5/threads:1               4625 ns        0.000 ns         2000
+LoguruFixture/write/iterations:2000/repeats:5/threads:1               4444 ns         7812 ns         2000
+LoguruFixture/write/iterations:2000/repeats:5/threads:1               4533 ns        0.000 ns         2000
+LoguruFixture/write/iterations:2000/repeats:5/threads:1               4515 ns         7812 ns         2000
+LoguruFixture/write/iterations:2000/repeats:5/threads:1               4457 ns        0.000 ns         2000
+LoguruFixture/write/iterations:2000/repeats:5/threads:1_mean          4515 ns         3125 ns            5
+LoguruFixture/write/iterations:2000/repeats:5/threads:1_median        4515 ns        0.000 ns            5
+LoguruFixture/write/iterations:2000/repeats:5/threads:1_stddev        72.2 ns         4279 ns            5
+LoguruFixture/write/iterations:2000/repeats:5/threads:1_cv            1.60 %        136.93 %             5
+LoguruFixture/write/iterations:2000/repeats:5/threads:5               5431 ns        26562 ns        10000
+LoguruFixture/write/iterations:2000/repeats:5/threads:5               5197 ns        23438 ns        10000
+LoguruFixture/write/iterations:2000/repeats:5/threads:5               5043 ns        23438 ns        10000
+LoguruFixture/write/iterations:2000/repeats:5/threads:5               5064 ns        20312 ns        10000
+LoguruFixture/write/iterations:2000/repeats:5/threads:5               5037 ns        29688 ns        10000
+LoguruFixture/write/iterations:2000/repeats:5/threads:5_mean          5155 ns        24688 ns            5
+LoguruFixture/write/iterations:2000/repeats:5/threads:5_median        5064 ns        23438 ns            5
+LoguruFixture/write/iterations:2000/repeats:5/threads:5_stddev         168 ns         3563 ns            5
+LoguruFixture/write/iterations:2000/repeats:5/threads:5_cv            3.26 %         14.43 %             5
+LoguruFixture/write/iterations:2000/repeats:5/threads:10              5635 ns        30469 ns        20000
+LoguruFixture/write/iterations:2000/repeats:5/threads:10              5622 ns        32812 ns        20000
+LoguruFixture/write/iterations:2000/repeats:5/threads:10              5526 ns        25781 ns        20000
+LoguruFixture/write/iterations:2000/repeats:5/threads:10              5623 ns        28125 ns        20000
+LoguruFixture/write/iterations:2000/repeats:5/threads:10              5655 ns        28125 ns        20000
+LoguruFixture/write/iterations:2000/repeats:5/threads:10_mean         5612 ns        29063 ns            5
+LoguruFixture/write/iterations:2000/repeats:5/threads:10_median       5623 ns        28125 ns            5
+LoguruFixture/write/iterations:2000/repeats:5/threads:10_stddev       49.9 ns         2672 ns            5
+LoguruFixture/write/iterations:2000/repeats:5/threads:10_cv           0.89 %          9.19 %             5
+LoguruFixture/write/iterations:2000/repeats:5/threads:20              5653 ns        29688 ns        40000
+LoguruFixture/write/iterations:2000/repeats:5/threads:20              5706 ns        29297 ns        40000
+LoguruFixture/write/iterations:2000/repeats:5/threads:20              5708 ns        28906 ns        40000
+LoguruFixture/write/iterations:2000/repeats:5/threads:20              5580 ns        30078 ns        40000
+LoguruFixture/write/iterations:2000/repeats:5/threads:20              5675 ns        30078 ns        40000
+LoguruFixture/write/iterations:2000/repeats:5/threads:20_mean         5664 ns        29609 ns            5
+LoguruFixture/write/iterations:2000/repeats:5/threads:20_median       5675 ns        29688 ns            5
+LoguruFixture/write/iterations:2000/repeats:5/threads:20_stddev       52.4 ns          509 ns            5
+LoguruFixture/write/iterations:2000/repeats:5/threads:20_cv           0.93 %          1.72 %             5
+LoguruFixture/write/iterations:2000/repeats:5/threads:40              5566 ns        30078 ns        80000
+LoguruFixture/write/iterations:2000/repeats:5/threads:40              5559 ns        28711 ns        80000
+LoguruFixture/write/iterations:2000/repeats:5/threads:40              5618 ns        27148 ns        80000
+LoguruFixture/write/iterations:2000/repeats:5/threads:40              5580 ns        27930 ns        80000
+LoguruFixture/write/iterations:2000/repeats:5/threads:40              5543 ns        29102 ns        80000
+LoguruFixture/write/iterations:2000/repeats:5/threads:40_mean         5573 ns        28594 ns            5
+LoguruFixture/write/iterations:2000/repeats:5/threads:40_median       5566 ns        28711 ns            5
+LoguruFixture/write/iterations:2000/repeats:5/threads:40_stddev       28.2 ns         1119 ns            5
+LoguruFixture/write/iterations:2000/repeats:5/threads:40_cv           0.51 %          3.91 %             5
+LoguruFixture/write/min_time:3.000/threads:1                          4412 ns         4417 ns       926897
+LoguruFixture/write/min_time:3.000/threads:2                          4876 ns         9652 ns       437074
+LoguruFixture/write/min_time:3.000/threads:4                          5039 ns        19796 ns       219428
+LoguruFixture/write/min_time:3.000/threads:8                          5684 ns        27430 ns       142408

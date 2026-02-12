@@ -1,4 +1,4 @@
-2026-02-11T16:55:29+08:00
+2026-02-11T18:59:41+08:00
 Running D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin\Release\gbenchmark_vision_quill_drop.exe
 Run on (20 X 2112 MHz CPU s)
 CPU Caches:
@@ -9,106 +9,106 @@ CPU Caches:
 ----------------------------------------------------------------------------------------------------------------------------
 Benchmark                                                                                  Time             CPU   Iterations
 ----------------------------------------------------------------------------------------------------------------------------
-VisionQuillDropFixture/image_acquisition/min_time:3.000/threads:1                       18.7 ns         18.5 ns    225882353
-VisionQuillDropFixture/image_acquisition/min_time:3.000/threads:2                       9.43 ns         18.7 ns    215040000
-VisionQuillDropFixture/image_acquisition/min_time:3.000/threads:4                       4.80 ns         19.0 ns    210823528
-VisionQuillDropFixture/image_acquisition/min_time:3.000/threads:8                       2.66 ns         21.1 ns    180705880
-VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:1              96.0 ns        0.000 ns          500
+VisionQuillDropFixture/image_acquisition/min_time:3.000/threads:1                       18.5 ns         18.5 ns    227796610
+VisionQuillDropFixture/image_acquisition/min_time:3.000/threads:2                       9.23 ns         18.5 ns    224000000
+VisionQuillDropFixture/image_acquisition/min_time:3.000/threads:4                       4.71 ns         18.9 ns    228765956
+VisionQuillDropFixture/image_acquisition/min_time:3.000/threads:8                       2.64 ns         21.1 ns    193729728
+VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:1              96.2 ns        0.000 ns          500
 VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:1              26.4 ns        0.000 ns          500
+VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:1              26.8 ns        0.000 ns          500
+VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:1              26.2 ns        0.000 ns          500
 VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:1              27.2 ns        0.000 ns          500
-VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:1              25.4 ns        0.000 ns          500
-VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:1              26.6 ns        0.000 ns          500
-VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:1_mean         40.3 ns        0.000 ns            5
-VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:1_median       26.6 ns        0.000 ns            5
+VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:1_mean         40.6 ns        0.000 ns            5
+VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:1_median       26.8 ns        0.000 ns            5
 VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:1_stddev       31.1 ns        0.000 ns            5
-VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:1_cv          77.21 %     -nan(ind) %             5
-VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:2               731 ns        0.000 ns         1000
-VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:2               747 ns        0.000 ns         1000
-VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:2               715 ns        0.000 ns         1000
-VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:2               713 ns        0.000 ns         1000
+VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:1_cv          76.69 %     -nan(ind) %             5
+VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:2               706 ns        0.000 ns         1000
+VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:2               716 ns        0.000 ns         1000
 VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:2               696 ns        0.000 ns         1000
-VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:2_mean          720 ns        0.000 ns            5
-VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:2_median        715 ns        0.000 ns            5
-VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:2_stddev       19.2 ns        0.000 ns            5
-VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:2_cv           2.66 %     -nan(ind) %             5
-VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:4               951 ns        0.000 ns         2000
-VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:4               943 ns        23438 ns         2000
-VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:4              1065 ns        0.000 ns         2000
-VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:4              1106 ns        0.000 ns         2000
-VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:4              1078 ns        0.000 ns         2000
-VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:4_mean         1029 ns         4688 ns            5
-VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:4_median       1065 ns        0.000 ns            5
-VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:4_stddev       76.3 ns        10482 ns            5
-VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:4_cv           7.42 %        223.61 %             5
-VisionQuillDropFixture/device_status/iterations:500/repeats:5/threads:1                  101 ns        0.000 ns          500
-VisionQuillDropFixture/device_status/iterations:500/repeats:5/threads:1                 31.8 ns        0.000 ns          500
-VisionQuillDropFixture/device_status/iterations:500/repeats:5/threads:1                 30.6 ns        0.000 ns          500
-VisionQuillDropFixture/device_status/iterations:500/repeats:5/threads:1                 30.4 ns        0.000 ns          500
-VisionQuillDropFixture/device_status/iterations:500/repeats:5/threads:1                 30.6 ns        0.000 ns          500
-VisionQuillDropFixture/device_status/iterations:500/repeats:5/threads:1_mean            44.9 ns        0.000 ns            5
-VisionQuillDropFixture/device_status/iterations:500/repeats:5/threads:1_median          30.6 ns        0.000 ns            5
-VisionQuillDropFixture/device_status/iterations:500/repeats:5/threads:1_stddev          31.5 ns        0.000 ns            5
-VisionQuillDropFixture/device_status/iterations:500/repeats:5/threads:1_cv             70.05 %     -nan(ind) %             5
-VisionQuillDropFixture/alarm_log/iterations:50/repeats:5/threads:1                       622 ns        0.000 ns           50
-VisionQuillDropFixture/alarm_log/iterations:50/repeats:5/threads:1                       156 ns        0.000 ns           50
-VisionQuillDropFixture/alarm_log/iterations:50/repeats:5/threads:1                       128 ns        0.000 ns           50
-VisionQuillDropFixture/alarm_log/iterations:50/repeats:5/threads:1                       114 ns        0.000 ns           50
-VisionQuillDropFixture/alarm_log/iterations:50/repeats:5/threads:1                       110 ns        0.000 ns           50
-VisionQuillDropFixture/alarm_log/iterations:50/repeats:5/threads:1_mean                  226 ns        0.000 ns            5
-VisionQuillDropFixture/alarm_log/iterations:50/repeats:5/threads:1_median                128 ns        0.000 ns            5
-VisionQuillDropFixture/alarm_log/iterations:50/repeats:5/threads:1_stddev                222 ns        0.000 ns            5
-VisionQuillDropFixture/alarm_log/iterations:50/repeats:5/threads:1_cv                  98.28 %     -nan(ind) %             5
-VisionQuillDropFixture/production_stats/iterations:25/repeats:5/threads:1               68.0 ns        0.000 ns           25
-VisionQuillDropFixture/production_stats/iterations:25/repeats:5/threads:1               20.0 ns        0.000 ns           25
+VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:2               726 ns        0.000 ns         1000
+VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:2               691 ns        0.000 ns         1000
+VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:2_mean          707 ns        0.000 ns            5
+VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:2_median        706 ns        0.000 ns            5
+VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:2_stddev       14.1 ns        0.000 ns            5
+VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:2_cv           1.99 %     -nan(ind) %             5
+VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:4              1032 ns        0.000 ns         2000
+VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:4              1303 ns        0.000 ns         2000
+VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:4              1204 ns        0.000 ns         2000
+VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:4              1176 ns        0.000 ns         2000
+VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:4              1104 ns        23438 ns         2000
+VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:4_mean         1164 ns         4688 ns            5
+VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:4_median       1176 ns        0.000 ns            5
+VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:4_stddev        103 ns        10482 ns            5
+VisionQuillDropFixture/detection_result/iterations:500/repeats:5/threads:4_cv           8.82 %        223.61 %             5
+VisionQuillDropFixture/device_status/iterations:500/repeats:5/threads:1                 81.2 ns        0.000 ns          500
+VisionQuillDropFixture/device_status/iterations:500/repeats:5/threads:1                 27.6 ns        0.000 ns          500
+VisionQuillDropFixture/device_status/iterations:500/repeats:5/threads:1                 36.4 ns        0.000 ns          500
+VisionQuillDropFixture/device_status/iterations:500/repeats:5/threads:1                 25.4 ns        0.000 ns          500
+VisionQuillDropFixture/device_status/iterations:500/repeats:5/threads:1                 25.0 ns        0.000 ns          500
+VisionQuillDropFixture/device_status/iterations:500/repeats:5/threads:1_mean            39.1 ns        0.000 ns            5
+VisionQuillDropFixture/device_status/iterations:500/repeats:5/threads:1_median          27.6 ns        0.000 ns            5
+VisionQuillDropFixture/device_status/iterations:500/repeats:5/threads:1_stddev          24.0 ns        0.000 ns            5
+VisionQuillDropFixture/device_status/iterations:500/repeats:5/threads:1_cv             61.28 %     -nan(ind) %             5
+VisionQuillDropFixture/alarm_log/iterations:50/repeats:5/threads:1                       598 ns        0.000 ns           50
+VisionQuillDropFixture/alarm_log/iterations:50/repeats:5/threads:1                       102 ns        0.000 ns           50
+VisionQuillDropFixture/alarm_log/iterations:50/repeats:5/threads:1                      76.0 ns        0.000 ns           50
+VisionQuillDropFixture/alarm_log/iterations:50/repeats:5/threads:1                      84.0 ns        0.000 ns           50
+VisionQuillDropFixture/alarm_log/iterations:50/repeats:5/threads:1                      80.0 ns        0.000 ns           50
+VisionQuillDropFixture/alarm_log/iterations:50/repeats:5/threads:1_mean                  188 ns        0.000 ns            5
+VisionQuillDropFixture/alarm_log/iterations:50/repeats:5/threads:1_median               84.0 ns        0.000 ns            5
+VisionQuillDropFixture/alarm_log/iterations:50/repeats:5/threads:1_stddev                229 ns        0.000 ns            5
+VisionQuillDropFixture/alarm_log/iterations:50/repeats:5/threads:1_cv                 122.03 %     -nan(ind) %             5
+VisionQuillDropFixture/production_stats/iterations:25/repeats:5/threads:1               52.0 ns        0.000 ns           25
 VisionQuillDropFixture/production_stats/iterations:25/repeats:5/threads:1               20.0 ns        0.000 ns           25
 VisionQuillDropFixture/production_stats/iterations:25/repeats:5/threads:1               20.0 ns        0.000 ns           25
 VisionQuillDropFixture/production_stats/iterations:25/repeats:5/threads:1               24.0 ns        0.000 ns           25
-VisionQuillDropFixture/production_stats/iterations:25/repeats:5/threads:1_mean          30.4 ns        0.000 ns            5
+VisionQuillDropFixture/production_stats/iterations:25/repeats:5/threads:1               20.0 ns        0.000 ns           25
+VisionQuillDropFixture/production_stats/iterations:25/repeats:5/threads:1_mean          27.2 ns        0.000 ns            5
 VisionQuillDropFixture/production_stats/iterations:25/repeats:5/threads:1_median        20.0 ns        0.000 ns            5
-VisionQuillDropFixture/production_stats/iterations:25/repeats:5/threads:1_stddev        21.1 ns        0.000 ns            5
-VisionQuillDropFixture/production_stats/iterations:25/repeats:5/threads:1_cv           69.37 %     -nan(ind) %             5
-16:55:41 Quill INFO: Dropped 543220465 log messages from thread 12300
-16:55:41 Quill INFO: Dropped 40926 log messages from thread 28124
-16:55:41 Quill INFO: Dropped 940926 log messages from thread 3800
-16:55:41 Quill INFO: Dropped 9908158 log messages from thread 22488
-16:55:41 Quill INFO: Dropped 106247594 log messages from thread 4036
-16:55:41 Quill INFO: Dropped 40926 log messages from thread 30036
-16:55:41 Quill INFO: Dropped 40926 log messages from thread 15088
-16:55:41 Quill INFO: Dropped 40926 log messages from thread 33908
-16:55:41 Quill INFO: Dropped 940926 log messages from thread 32936
-16:55:41 Quill INFO: Dropped 940926 log messages from thread 23428
-16:55:41 Quill INFO: Dropped 940926 log messages from thread 42384
-16:55:41 Quill INFO: Dropped 9908158 log messages from thread 38220
-16:55:41 Quill INFO: Dropped 9908158 log messages from thread 19500
-16:55:41 Quill INFO: Dropped 9908158 log messages from thread 40548
-16:55:41 Quill INFO: Dropped 52456660 log messages from thread 30628
-16:55:41 Quill INFO: Dropped 52522198 log messages from thread 40588
-16:55:41 Quill INFO: Dropped 52522198 log messages from thread 21532
-16:55:41 Quill INFO: Dropped 40926 log messages from thread 19136
-16:55:41 Quill INFO: Dropped 40926 log messages from thread 22760
-16:55:41 Quill INFO: Dropped 40926 log messages from thread 32628
-16:55:41 Quill INFO: Dropped 40926 log messages from thread 19616
-16:55:41 Quill INFO: Dropped 40926 log messages from thread 15816
-16:55:41 Quill INFO: Dropped 40926 log messages from thread 42832
-16:55:41 Quill INFO: Dropped 40926 log messages from thread 13824
-16:55:41 Quill INFO: Dropped 940926 log messages from thread 39552
-16:55:41 Quill INFO: Dropped 940926 log messages from thread 34880
-16:55:41 Quill INFO: Dropped 940926 log messages from thread 25672
-16:55:41 Quill INFO: Dropped 940926 log messages from thread 31940
-16:55:41 Quill INFO: Dropped 940926 log messages from thread 16104
-16:55:41 Quill INFO: Dropped 940926 log messages from thread 8244
-16:55:41 Quill INFO: Dropped 940926 log messages from thread 43300
-16:55:41 Quill INFO: Dropped 9940926 log messages from thread 29852
-16:55:41 Quill INFO: Dropped 9940926 log messages from thread 22368
-16:55:41 Quill INFO: Dropped 9940926 log messages from thread 1660
-16:55:41 Quill INFO: Dropped 9940926 log messages from thread 38352
-16:55:41 Quill INFO: Dropped 9940926 log messages from thread 23240
-16:55:41 Quill INFO: Dropped 9940926 log messages from thread 21340
-16:55:41 Quill INFO: Dropped 9940926 log messages from thread 4520
-16:55:41 Quill INFO: Dropped 22496393 log messages from thread 35996
-16:55:41 Quill INFO: Dropped 22496393 log messages from thread 22252
-16:55:41 Quill INFO: Dropped 22496393 log messages from thread 32608
-16:55:41 Quill INFO: Dropped 22496393 log messages from thread 32112
-16:55:41 Quill INFO: Dropped 22496393 log messages from thread 28824
-16:55:41 Quill INFO: Dropped 22496393 log messages from thread 13916
-16:55:41 Quill INFO: Dropped 22496393 log messages from thread 36828
+VisionQuillDropFixture/production_stats/iterations:25/repeats:5/threads:1_stddev        14.0 ns        0.000 ns            5
+VisionQuillDropFixture/production_stats/iterations:25/repeats:5/threads:1_cv           51.36 %     -nan(ind) %             5
+18:59:53 Quill INFO: Dropped 555258008 log messages from thread 27776
+18:59:53 Quill INFO: Dropped 40926 log messages from thread 27484
+18:59:53 Quill INFO: Dropped 940926 log messages from thread 41260
+18:59:53 Quill INFO: Dropped 9908158 log messages from thread 31216
+18:59:53 Quill INFO: Dropped 110662058 log messages from thread 43964
+18:59:53 Quill INFO: Dropped 40926 log messages from thread 42664
+18:59:53 Quill INFO: Dropped 40926 log messages from thread 15348
+18:59:53 Quill INFO: Dropped 40926 log messages from thread 37148
+18:59:53 Quill INFO: Dropped 940926 log messages from thread 30252
+18:59:53 Quill INFO: Dropped 940926 log messages from thread 15820
+18:59:53 Quill INFO: Dropped 940926 log messages from thread 34292
+18:59:53 Quill INFO: Dropped 9908158 log messages from thread 11004
+18:59:53 Quill INFO: Dropped 9908158 log messages from thread 4016
+18:59:53 Quill INFO: Dropped 9908158 log messages from thread 39896
+18:59:53 Quill INFO: Dropped 56948731 log messages from thread 42536
+18:59:53 Quill INFO: Dropped 56948731 log messages from thread 17244
+18:59:53 Quill INFO: Dropped 56953229 log messages from thread 15444
+18:59:53 Quill INFO: Dropped 40926 log messages from thread 31612
+18:59:53 Quill INFO: Dropped 40926 log messages from thread 21448
+18:59:53 Quill INFO: Dropped 40926 log messages from thread 28220
+18:59:53 Quill INFO: Dropped 40926 log messages from thread 15400
+18:59:53 Quill INFO: Dropped 40926 log messages from thread 37992
+18:59:53 Quill INFO: Dropped 40926 log messages from thread 18596
+18:59:53 Quill INFO: Dropped 40926 log messages from thread 36688
+18:59:53 Quill INFO: Dropped 940926 log messages from thread 4912
+18:59:53 Quill INFO: Dropped 940926 log messages from thread 43624
+18:59:53 Quill INFO: Dropped 940926 log messages from thread 2972
+18:59:53 Quill INFO: Dropped 940926 log messages from thread 25240
+18:59:53 Quill INFO: Dropped 940926 log messages from thread 35744
+18:59:53 Quill INFO: Dropped 940926 log messages from thread 39244
+18:59:53 Quill INFO: Dropped 940926 log messages from thread 42212
+18:59:53 Quill INFO: Dropped 9940926 log messages from thread 43908
+18:59:53 Quill INFO: Dropped 9940926 log messages from thread 31596
+18:59:53 Quill INFO: Dropped 9940926 log messages from thread 42572
+18:59:53 Quill INFO: Dropped 9940926 log messages from thread 32504
+18:59:53 Quill INFO: Dropped 9940926 log messages from thread 22160
+18:59:53 Quill INFO: Dropped 9940926 log messages from thread 22412
+18:59:53 Quill INFO: Dropped 9940926 log messages from thread 32356
+18:59:53 Quill INFO: Dropped 24124374 log messages from thread 30208
+18:59:53 Quill INFO: Dropped 24124374 log messages from thread 35920
+18:59:53 Quill INFO: Dropped 24124374 log messages from thread 34660
+18:59:53 Quill INFO: Dropped 24124374 log messages from thread 42976
+18:59:53 Quill INFO: Dropped 24124374 log messages from thread 14216
+18:59:53 Quill INFO: Dropped 24124374 log messages from thread 41192
+18:59:53 Quill INFO: Dropped 24124374 log messages from thread 24464

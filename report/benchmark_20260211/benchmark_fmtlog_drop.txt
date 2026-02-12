@@ -1,4 +1,4 @@
-2026-02-11T16:49:59+08:00
+2026-02-11T18:54:13+08:00
 Running D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin\Release\gbenchmark_fmtlog_drop.exe
 Run on (20 X 2112 MHz CPU s)
 CPU Caches:
@@ -6,145 +6,146 @@ CPU Caches:
   L1 Instruction 32 KiB (x10)
   L2 Unified 1280 KiB (x10)
   L3 Unified 25600 KiB (x1)
-state: FmtlogFixture/write, QFull times: 1236
-state: FmtlogFixture/write, QFull times: 1761
+state: FmtlogFixture/write, QFull times: 1145
+state: FmtlogFixture/write, QFull times: 1817
 ----------------------------------------------------------------------------------------------------------
 Benchmark                                                                Time             CPU   Iterations
 ----------------------------------------------------------------------------------------------------------
-FmtlogFixture/write/iterations:2000/repeats:5/threads:1                144 ns        0.000 ns         2000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:1               70.3 ns        0.000 ns         2000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:1               68.0 ns        0.000 ns         2000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:1               77.0 ns        0.000 ns         2000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:1               78.6 ns        0.000 ns         2000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:1_mean          87.6 ns        0.000 ns            5
-FmtlogFixture/write/iterations:2000/repeats:5/threads:1_median        77.0 ns        0.000 ns            5
-FmtlogFixture/write/iterations:2000/repeats:5/threads:1_stddev        32.0 ns        0.000 ns            5
-FmtlogFixture/write/iterations:2000/repeats:5/threads:1_cv           36.48 %     -nan(ind) %             5
-state: FmtlogFixture/write, QFull times: 856
-state: FmtlogFixture/write, QFull times: 595
-state: FmtlogFixture/write, QFull times: 719
-state: FmtlogFixture/write, QFull times: 896
-state: FmtlogFixture/write, QFull times: 621
-FmtlogFixture/write/iterations:2000/repeats:5/threads:5               21.5 ns        0.000 ns        10000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:5               19.5 ns        0.000 ns        10000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:5               18.5 ns        0.000 ns        10000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:5               19.0 ns        0.000 ns        10000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:5               22.7 ns         1562 ns        10000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:5_mean          20.2 ns          312 ns            5
-FmtlogFixture/write/iterations:2000/repeats:5/threads:5_median        19.5 ns        0.000 ns            5
-FmtlogFixture/write/iterations:2000/repeats:5/threads:5_stddev        1.81 ns          699 ns            5
-FmtlogFixture/write/iterations:2000/repeats:5/threads:5_cv            8.95 %        223.61 %             5
-state: FmtlogFixture/write, QFull times: 1676
-state: FmtlogFixture/write, QFull times: 1817
-state: FmtlogFixture/write, QFull times: 1829
-state: FmtlogFixture/write, QFull times: 1812
-state: FmtlogFixture/write, QFull times: 1829
-FmtlogFixture/write/iterations:2000/repeats:5/threads:10              9.21 ns        0.000 ns        20000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:10              9.34 ns        0.000 ns        20000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:10              9.74 ns        0.000 ns        20000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:10              10.3 ns        0.000 ns        20000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:10              9.82 ns        0.000 ns        20000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:10_mean         9.68 ns        0.000 ns            5
-FmtlogFixture/write/iterations:2000/repeats:5/threads:10_median       9.74 ns        0.000 ns            5
-FmtlogFixture/write/iterations:2000/repeats:5/threads:10_stddev      0.424 ns        0.000 ns            5
-FmtlogFixture/write/iterations:2000/repeats:5/threads:10_cv           4.38 %     -nan(ind) %             5
-state: FmtlogFixture/write, QFull times: 1731
-state: FmtlogFixture/write, QFull times: 1201
-state: FmtlogFixture/write, QFull times: 1732
-state: FmtlogFixture/write, QFull times: 1852
-state: FmtlogFixture/write, QFull times: 1107
-FmtlogFixture/write/iterations:2000/repeats:5/threads:20              4.80 ns        0.000 ns        40000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:20              5.46 ns        0.000 ns        40000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:20              4.84 ns        0.000 ns        40000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:20              4.59 ns        0.000 ns        40000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:20              4.78 ns        0.000 ns        40000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:20_mean         4.90 ns        0.000 ns            5
-FmtlogFixture/write/iterations:2000/repeats:5/threads:20_median       4.80 ns        0.000 ns            5
-FmtlogFixture/write/iterations:2000/repeats:5/threads:20_stddev      0.330 ns        0.000 ns            5
-FmtlogFixture/write/iterations:2000/repeats:5/threads:20_cv           6.74 %     -nan(ind) %             5
-state: FmtlogFixture/write, QFull times: 1656
-state: FmtlogFixture/write, QFull times: 914
-state: FmtlogFixture/write, QFull times: 1983
-state: FmtlogFixture/write, QFull times: 621
+FmtlogFixture/write/iterations:2000/repeats:5/threads:1                117 ns        0.000 ns         2000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:1               87.2 ns        0.000 ns         2000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:1               67.1 ns        0.000 ns         2000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:1               73.9 ns        0.000 ns         2000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:1               74.8 ns        0.000 ns         2000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:1_mean          84.0 ns        0.000 ns            5
+FmtlogFixture/write/iterations:2000/repeats:5/threads:1_median        74.8 ns        0.000 ns            5
+FmtlogFixture/write/iterations:2000/repeats:5/threads:1_stddev        19.8 ns        0.000 ns            5
+FmtlogFixture/write/iterations:2000/repeats:5/threads:1_cv           23.60 %     -nan(ind) %             5
+state: FmtlogFixture/write, QFull times: 585
+state: FmtlogFixture/write, QFull times: 671
+state: FmtlogFixture/write, QFull times: 745
+state: FmtlogFixture/write, QFull times: 1256
+state: FmtlogFixture/write, QFull times: 503
+FmtlogFixture/write/iterations:2000/repeats:5/threads:5               19.9 ns        0.000 ns        10000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:5               20.2 ns        0.000 ns        10000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:5               19.6 ns        0.000 ns        10000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:5               20.5 ns        0.000 ns        10000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:5               19.6 ns        0.000 ns        10000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:5_mean          20.0 ns        0.000 ns            5
+FmtlogFixture/write/iterations:2000/repeats:5/threads:5_median        19.9 ns        0.000 ns            5
+FmtlogFixture/write/iterations:2000/repeats:5/threads:5_stddev       0.397 ns        0.000 ns            5
+FmtlogFixture/write/iterations:2000/repeats:5/threads:5_cv            1.99 %     -nan(ind) %             5
+state: FmtlogFixture/write, QFull times: 1679
+state: FmtlogFixture/write, QFull times: 1993
 state: FmtlogFixture/write, QFull times: 2000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:40              2.63 ns        0.000 ns        80000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:40              2.72 ns        0.000 ns        80000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:40              2.72 ns        0.000 ns        80000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:40              2.82 ns        0.000 ns        80000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:40              3.07 ns        0.000 ns        80000
-FmtlogFixture/write/iterations:2000/repeats:5/threads:40_mean         2.79 ns        0.000 ns            5
-FmtlogFixture/write/iterations:2000/repeats:5/threads:40_median       2.72 ns        0.000 ns            5
-FmtlogFixture/write/iterations:2000/repeats:5/threads:40_stddev      0.171 ns        0.000 ns            5
-FmtlogFixture/write/iterations:2000/repeats:5/threads:40_cv           6.13 %     -nan(ind) %             5
-state: FmtlogFixture/write, QFull times: 813
-state: FmtlogFixture/write, QFull times: 9992
-state: FmtlogFixture/write, QFull times: 99982
-state: FmtlogFixture/write, QFull times: 999287
-state: FmtlogFixture/write, QFull times: 9796809
-state: FmtlogFixture/write, QFull times: 60251402
-FmtlogFixture/write/min_time:3.000/threads:1                          66.7 ns         65.8 ns     65560976
-state: FmtlogFixture/write, QFull times: 7558
+state: FmtlogFixture/write, QFull times: 1847
+state: FmtlogFixture/write, QFull times: 1285
+FmtlogFixture/write/iterations:2000/repeats:5/threads:10              9.46 ns        0.000 ns        20000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:10              9.17 ns        0.000 ns        20000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:10              8.87 ns        0.000 ns        20000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:10              8.65 ns        0.000 ns        20000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:10              9.17 ns        0.000 ns        20000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:10_mean         9.06 ns        0.000 ns            5
+FmtlogFixture/write/iterations:2000/repeats:5/threads:10_median       9.17 ns        0.000 ns            5
+FmtlogFixture/write/iterations:2000/repeats:5/threads:10_stddev      0.312 ns        0.000 ns            5
+FmtlogFixture/write/iterations:2000/repeats:5/threads:10_cv           3.44 %     -nan(ind) %             5
+state: FmtlogFixture/write, QFull times: 1204
+state: FmtlogFixture/write, QFull times: 1558
+state: FmtlogFixture/write, QFull times: 1093
+state: FmtlogFixture/write, QFull times: 1614
+state: FmtlogFixture/write, QFull times: 1625
+FmtlogFixture/write/iterations:2000/repeats:5/threads:20              4.95 ns        0.000 ns        40000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:20              4.28 ns        0.000 ns        40000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:20              4.31 ns        0.000 ns        40000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:20              4.88 ns        0.000 ns        40000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:20              4.43 ns        0.000 ns        40000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:20_mean         4.57 ns        0.000 ns            5
+FmtlogFixture/write/iterations:2000/repeats:5/threads:20_median       4.43 ns        0.000 ns            5
+FmtlogFixture/write/iterations:2000/repeats:5/threads:20_stddev      0.324 ns        0.000 ns            5
+FmtlogFixture/write/iterations:2000/repeats:5/threads:20_cv           7.09 %     -nan(ind) %             5
+state: FmtlogFixture/write, QFull times: 1466
+state: FmtlogFixture/write, QFull times: 1707
+state: FmtlogFixture/write, QFull times: 929
+state: FmtlogFixture/write, QFull times: 1760
+state: FmtlogFixture/write, QFull times: 2000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:40              2.39 ns        0.000 ns        80000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:40              2.40 ns        0.000 ns        80000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:40              2.93 ns        0.000 ns        80000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:40              3.02 ns        0.000 ns        80000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:40              3.24 ns        0.000 ns        80000
+FmtlogFixture/write/iterations:2000/repeats:5/threads:40_mean         2.80 ns        0.000 ns            5
+FmtlogFixture/write/iterations:2000/repeats:5/threads:40_median       2.93 ns        0.000 ns            5
+FmtlogFixture/write/iterations:2000/repeats:5/threads:40_stddev      0.385 ns        0.000 ns            5
+FmtlogFixture/write/iterations:2000/repeats:5/threads:40_cv          13.79 %     -nan(ind) %             5
+state: FmtlogFixture/write, QFull times: 790
+state: FmtlogFixture/write, QFull times: 9993
+state: FmtlogFixture/write, QFull times: 100000
+state: FmtlogFixture/write, QFull times: 999132
+state: FmtlogFixture/write, QFull times: 9831406
+state: FmtlogFixture/write, QFull times: 64867745
+FmtlogFixture/write/min_time:3.000/threads:1                          63.6 ns         63.6 ns     70736842
+state: FmtlogFixture/write, QFull times: 7757
 state: FmtlogFixture/write, QFull times: 3759
+state: FmtlogFixture/write, QFull times: 94576
 state: FmtlogFixture/write, QFull times: 93759
-state: FmtlogFixture/write, QFull times: 94661
-state: FmtlogFixture/write, QFull times: 958069
-state: FmtlogFixture/write, QFull times: 968615
-state: FmtlogFixture/write, QFull times: 9643767
-state: FmtlogFixture/write, QFull times: 9644864
-state: FmtlogFixture/write, QFull times: 29372071
-state: FmtlogFixture/write, QFull times: 29446745
-FmtlogFixture/write/min_time:3.000/threads:2                          34.6 ns         68.5 ns     61090910
-state: FmtlogFixture/write, QFull times: 3759
-state: FmtlogFixture/write, QFull times: 3759
+state: FmtlogFixture/write, QFull times: 962554
+state: FmtlogFixture/write, QFull times: 968918
+state: FmtlogFixture/write, QFull times: 9696555
+state: FmtlogFixture/write, QFull times: 9709228
+state: FmtlogFixture/write, QFull times: 30517960
+state: FmtlogFixture/write, QFull times: 30416691
+FmtlogFixture/write/min_time:3.000/threads:2                          34.0 ns         67.2 ns     63247058
 state: FmtlogFixture/write, QFull times: 4871
 state: FmtlogFixture/write, QFull times: 3759
-state: FmtlogFixture/write, QFull times: 98037
+state: FmtlogFixture/write, QFull times: 3759
+state: FmtlogFixture/write, QFull times: 3759
 state: FmtlogFixture/write, QFull times: 93759
 state: FmtlogFixture/write, QFull times: 93759
+state: FmtlogFixture/write, QFull times: 99090
 state: FmtlogFixture/write, QFull times: 93759
 state: FmtlogFixture/write, QFull times: 987518
-state: FmtlogFixture/write, QFull times: 987518
-state: FmtlogFixture/write, QFull times: 992429
-state: FmtlogFixture/write, QFull times: 987518
-state: FmtlogFixture/write, QFull times: 9838983
-state: FmtlogFixture/write, QFull times: 9838461
-state: FmtlogFixture/write, QFull times: 9838851
-state: FmtlogFixture/write, QFull times: 9836006
-state: FmtlogFixture/write, QFull times: 13939206
-state: FmtlogFixture/write, QFull times: 13943382
-state: FmtlogFixture/write, QFull times: 13947075
-state: FmtlogFixture/write, QFull times: 13950653
-FmtlogFixture/write/min_time:3.000/threads:4                          18.4 ns         73.7 ns     56589472
+state: FmtlogFixture/write, QFull times: 989343
+state: FmtlogFixture/write, QFull times: 993296
+state: FmtlogFixture/write, QFull times: 989148
+state: FmtlogFixture/write, QFull times: 9842713
+state: FmtlogFixture/write, QFull times: 9843436
+state: FmtlogFixture/write, QFull times: 9843933
+state: FmtlogFixture/write, QFull times: 9841034
+state: FmtlogFixture/write, QFull times: 14369162
+state: FmtlogFixture/write, QFull times: 14370003
+state: FmtlogFixture/write, QFull times: 14374201
+state: FmtlogFixture/write, QFull times: 14371576
+FmtlogFixture/write/min_time:3.000/threads:4                          18.4 ns         73.3 ns     58434784
+state: FmtlogFixture/write, QFull times: 480
 state: FmtlogFixture/write, QFull times: 3759
 state: FmtlogFixture/write, QFull times: 3759
 state: FmtlogFixture/write, QFull times: 3759
 state: FmtlogFixture/write, QFull times: 3759
-state: FmtlogFixture/write, QFull times: 4629
+state: FmtlogFixture/write, QFull times: 10000
 state: FmtlogFixture/write, QFull times: 3759
 state: FmtlogFixture/write, QFull times: 3759
 state: FmtlogFixture/write, QFull times: 3759
+state: FmtlogFixture/write, QFull times: 93759
+state: FmtlogFixture/write, QFull times: 96820
 state: FmtlogFixture/write, QFull times: 93759
 state: FmtlogFixture/write, QFull times: 93759
 state: FmtlogFixture/write, QFull times: 93759
 state: FmtlogFixture/write, QFull times: 93759
 state: FmtlogFixture/write, QFull times: 93759
 state: FmtlogFixture/write, QFull times: 93759
-state: FmtlogFixture/write, QFull times: 99131
-state: FmtlogFixture/write, QFull times: 93759
 state: FmtlogFixture/write, QFull times: 993759
 state: FmtlogFixture/write, QFull times: 993759
 state: FmtlogFixture/write, QFull times: 993759
 state: FmtlogFixture/write, QFull times: 993759
-state: FmtlogFixture/write, QFull times: 994483
 state: FmtlogFixture/write, QFull times: 993759
 state: FmtlogFixture/write, QFull times: 993759
+state: FmtlogFixture/write, QFull times: 996940
 state: FmtlogFixture/write, QFull times: 993759
-state: FmtlogFixture/write, QFull times: 5794525
-state: FmtlogFixture/write, QFull times: 5796362
-state: FmtlogFixture/write, QFull times: 5794597
-state: FmtlogFixture/write, QFull times: 5799787
-state: FmtlogFixture/write, QFull times: 5797020
-state: FmtlogFixture/write, QFull times: 5806032
-state: FmtlogFixture/write, QFull times: 5790187
-state: FmtlogFixture/write, QFull times: 5798645
-FmtlogFixture/write/min_time:3.000/threads:8                          12.0 ns         95.6 ns     46747824
+state: FmtlogFixture/write, QFull times: 6204155
+state: FmtlogFixture/write, QFull times: 6205188
+state: FmtlogFixture/write, QFull times: 6202116
+state: FmtlogFixture/write, QFull times: 6213723
+state: FmtlogFixture/write, QFull times: 6204746
+state: FmtlogFixture/write, QFull times: 6205844
+state: FmtlogFixture/write, QFull times: 6207476
+state: FmtlogFixture/write, QFull times: 6208929
+FmtlogFixture/write/min_time:3.000/threads:8                          11.8 ns         94.4 ns     50009304

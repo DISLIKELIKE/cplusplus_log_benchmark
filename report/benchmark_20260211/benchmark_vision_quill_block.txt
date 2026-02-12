@@ -1,4 +1,4 @@
-2026-02-11T16:55:57+08:00
+2026-02-11T19:00:09+08:00
 Running D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin\Release\gbenchmark_vision_quill_block.exe
 Run on (20 X 2112 MHz CPU s)
 CPU Caches:
@@ -9,85 +9,78 @@ CPU Caches:
 -----------------------------------------------------------------------------------------------------------------------------
 Benchmark                                                                                   Time             CPU   Iterations
 -----------------------------------------------------------------------------------------------------------------------------
-VisionQuillBlockFixture/image_acquisition/threads:1                                       720 ns         1.56 ns     10000000
-VisionQuillBlockFixture/image_acquisition/threads:2                                       785 ns         3.12 ns     20000000
-VisionQuillBlockFixture/image_acquisition/threads:4                                      1011 ns        0.000 ns      4000000
-VisionQuillBlockFixture/image_acquisition/threads:8                                      1064 ns         10.5 ns      4480000
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:1               120 ns        0.000 ns          500
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:1              70.8 ns        0.000 ns          500
+VisionQuillBlockFixture/image_acquisition/threads:1                                       703 ns        0.000 ns     10000000
+VisionQuillBlockFixture/image_acquisition/threads:2                                       723 ns         5.47 ns     20000000
+VisionQuillBlockFixture/image_acquisition/threads:4                                       929 ns         3.91 ns      4000000
+VisionQuillBlockFixture/image_acquisition/threads:8                                      1119 ns         33.4 ns      3276800
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:1               118 ns        0.000 ns          500
 VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:1              69.4 ns        0.000 ns          500
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:1              68.8 ns        0.000 ns          500
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:1              67.4 ns        0.000 ns          500
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:1_mean         79.3 ns        0.000 ns            5
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:1_median       69.4 ns        0.000 ns            5
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:1_stddev       22.9 ns        0.000 ns            5
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:1_cv          28.85 %     -nan(ind) %             5
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:2               779 ns        15625 ns         1000
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:2               801 ns        0.000 ns         1000
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:2               717 ns        0.000 ns         1000
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:2               683 ns        0.000 ns         1000
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:2               662 ns        0.000 ns         1000
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:2_mean          728 ns         3125 ns            5
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:2_median        717 ns        0.000 ns            5
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:2_stddev       60.1 ns         6988 ns            5
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:2_cv           8.26 %        223.61 %             5
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:4               943 ns        0.000 ns         2000
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:4              1056 ns        0.000 ns         2000
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:4              1306 ns        23438 ns         2000
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:4              1139 ns        0.000 ns         2000
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:4              1268 ns        0.000 ns         2000
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:4_mean         1142 ns         4688 ns            5
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:4_median       1139 ns        0.000 ns            5
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:4_stddev        150 ns        10482 ns            5
-VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:4_cv          13.10 %        223.61 %             5
-VisionQuillBlockFixture/device_status/iterations:500/repeats:5/threads:1                 83.2 ns        0.000 ns          500
-VisionQuillBlockFixture/device_status/iterations:500/repeats:5/threads:1                 47.4 ns        0.000 ns          500
-VisionQuillBlockFixture/device_status/iterations:500/repeats:5/threads:1                 46.6 ns        0.000 ns          500
-VisionQuillBlockFixture/device_status/iterations:500/repeats:5/threads:1                 46.2 ns        0.000 ns          500
-VisionQuillBlockFixture/device_status/iterations:500/repeats:5/threads:1                 49.6 ns        0.000 ns          500
-VisionQuillBlockFixture/device_status/iterations:500/repeats:5/threads:1_mean            54.6 ns        0.000 ns            5
-VisionQuillBlockFixture/device_status/iterations:500/repeats:5/threads:1_median          47.4 ns        0.000 ns            5
-VisionQuillBlockFixture/device_status/iterations:500/repeats:5/threads:1_stddev          16.0 ns        0.000 ns            5
-VisionQuillBlockFixture/device_status/iterations:500/repeats:5/threads:1_cv             29.38 %     -nan(ind) %             5
-VisionQuillBlockFixture/alarm_log/iterations:50/repeats:5/threads:1                       252 ns        0.000 ns           50
-VisionQuillBlockFixture/alarm_log/iterations:50/repeats:5/threads:1                       104 ns        0.000 ns           50
-VisionQuillBlockFixture/alarm_log/iterations:50/repeats:5/threads:1                      98.0 ns        0.000 ns           50
-VisionQuillBlockFixture/alarm_log/iterations:50/repeats:5/threads:1                       106 ns        0.000 ns           50
-VisionQuillBlockFixture/alarm_log/iterations:50/repeats:5/threads:1                       110 ns        0.000 ns           50
-VisionQuillBlockFixture/alarm_log/iterations:50/repeats:5/threads:1_mean                  134 ns        0.000 ns            5
-VisionQuillBlockFixture/alarm_log/iterations:50/repeats:5/threads:1_median                106 ns        0.000 ns            5
-VisionQuillBlockFixture/alarm_log/iterations:50/repeats:5/threads:1_stddev               66.1 ns        0.000 ns            5
-VisionQuillBlockFixture/alarm_log/iterations:50/repeats:5/threads:1_cv                  49.33 %     -nan(ind) %             5
-VisionQuillBlockFixture/production_stats/iterations:25/repeats:5/threads:1                188 ns        0.000 ns           25
-VisionQuillBlockFixture/production_stats/iterations:25/repeats:5/threads:1               16.0 ns        0.000 ns           25
-VisionQuillBlockFixture/production_stats/iterations:25/repeats:5/threads:1               28.0 ns        0.000 ns           25
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:1              69.0 ns        0.000 ns          500
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:1              67.8 ns        0.000 ns          500
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:1              68.2 ns        0.000 ns          500
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:1_mean         78.6 ns        0.000 ns            5
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:1_median       69.0 ns        0.000 ns            5
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:1_stddev       22.3 ns        0.000 ns            5
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:1_cv          28.36 %     -nan(ind) %             5
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:2               711 ns        0.000 ns         1000
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:2               736 ns        0.000 ns         1000
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:2               711 ns        0.000 ns         1000
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:2               745 ns        0.000 ns         1000
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:2               709 ns        0.000 ns         1000
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:2_mean          722 ns        0.000 ns            5
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:2_median        711 ns        0.000 ns            5
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:2_stddev       16.7 ns        0.000 ns            5
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:2_cv           2.31 %     -nan(ind) %             5
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:4              1049 ns        0.000 ns         2000
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:4              1165 ns        23438 ns         2000
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:4              1166 ns        0.000 ns         2000
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:4              1381 ns        0.000 ns         2000
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:4              1345 ns        0.000 ns         2000
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:4_mean         1221 ns         4688 ns            5
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:4_median       1166 ns        0.000 ns            5
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:4_stddev        138 ns        10482 ns            5
+VisionQuillBlockFixture/detection_result/iterations:500/repeats:5/threads:4_cv          11.34 %        223.61 %             5
+VisionQuillBlockFixture/device_status/iterations:500/repeats:5/threads:1                 72.6 ns        0.000 ns          500
+VisionQuillBlockFixture/device_status/iterations:500/repeats:5/threads:1                 44.2 ns        0.000 ns          500
+VisionQuillBlockFixture/device_status/iterations:500/repeats:5/threads:1                 43.8 ns        0.000 ns          500
+VisionQuillBlockFixture/device_status/iterations:500/repeats:5/threads:1                 43.8 ns        0.000 ns          500
+VisionQuillBlockFixture/device_status/iterations:500/repeats:5/threads:1                 55.2 ns        0.000 ns          500
+VisionQuillBlockFixture/device_status/iterations:500/repeats:5/threads:1_mean            51.9 ns        0.000 ns            5
+VisionQuillBlockFixture/device_status/iterations:500/repeats:5/threads:1_median          44.2 ns        0.000 ns            5
+VisionQuillBlockFixture/device_status/iterations:500/repeats:5/threads:1_stddev          12.5 ns        0.000 ns            5
+VisionQuillBlockFixture/device_status/iterations:500/repeats:5/threads:1_cv             24.17 %     -nan(ind) %             5
+VisionQuillBlockFixture/alarm_log/iterations:50/repeats:5/threads:1                       300 ns        0.000 ns           50
+VisionQuillBlockFixture/alarm_log/iterations:50/repeats:5/threads:1                       102 ns        0.000 ns           50
+VisionQuillBlockFixture/alarm_log/iterations:50/repeats:5/threads:1                       116 ns        0.000 ns           50
+VisionQuillBlockFixture/alarm_log/iterations:50/repeats:5/threads:1                       112 ns        0.000 ns           50
+VisionQuillBlockFixture/alarm_log/iterations:50/repeats:5/threads:1                       100 ns        0.000 ns           50
+VisionQuillBlockFixture/alarm_log/iterations:50/repeats:5/threads:1_mean                  146 ns        0.000 ns            5
+VisionQuillBlockFixture/alarm_log/iterations:50/repeats:5/threads:1_median                112 ns        0.000 ns            5
+VisionQuillBlockFixture/alarm_log/iterations:50/repeats:5/threads:1_stddev               86.3 ns        0.000 ns            5
+VisionQuillBlockFixture/alarm_log/iterations:50/repeats:5/threads:1_cv                  59.14 %     -nan(ind) %             5
+VisionQuillBlockFixture/production_stats/iterations:25/repeats:5/threads:1                200 ns        0.000 ns           25
+VisionQuillBlockFixture/production_stats/iterations:25/repeats:5/threads:1               20.0 ns        0.000 ns           25
 VisionQuillBlockFixture/production_stats/iterations:25/repeats:5/threads:1               20.0 ns        0.000 ns           25
 VisionQuillBlockFixture/production_stats/iterations:25/repeats:5/threads:1               16.0 ns        0.000 ns           25
-VisionQuillBlockFixture/production_stats/iterations:25/repeats:5/threads:1_mean          53.6 ns        0.000 ns            5
+VisionQuillBlockFixture/production_stats/iterations:25/repeats:5/threads:1               36.0 ns        0.000 ns           25
+VisionQuillBlockFixture/production_stats/iterations:25/repeats:5/threads:1_mean          58.4 ns        0.000 ns            5
 VisionQuillBlockFixture/production_stats/iterations:25/repeats:5/threads:1_median        20.0 ns        0.000 ns            5
-VisionQuillBlockFixture/production_stats/iterations:25/repeats:5/threads:1_stddev        75.3 ns        0.000 ns            5
-VisionQuillBlockFixture/production_stats/iterations:25/repeats:5/threads:1_cv          140.47 %     -nan(ind) %             5
-16:56:34 Quill INFO: Experienced 753 blocking occurrences on thread 29804
-16:56:34 Quill INFO: Experienced 2 blocking occurrences on thread 8580
-16:56:34 Quill INFO: Experienced 31 blocking occurrences on thread 4296
-16:56:34 Quill INFO: Experienced 319 blocking occurrences on thread 38320
-16:56:34 Quill INFO: Experienced 2 blocking occurrences on thread 35224
-16:56:34 Quill INFO: Experienced 2 blocking occurrences on thread 37988
-16:56:34 Quill INFO: Experienced 3 blocking occurrences on thread 38332
-16:56:34 Quill INFO: Experienced 31 blocking occurrences on thread 28252
-16:56:34 Quill INFO: Experienced 31 blocking occurrences on thread 12312
-16:56:34 Quill INFO: Experienced 31 blocking occurrences on thread 11088
-16:56:34 Quill INFO: Experienced 2 blocking occurrences on thread 19032
-16:56:34 Quill INFO: Experienced 2 blocking occurrences on thread 28772
-16:56:34 Quill INFO: Experienced 2 blocking occurrences on thread 24092
-16:56:34 Quill INFO: Experienced 2 blocking occurrences on thread 38168
-16:56:34 Quill INFO: Experienced 2 blocking occurrences on thread 27516
-16:56:34 Quill INFO: Experienced 2 blocking occurrences on thread 29484
-16:56:34 Quill INFO: Experienced 2 blocking occurrences on thread 32760
-16:56:34 Quill INFO: Experienced 22 blocking occurrences on thread 22268
-16:56:34 Quill INFO: Experienced 22 blocking occurrences on thread 39428
-16:56:34 Quill INFO: Experienced 17 blocking occurrences on thread 12908
-16:56:34 Quill INFO: Experienced 17 blocking occurrences on thread 29996
-16:56:34 Quill INFO: Experienced 17 blocking occurrences on thread 36236
-16:56:34 Quill INFO: Experienced 17 blocking occurrences on thread 16852
-16:56:34 Quill INFO: Experienced 20 blocking occurrences on thread 42188
+VisionQuillBlockFixture/production_stats/iterations:25/repeats:5/threads:1_stddev        79.5 ns        0.000 ns            5
+VisionQuillBlockFixture/production_stats/iterations:25/repeats:5/threads:1_cv          136.18 %     -nan(ind) %             5
+19:00:42 Quill INFO: Experienced 762 blocking occurrences on thread 35308
+19:00:42 Quill INFO: Experienced 2 blocking occurrences on thread 6652
+19:00:42 Quill INFO: Experienced 31 blocking occurrences on thread 39664
+19:00:42 Quill INFO: Experienced 334 blocking occurrences on thread 33012
+19:00:42 Quill INFO: Experienced 2 blocking occurrences on thread 26336
+19:00:42 Quill INFO: Experienced 2 blocking occurrences on thread 36268
+19:00:42 Quill INFO: Experienced 2 blocking occurrences on thread 26728
+19:00:42 Quill INFO: Experienced 41 blocking occurrences on thread 28840
+19:00:42 Quill INFO: Experienced 31 blocking occurrences on thread 2644
+19:00:42 Quill INFO: Experienced 40 blocking occurrences on thread 38740
+19:00:42 Quill INFO: Experienced 12 blocking occurrences on thread 876
+19:00:42 Quill INFO: Experienced 12 blocking occurrences on thread 33140
+19:00:42 Quill INFO: Experienced 14 blocking occurrences on thread 24448
+19:00:42 Quill INFO: Experienced 15 blocking occurrences on thread 16092
+19:00:42 Quill INFO: Experienced 17 blocking occurrences on thread 13820
+19:00:42 Quill INFO: Experienced 14 blocking occurrences on thread 43952
+19:00:42 Quill INFO: Experienced 15 blocking occurrences on thread 19424

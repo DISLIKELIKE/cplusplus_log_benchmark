@@ -1,4 +1,4 @@
-2026-02-11T16:55:03+08:00
+2026-02-11T18:59:15+08:00
 Running D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin\Release\gbenchmark_vision_glog.exe
 Run on (20 X 2112 MHz CPU s)
 CPU Caches:
@@ -9,311 +9,311 @@ CPU Caches:
 -----------------------------------------------------------------------------------------------------------------------
 Benchmark                                                                             Time             CPU   Iterations
 -----------------------------------------------------------------------------------------------------------------------
-VisionGlogFixture/image_acquisition/min_time:3.000/threads:1                       3906 ns         3884 ns      1033846
-VisionGlogFixture/image_acquisition/min_time:3.000/threads:2                       4814 ns         9623 ns       433548
-VisionGlogFixture/image_acquisition/min_time:3.000/threads:4                       8152 ns        32890 ns       131120
-VisionGlogFixture/image_acquisition/min_time:3.000/threads:8                      11261 ns        88937 ns        44800
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:1              4354 ns        31250 ns          500
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:1              4269 ns        0.000 ns          500
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:1              4211 ns        0.000 ns          500
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:1              4199 ns        0.000 ns          500
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:1              4289 ns        0.000 ns          500
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:1_mean         4264 ns         6250 ns            5
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:1_median       4269 ns        0.000 ns            5
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:1_stddev       62.9 ns        13975 ns            5
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:1_cv           1.47 %        223.61 %             5
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:2              4675 ns        0.000 ns         1000
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:2              4672 ns        31250 ns         1000
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:2              4603 ns        0.000 ns         1000
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:2              4699 ns        0.000 ns         1000
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:2              4651 ns        31250 ns         1000
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:2_mean         4660 ns        12500 ns            5
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:2_median       4672 ns        0.000 ns            5
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:2_stddev       36.2 ns        17116 ns            5
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:2_cv           0.78 %        136.93 %             5
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:4              7818 ns        31250 ns         2000
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:4              7711 ns        31250 ns         2000
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:4              7695 ns        31250 ns         2000
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:4              7672 ns        31250 ns         2000
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:4              7687 ns        31250 ns         2000
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:4_mean         7717 ns        31250 ns            5
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:4_median       7695 ns        31250 ns            5
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:4_stddev       58.6 ns        0.000 ns            5
-VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:4_cv           0.76 %          0.00 %             5
-VisionGlogFixture/device_status/iterations:500/repeats:5/threads:1                 4531 ns        0.000 ns          500
-VisionGlogFixture/device_status/iterations:500/repeats:5/threads:1                 4379 ns        0.000 ns          500
-VisionGlogFixture/device_status/iterations:500/repeats:5/threads:1                 4359 ns        0.000 ns          500
-VisionGlogFixture/device_status/iterations:500/repeats:5/threads:1                 4318 ns        0.000 ns          500
-VisionGlogFixture/device_status/iterations:500/repeats:5/threads:1                 4550 ns        0.000 ns          500
-VisionGlogFixture/device_status/iterations:500/repeats:5/threads:1_mean            4427 ns        0.000 ns            5
-VisionGlogFixture/device_status/iterations:500/repeats:5/threads:1_median          4379 ns        0.000 ns            5
-VisionGlogFixture/device_status/iterations:500/repeats:5/threads:1_stddev           106 ns        0.000 ns            5
-VisionGlogFixture/device_status/iterations:500/repeats:5/threads:1_cv              2.38 %     -nan(ind) %             5
-E20260211 16:55:13.793365 32096 vision_glog_benchmark.cpp:222] [ALARM] ts:9866084734, id:5019, severity:CRITICAL, type:IMAGE_TIMEOUT, msg:Camera 2 failed to acquire image within timeout, code:6925
-E20260211 16:55:13.794361 32096 vision_glog_benchmark.cpp:223] [ALARM] ts:5940959987, id:3034, severity:ERROR, type:DETECTION_FAILED, msg:Detection model failed to process image 1, code:6562
-E20260211 16:55:13.794361 32096 vision_glog_benchmark.cpp:224] [ALARM] ts:7637223974, id:7419, severity:ERROR, type:SENSOR_DISCONNECTED, msg:Sensor 2 disconnected from system, code:8147
-E20260211 16:55:13.794361 32096 vision_glog_benchmark.cpp:225] [ALARM] ts:6270810092, id:1422, severity:ERROR, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 78.0°C, code:8655
-E20260211 16:55:13.794361 32096 vision_glog_benchmark.cpp:226] [ALARM] ts:3951584930, id:6796, severity:INFO, type:LOW_LIGHT, msg:Light intensity too low: 104.00 lux, code:5194
-E20260211 16:55:13.794361 32096 vision_glog_benchmark.cpp:227] [ALARM] ts:1554374926, id:1623, severity:WARNING, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:1679
-E20260211 16:55:13.794361 32096 vision_glog_benchmark.cpp:228] [ALARM] ts:6481080472, id:9484, severity:ERROR, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:4748
-E20260211 16:55:13.794361 32096 vision_glog_benchmark.cpp:229] [ALARM] ts:3866415303, id:8777, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5007 ms, code:3321
-E20260211 16:55:13.794361 32096 vision_glog_benchmark.cpp:230] [ALARM] ts:9118312405, id:9599, severity:ERROR, type:IMAGE_TIMEOUT, msg:Camera 5 failed to acquire image within timeout, code:3657
-E20260211 16:55:13.794361 32096 vision_glog_benchmark.cpp:231] [ALARM] ts:5203348698, id:5546, severity:ERROR, type:DETECTION_FAILED, msg:Detection model failed to process image 9, code:6491
-E20260211 16:55:13.794361 32096 vision_glog_benchmark.cpp:232] [ALARM] ts:2253789466, id:2424, severity:INFO, type:SENSOR_DISCONNECTED, msg:Sensor 10 disconnected from system, code:8777
-E20260211 16:55:13.794361 32096 vision_glog_benchmark.cpp:233] [ALARM] ts:4794942648, id:6094, severity:WARNING, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 76.0°C, code:5439
-E20260211 16:55:13.794361 32096 vision_glog_benchmark.cpp:234] [ALARM] ts:9416600195, id:8924, severity:CRITICAL, type:LOW_LIGHT, msg:Light intensity too low: 112.00 lux, code:3517
-E20260211 16:55:13.794361 32096 vision_glog_benchmark.cpp:235] [ALARM] ts:7930291440, id:3521, severity:ERROR, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:1835
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:236] [ALARM] ts:7204011551, id:4427, severity:WARNING, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:3825
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:237] [ALARM] ts:8882559021, id:8343, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5015 ms, code:9787
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:238] [ALARM] ts:3563352444, id:6509, severity:WARNING, type:IMAGE_TIMEOUT, msg:Camera 4 failed to acquire image within timeout, code:7622
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:239] [ALARM] ts:5227847385, id:7207, severity:CRITICAL, type:DETECTION_FAILED, msg:Detection model failed to process image 17, code:6748
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:240] [ALARM] ts:5242989958, id:4811, severity:INFO, type:SENSOR_DISCONNECTED, msg:Sensor 18 disconnected from system, code:6594
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:241] [ALARM] ts:6987611403, id:1305, severity:INFO, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 84.0°C, code:6132
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:242] [ALARM] ts:5143686307, id:3341, severity:WARNING, type:LOW_LIGHT, msg:Light intensity too low: 120.00 lux, code:1317
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:243] [ALARM] ts:5295711865, id:9157, severity:INFO, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:660
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:244] [ALARM] ts:8912802677, id:4974, severity:WARNING, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:3618
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:245] [ALARM] ts:4066079460, id:7915, severity:CRITICAL, type:PLC_TIMEOUT, msg:PLC response timeout after 5023 ms, code:6649
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:246] [ALARM] ts:5656795131, id:1585, severity:ERROR, type:IMAGE_TIMEOUT, msg:Camera 8 failed to acquire image within timeout, code:4868
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:247] [ALARM] ts:7999569515, id:8889, severity:ERROR, type:DETECTION_FAILED, msg:Detection model failed to process image 25, code:6492
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:248] [ALARM] ts:6412318576, id:7817, severity:ERROR, type:SENSOR_DISCONNECTED, msg:Sensor 26 disconnected from system, code:2065
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:249] [ALARM] ts:1447426484, id:8879, severity:INFO, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 82.0°C, code:434
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:250] [ALARM] ts:3111436074, id:6536, severity:WARNING, type:LOW_LIGHT, msg:Light intensity too low: 128.00 lux, code:5664
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:251] [ALARM] ts:3882134036, id:3247, severity:CRITICAL, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:2469
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:252] [ALARM] ts:7428866123, id:4663, severity:CRITICAL, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:2317
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:253] [ALARM] ts:4285851593, id:4436, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5031 ms, code:1729
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:254] [ALARM] ts:3371654566, id:4824, severity:WARNING, type:IMAGE_TIMEOUT, msg:Camera 8 failed to acquire image within timeout, code:5882
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:255] [ALARM] ts:8799348589, id:1689, severity:INFO, type:DETECTION_FAILED, msg:Detection model failed to process image 33, code:3519
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:256] [ALARM] ts:9778685069, id:5411, severity:ERROR, type:SENSOR_DISCONNECTED, msg:Sensor 34 disconnected from system, code:7395
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:257] [ALARM] ts:4412561173, id:5523, severity:WARNING, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 80.0°C, code:9409
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:258] [ALARM] ts:6135555094, id:8061, severity:ERROR, type:LOW_LIGHT, msg:Light intensity too low: 136.00 lux, code:1630
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:259] [ALARM] ts:6432090023, id:3531, severity:INFO, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:7438
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:260] [ALARM] ts:4050574568, id:6466, severity:WARNING, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:4573
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:261] [ALARM] ts:2818947881, id:9289, severity:CRITICAL, type:PLC_TIMEOUT, msg:PLC response timeout after 5039 ms, code:5466
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:262] [ALARM] ts:5139293939, id:6018, severity:INFO, type:IMAGE_TIMEOUT, msg:Camera 5 failed to acquire image within timeout, code:9518
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:263] [ALARM] ts:6121220742, id:7306, severity:WARNING, type:DETECTION_FAILED, msg:Detection model failed to process image 41, code:6437
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:264] [ALARM] ts:4628579109, id:3507, severity:CRITICAL, type:SENSOR_DISCONNECTED, msg:Sensor 42 disconnected from system, code:6209
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:265] [ALARM] ts:6195997932, id:4419, severity:CRITICAL, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 78.0°C, code:1142
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:266] [ALARM] ts:1193084688, id:6767, severity:WARNING, type:LOW_LIGHT, msg:Light intensity too low: 144.00 lux, code:3646
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:267] [ALARM] ts:4061199876, id:9987, severity:INFO, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:9428
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:268] [ALARM] ts:5072374971, id:3812, severity:WARNING, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:573
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:269] [ALARM] ts:5454552534, id:8920, severity:ERROR, type:PLC_TIMEOUT, msg:PLC response timeout after 5047 ms, code:6102
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:270] [ALARM] ts:8143274490, id:4116, severity:WARNING, type:IMAGE_TIMEOUT, msg:Camera 3 failed to acquire image within timeout, code:1351
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:271] [ALARM] ts:2443219212, id:1506, severity:ERROR, type:DETECTION_FAILED, msg:Detection model failed to process image 49, code:9639
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:222] [ALARM] ts:3525196858, id:3046, severity:INFO, type:SENSOR_DISCONNECTED, msg:Sensor 50 disconnected from system, code:8241
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:223] [ALARM] ts:3162059321, id:7387, severity:CRITICAL, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 76.0°C, code:4104
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:224] [ALARM] ts:5920398342, id:3963, severity:WARNING, type:LOW_LIGHT, msg:Light intensity too low: 102.00 lux, code:5378
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:225] [ALARM] ts:8786291549, id:9654, severity:WARNING, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:2426
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:226] [ALARM] ts:5038279428, id:2020, severity:WARNING, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:610
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:227] [ALARM] ts:4721841798, id:4870, severity:ERROR, type:PLC_TIMEOUT, msg:PLC response timeout after 5055 ms, code:5600
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:228] [ALARM] ts:1428827374, id:8943, severity:INFO, type:IMAGE_TIMEOUT, msg:Camera 3 failed to acquire image within timeout, code:8683
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:229] [ALARM] ts:8096504715, id:9201, severity:WARNING, type:DETECTION_FAILED, msg:Detection model failed to process image 57, code:3506
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:230] [ALARM] ts:9205421911, id:2174, severity:INFO, type:SENSOR_DISCONNECTED, msg:Sensor 58 disconnected from system, code:4724
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:231] [ALARM] ts:4424668786, id:4767, severity:CRITICAL, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 84.0°C, code:7121
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:232] [ALARM] ts:9354019462, id:5766, severity:WARNING, type:LOW_LIGHT, msg:Light intensity too low: 110.00 lux, code:6034
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:233] [ALARM] ts:4516284386, id:3287, severity:INFO, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:3382
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:234] [ALARM] ts:9121236167, id:2437, severity:CRITICAL, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:3187
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:235] [ALARM] ts:4576328874, id:5361, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5063 ms, code:9630
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:236] [ALARM] ts:3488391763, id:4251, severity:ERROR, type:IMAGE_TIMEOUT, msg:Camera 5 failed to acquire image within timeout, code:9424
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:237] [ALARM] ts:9957408625, id:8451, severity:INFO, type:DETECTION_FAILED, msg:Detection model failed to process image 65, code:8181
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:238] [ALARM] ts:9859533029, id:7170, severity:INFO, type:SENSOR_DISCONNECTED, msg:Sensor 66 disconnected from system, code:7350
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:239] [ALARM] ts:4877690021, id:4735, severity:CRITICAL, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 82.0°C, code:7018
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:240] [ALARM] ts:2792646943, id:2912, severity:WARNING, type:LOW_LIGHT, msg:Light intensity too low: 118.00 lux, code:4729
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:241] [ALARM] ts:6460522593, id:7750, severity:ERROR, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:802
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:242] [ALARM] ts:2989439509, id:6906, severity:INFO, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:7613
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:243] [ALARM] ts:2775986409, id:1452, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5071 ms, code:3523
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:244] [ALARM] ts:2199422104, id:9362, severity:CRITICAL, type:IMAGE_TIMEOUT, msg:Camera 7 failed to acquire image within timeout, code:1754
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:245] [ALARM] ts:9662012207, id:1384, severity:ERROR, type:DETECTION_FAILED, msg:Detection model failed to process image 73, code:8025
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:246] [ALARM] ts:8232363996, id:7556, severity:WARNING, type:SENSOR_DISCONNECTED, msg:Sensor 74 disconnected from system, code:6243
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:247] [ALARM] ts:5607275384, id:8880, severity:ERROR, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 80.0°C, code:7200
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:248] [ALARM] ts:6020389533, id:3610, severity:CRITICAL, type:LOW_LIGHT, msg:Light intensity too low: 126.00 lux, code:578
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:249] [ALARM] ts:1164679031, id:8358, severity:CRITICAL, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:9596
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:250] [ALARM] ts:5702952274, id:8382, severity:CRITICAL, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:1308
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:251] [ALARM] ts:3477833588, id:6699, severity:ERROR, type:PLC_TIMEOUT, msg:PLC response timeout after 5079 ms, code:6217
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:252] [ALARM] ts:5238113481, id:8619, severity:ERROR, type:IMAGE_TIMEOUT, msg:Camera 2 failed to acquire image within timeout, code:3256
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:253] [ALARM] ts:2862201712, id:3388, severity:ERROR, type:DETECTION_FAILED, msg:Detection model failed to process image 81, code:942
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:254] [ALARM] ts:1358010405, id:2117, severity:CRITICAL, type:SENSOR_DISCONNECTED, msg:Sensor 82 disconnected from system, code:7407
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:255] [ALARM] ts:5361135827, id:7230, severity:INFO, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 78.0°C, code:4044
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:256] [ALARM] ts:4199569452, id:8373, severity:CRITICAL, type:LOW_LIGHT, msg:Light intensity too low: 134.00 lux, code:7885
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:257] [ALARM] ts:4951163065, id:6444, severity:CRITICAL, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:5232
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:258] [ALARM] ts:2235638953, id:6298, severity:INFO, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:5273
-E20260211 16:55:13.795358 32096 vision_glog_benchmark.cpp:259] [ALARM] ts:1482984281, id:7208, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5087 ms, code:2179
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:260] [ALARM] ts:1651056328, id:4511, severity:INFO, type:IMAGE_TIMEOUT, msg:Camera 1 failed to acquire image within timeout, code:9560
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:261] [ALARM] ts:6559897201, id:3105, severity:WARNING, type:DETECTION_FAILED, msg:Detection model failed to process image 89, code:4963
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:262] [ALARM] ts:1982505803, id:6631, severity:CRITICAL, type:SENSOR_DISCONNECTED, msg:Sensor 90 disconnected from system, code:234
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:263] [ALARM] ts:5627230446, id:2237, severity:CRITICAL, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 76.0°C, code:2537
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:264] [ALARM] ts:5584306532, id:1110, severity:ERROR, type:LOW_LIGHT, msg:Light intensity too low: 142.00 lux, code:8987
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:265] [ALARM] ts:7049095926, id:7608, severity:WARNING, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:5720
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:266] [ALARM] ts:3501125531, id:2470, severity:CRITICAL, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:1563
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:267] [ALARM] ts:5589897670, id:8524, severity:CRITICAL, type:PLC_TIMEOUT, msg:PLC response timeout after 5095 ms, code:2534
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:268] [ALARM] ts:9349300529, id:4393, severity:INFO, type:IMAGE_TIMEOUT, msg:Camera 6 failed to acquire image within timeout, code:602
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:269] [ALARM] ts:9062322545, id:5120, severity:INFO, type:DETECTION_FAILED, msg:Detection model failed to process image 97, code:3298
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:270] [ALARM] ts:9958378838, id:1102, severity:WARNING, type:SENSOR_DISCONNECTED, msg:Sensor 98 disconnected from system, code:4889
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:271] [ALARM] ts:2948219244, id:6036, severity:CRITICAL, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 84.0°C, code:9270
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:222] [ALARM] ts:6089486671, id:9188, severity:INFO, type:LOW_LIGHT, msg:Light intensity too low: 100.00 lux, code:9666
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:223] [ALARM] ts:3012305024, id:6388, severity:INFO, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:4003
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:224] [ALARM] ts:8217073250, id:5951, severity:INFO, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:645
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:225] [ALARM] ts:8069649885, id:8325, severity:WARNING, type:PLC_TIMEOUT, msg:PLC response timeout after 5003 ms, code:4796
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:226] [ALARM] ts:2223096338, id:5045, severity:ERROR, type:IMAGE_TIMEOUT, msg:Camera 4 failed to acquire image within timeout, code:254
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:227] [ALARM] ts:4672609537, id:1065, severity:WARNING, type:DETECTION_FAILED, msg:Detection model failed to process image 105, code:6913
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:228] [ALARM] ts:3053176866, id:4133, severity:INFO, type:SENSOR_DISCONNECTED, msg:Sensor 106 disconnected from system, code:522
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:229] [ALARM] ts:8966652273, id:6931, severity:ERROR, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 82.0°C, code:6767
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:230] [ALARM] ts:6264249095, id:1988, severity:WARNING, type:LOW_LIGHT, msg:Light intensity too low: 108.00 lux, code:5334
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:231] [ALARM] ts:4722356232, id:3374, severity:INFO, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:2635
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:232] [ALARM] ts:8152994085, id:5496, severity:ERROR, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:4721
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:233] [ALARM] ts:1851246286, id:1218, severity:ERROR, type:PLC_TIMEOUT, msg:PLC response timeout after 5011 ms, code:2397
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:234] [ALARM] ts:9274213728, id:8941, severity:CRITICAL, type:IMAGE_TIMEOUT, msg:Camera 6 failed to acquire image within timeout, code:849
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:235] [ALARM] ts:7578035564, id:2010, severity:ERROR, type:DETECTION_FAILED, msg:Detection model failed to process image 113, code:7859
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:236] [ALARM] ts:5574119911, id:2774, severity:ERROR, type:SENSOR_DISCONNECTED, msg:Sensor 114 disconnected from system, code:8856
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:237] [ALARM] ts:9269660093, id:5394, severity:WARNING, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 80.0°C, code:2298
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:238] [ALARM] ts:1981800019, id:2243, severity:WARNING, type:LOW_LIGHT, msg:Light intensity too low: 116.00 lux, code:3444
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:239] [ALARM] ts:2971337813, id:3324, severity:WARNING, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:9570
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:240] [ALARM] ts:4219048104, id:7375, severity:WARNING, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:1852
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:241] [ALARM] ts:1178811819, id:2155, severity:WARNING, type:PLC_TIMEOUT, msg:PLC response timeout after 5019 ms, code:97
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:242] [ALARM] ts:4993118841, id:1295, severity:INFO, type:IMAGE_TIMEOUT, msg:Camera 5 failed to acquire image within timeout, code:4847
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:243] [ALARM] ts:3149424811, id:7648, severity:CRITICAL, type:DETECTION_FAILED, msg:Detection model failed to process image 121, code:9454
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:244] [ALARM] ts:2480250067, id:2860, severity:ERROR, type:SENSOR_DISCONNECTED, msg:Sensor 122 disconnected from system, code:3832
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:245] [ALARM] ts:8086402160, id:1370, severity:WARNING, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 78.0°C, code:1458
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:246] [ALARM] ts:2543917299, id:8950, severity:WARNING, type:LOW_LIGHT, msg:Light intensity too low: 124.00 lux, code:1840
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:247] [ALARM] ts:6467476367, id:1073, severity:INFO, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:8829
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:248] [ALARM] ts:6540706868, id:1465, severity:INFO, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:7703
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:249] [ALARM] ts:9576149105, id:1442, severity:CRITICAL, type:PLC_TIMEOUT, msg:PLC response timeout after 5027 ms, code:7720
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:250] [ALARM] ts:7602142247, id:2226, severity:ERROR, type:IMAGE_TIMEOUT, msg:Camera 5 failed to acquire image within timeout, code:8388
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:251] [ALARM] ts:2080227394, id:4379, severity:CRITICAL, type:DETECTION_FAILED, msg:Detection model failed to process image 129, code:8388
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:252] [ALARM] ts:7626562157, id:7019, severity:WARNING, type:SENSOR_DISCONNECTED, msg:Sensor 130 disconnected from system, code:1322
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:253] [ALARM] ts:2442330582, id:1923, severity:ERROR, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 76.0°C, code:7372
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:254] [ALARM] ts:5062035915, id:7254, severity:ERROR, type:LOW_LIGHT, msg:Light intensity too low: 132.00 lux, code:6199
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:255] [ALARM] ts:1764491742, id:9794, severity:ERROR, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:4855
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:256] [ALARM] ts:5754644018, id:1698, severity:INFO, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:4591
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:257] [ALARM] ts:5725476349, id:7203, severity:WARNING, type:PLC_TIMEOUT, msg:PLC response timeout after 5035 ms, code:4213
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:258] [ALARM] ts:8207253794, id:4715, severity:WARNING, type:IMAGE_TIMEOUT, msg:Camera 1 failed to acquire image within timeout, code:8806
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:259] [ALARM] ts:1696377360, id:4346, severity:INFO, type:DETECTION_FAILED, msg:Detection model failed to process image 137, code:3204
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:260] [ALARM] ts:8968778005, id:5026, severity:CRITICAL, type:SENSOR_DISCONNECTED, msg:Sensor 138 disconnected from system, code:3566
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:261] [ALARM] ts:3099070387, id:9902, severity:WARNING, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 84.0°C, code:5855
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:262] [ALARM] ts:6043143642, id:2948, severity:ERROR, type:LOW_LIGHT, msg:Light intensity too low: 140.00 lux, code:5050
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:263] [ALARM] ts:5014967136, id:9235, severity:CRITICAL, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:9380
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:264] [ALARM] ts:1795386131, id:1620, severity:INFO, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:484
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:265] [ALARM] ts:7684535331, id:2539, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5043 ms, code:6841
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:266] [ALARM] ts:2086615157, id:4279, severity:WARNING, type:IMAGE_TIMEOUT, msg:Camera 1 failed to acquire image within timeout, code:4887
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:267] [ALARM] ts:1031079026, id:3453, severity:INFO, type:DETECTION_FAILED, msg:Detection model failed to process image 145, code:4084
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:268] [ALARM] ts:6106625632, id:9045, severity:INFO, type:SENSOR_DISCONNECTED, msg:Sensor 146 disconnected from system, code:8873
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:269] [ALARM] ts:9503344997, id:2217, severity:CRITICAL, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 82.0°C, code:8236
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:270] [ALARM] ts:5445676157, id:9409, severity:ERROR, type:LOW_LIGHT, msg:Light intensity too low: 148.00 lux, code:5673
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:271] [ALARM] ts:2201042168, id:3252, severity:INFO, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:3040
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:222] [ALARM] ts:8967423924, id:2047, severity:ERROR, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:2178
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:223] [ALARM] ts:7219189500, id:9063, severity:CRITICAL, type:PLC_TIMEOUT, msg:PLC response timeout after 5051 ms, code:8592
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:224] [ALARM] ts:6902754192, id:1429, severity:ERROR, type:IMAGE_TIMEOUT, msg:Camera 6 failed to acquire image within timeout, code:7833
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:225] [ALARM] ts:7801346031, id:9898, severity:CRITICAL, type:DETECTION_FAILED, msg:Detection model failed to process image 153, code:9495
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:226] [ALARM] ts:6667629224, id:7232, severity:WARNING, type:SENSOR_DISCONNECTED, msg:Sensor 154 disconnected from system, code:4762
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:227] [ALARM] ts:8753569428, id:4210, severity:WARNING, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 80.0°C, code:7598
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:228] [ALARM] ts:6138638146, id:4505, severity:ERROR, type:LOW_LIGHT, msg:Light intensity too low: 106.00 lux, code:1920
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:229] [ALARM] ts:7630081588, id:6239, severity:ERROR, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:4070
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:230] [ALARM] ts:1654650293, id:6146, severity:CRITICAL, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:4358
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:231] [ALARM] ts:4542593004, id:4376, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5059 ms, code:2613
-E20260211 16:55:13.796355 32096 vision_glog_benchmark.cpp:232] [ALARM] ts:4808781948, id:9738, severity:WARNING, type:IMAGE_TIMEOUT, msg:Camera 4 failed to acquire image within timeout, code:7651
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:233] [ALARM] ts:6206176759, id:4660, severity:ERROR, type:DETECTION_FAILED, msg:Detection model failed to process image 161, code:6777
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:234] [ALARM] ts:6986103646, id:5648, severity:WARNING, type:SENSOR_DISCONNECTED, msg:Sensor 162 disconnected from system, code:4250
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:235] [ALARM] ts:1987480553, id:2999, severity:ERROR, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 78.0°C, code:8327
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:236] [ALARM] ts:7416964677, id:8163, severity:WARNING, type:LOW_LIGHT, msg:Light intensity too low: 114.00 lux, code:8185
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:237] [ALARM] ts:7541661089, id:2717, severity:INFO, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:1635
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:238] [ALARM] ts:8680341599, id:2770, severity:WARNING, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:9850
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:239] [ALARM] ts:3237661358, id:5645, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5067 ms, code:4278
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:240] [ALARM] ts:5385687341, id:1358, severity:WARNING, type:IMAGE_TIMEOUT, msg:Camera 2 failed to acquire image within timeout, code:4122
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:241] [ALARM] ts:8288112779, id:4019, severity:WARNING, type:DETECTION_FAILED, msg:Detection model failed to process image 169, code:9882
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:242] [ALARM] ts:7655286751, id:7103, severity:ERROR, type:SENSOR_DISCONNECTED, msg:Sensor 170 disconnected from system, code:8837
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:243] [ALARM] ts:4047461940, id:8921, severity:ERROR, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 76.0°C, code:910
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:244] [ALARM] ts:9805123180, id:2075, severity:CRITICAL, type:LOW_LIGHT, msg:Light intensity too low: 122.00 lux, code:8998
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:245] [ALARM] ts:9696712356, id:7978, severity:WARNING, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:8794
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:246] [ALARM] ts:6700320958, id:1650, severity:WARNING, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:8878
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:247] [ALARM] ts:7871108490, id:1540, severity:ERROR, type:PLC_TIMEOUT, msg:PLC response timeout after 5075 ms, code:4045
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:248] [ALARM] ts:8814889415, id:4894, severity:CRITICAL, type:IMAGE_TIMEOUT, msg:Camera 2 failed to acquire image within timeout, code:1143
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:249] [ALARM] ts:5601414816, id:6931, severity:INFO, type:DETECTION_FAILED, msg:Detection model failed to process image 177, code:6556
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:250] [ALARM] ts:1425758545, id:5641, severity:WARNING, type:SENSOR_DISCONNECTED, msg:Sensor 178 disconnected from system, code:8191
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:251] [ALARM] ts:6558240157, id:5243, severity:INFO, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 84.0°C, code:8897
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:252] [ALARM] ts:7693869259, id:8877, severity:INFO, type:LOW_LIGHT, msg:Light intensity too low: 130.00 lux, code:1594
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:253] [ALARM] ts:9657196307, id:4445, severity:ERROR, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:507
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:254] [ALARM] ts:5226111603, id:9692, severity:CRITICAL, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:6791
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:255] [ALARM] ts:8318468581, id:1723, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5083 ms, code:3274
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:256] [ALARM] ts:2953116215, id:6132, severity:WARNING, type:IMAGE_TIMEOUT, msg:Camera 1 failed to acquire image within timeout, code:949
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:257] [ALARM] ts:1326205084, id:6182, severity:ERROR, type:DETECTION_FAILED, msg:Detection model failed to process image 185, code:2074
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:258] [ALARM] ts:9087127713, id:6491, severity:INFO, type:SENSOR_DISCONNECTED, msg:Sensor 186 disconnected from system, code:1074
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:259] [ALARM] ts:5561790721, id:4132, severity:CRITICAL, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 82.0°C, code:9086
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:260] [ALARM] ts:8060759357, id:4378, severity:INFO, type:LOW_LIGHT, msg:Light intensity too low: 138.00 lux, code:7284
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:261] [ALARM] ts:3916056919, id:2678, severity:WARNING, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:6319
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:262] [ALARM] ts:3326347033, id:4183, severity:CRITICAL, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:4468
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:263] [ALARM] ts:7215948067, id:1298, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5091 ms, code:4377
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:264] [ALARM] ts:1722419147, id:8969, severity:WARNING, type:IMAGE_TIMEOUT, msg:Camera 1 failed to acquire image within timeout, code:5193
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:265] [ALARM] ts:6595101267, id:8425, severity:CRITICAL, type:DETECTION_FAILED, msg:Detection model failed to process image 193, code:268
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:266] [ALARM] ts:7255886526, id:7331, severity:WARNING, type:SENSOR_DISCONNECTED, msg:Sensor 194 disconnected from system, code:6142
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:267] [ALARM] ts:9247082000, id:1082, severity:ERROR, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 80.0°C, code:6152
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:268] [ALARM] ts:2485069385, id:7171, severity:ERROR, type:LOW_LIGHT, msg:Light intensity too low: 146.00 lux, code:9338
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:269] [ALARM] ts:1628711414, id:1452, severity:WARNING, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:7604
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:270] [ALARM] ts:3317724728, id:1258, severity:WARNING, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:6318
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:271] [ALARM] ts:5957024033, id:2867, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5099 ms, code:9668
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:222] [ALARM] ts:7986789200, id:4270, severity:INFO, type:IMAGE_TIMEOUT, msg:Camera 5 failed to acquire image within timeout, code:4375
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:223] [ALARM] ts:1639230740, id:1464, severity:CRITICAL, type:DETECTION_FAILED, msg:Detection model failed to process image 201, code:4199
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:224] [ALARM] ts:2151773294, id:8214, severity:CRITICAL, type:SENSOR_DISCONNECTED, msg:Sensor 202 disconnected from system, code:1735
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:225] [ALARM] ts:1837663446, id:4179, severity:WARNING, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 78.0°C, code:8203
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:226] [ALARM] ts:2715787063, id:1552, severity:INFO, type:LOW_LIGHT, msg:Light intensity too low: 104.00 lux, code:1610
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:227] [ALARM] ts:1412161743, id:5400, severity:ERROR, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:1150
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:228] [ALARM] ts:9726963085, id:7519, severity:ERROR, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:5297
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:229] [ALARM] ts:5270111236, id:1599, severity:CRITICAL, type:PLC_TIMEOUT, msg:PLC response timeout after 5007 ms, code:1405
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:230] [ALARM] ts:4043474534, id:1369, severity:WARNING, type:IMAGE_TIMEOUT, msg:Camera 7 failed to acquire image within timeout, code:4426
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:231] [ALARM] ts:2094010762, id:7263, severity:ERROR, type:DETECTION_FAILED, msg:Detection model failed to process image 209, code:727
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:232] [ALARM] ts:1825539880, id:4575, severity:CRITICAL, type:SENSOR_DISCONNECTED, msg:Sensor 210 disconnected from system, code:5193
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:233] [ALARM] ts:2113249962, id:9157, severity:CRITICAL, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 76.0°C, code:2376
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:234] [ALARM] ts:7498279229, id:7844, severity:ERROR, type:LOW_LIGHT, msg:Light intensity too low: 112.00 lux, code:6110
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:235] [ALARM] ts:8565898478, id:8785, severity:WARNING, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:4176
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:236] [ALARM] ts:6761050894, id:3049, severity:INFO, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:3051
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:237] [ALARM] ts:9153907469, id:7187, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5015 ms, code:5848
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:238] [ALARM] ts:4548987544, id:2265, severity:ERROR, type:IMAGE_TIMEOUT, msg:Camera 7 failed to acquire image within timeout, code:6193
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:239] [ALARM] ts:2343226087, id:3464, severity:INFO, type:DETECTION_FAILED, msg:Detection model failed to process image 217, code:8547
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:240] [ALARM] ts:1205127611, id:2420, severity:INFO, type:SENSOR_DISCONNECTED, msg:Sensor 218 disconnected from system, code:5402
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:241] [ALARM] ts:7191617730, id:3580, severity:CRITICAL, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 84.0°C, code:7920
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:242] [ALARM] ts:4089529361, id:9257, severity:INFO, type:LOW_LIGHT, msg:Light intensity too low: 120.00 lux, code:1233
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:243] [ALARM] ts:2877644883, id:3416, severity:CRITICAL, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:364
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:244] [ALARM] ts:5159262514, id:4896, severity:CRITICAL, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:4406
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:245] [ALARM] ts:5723894691, id:1130, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5023 ms, code:7181
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:246] [ALARM] ts:7772136486, id:9444, severity:ERROR, type:IMAGE_TIMEOUT, msg:Camera 4 failed to acquire image within timeout, code:2858
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:247] [ALARM] ts:3055002771, id:4466, severity:INFO, type:DETECTION_FAILED, msg:Detection model failed to process image 225, code:6184
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:248] [ALARM] ts:6482383473, id:8518, severity:CRITICAL, type:SENSOR_DISCONNECTED, msg:Sensor 226 disconnected from system, code:6777
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:249] [ALARM] ts:8373317758, id:4494, severity:ERROR, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 82.0°C, code:1948
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:250] [ALARM] ts:3665818383, id:1081, severity:CRITICAL, type:LOW_LIGHT, msg:Light intensity too low: 128.00 lux, code:3514
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:251] [ALARM] ts:5905108633, id:8002, severity:CRITICAL, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:2062
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:252] [ALARM] ts:6317193477, id:5550, severity:CRITICAL, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:3053
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:253] [ALARM] ts:9265148783, id:9141, severity:WARNING, type:PLC_TIMEOUT, msg:PLC response timeout after 5031 ms, code:8921
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:254] [ALARM] ts:5838727497, id:8118, severity:CRITICAL, type:IMAGE_TIMEOUT, msg:Camera 2 failed to acquire image within timeout, code:5591
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:255] [ALARM] ts:1794489703, id:9848, severity:WARNING, type:DETECTION_FAILED, msg:Detection model failed to process image 233, code:1486
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:256] [ALARM] ts:7722946163, id:8882, severity:INFO, type:SENSOR_DISCONNECTED, msg:Sensor 234 disconnected from system, code:6027
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:257] [ALARM] ts:4022634216, id:4117, severity:CRITICAL, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 80.0°C, code:8038
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:258] [ALARM] ts:3646662719, id:6885, severity:CRITICAL, type:LOW_LIGHT, msg:Light intensity too low: 136.00 lux, code:2232
-E20260211 16:55:13.797351 32096 vision_glog_benchmark.cpp:259] [ALARM] ts:6633171844, id:7248, severity:INFO, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:4715
-E20260211 16:55:13.798348 32096 vision_glog_benchmark.cpp:260] [ALARM] ts:3325613448, id:6845, severity:CRITICAL, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:1455
-E20260211 16:55:13.798348 32096 vision_glog_benchmark.cpp:261] [ALARM] ts:5043017268, id:7733, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5039 ms, code:7348
-E20260211 16:55:13.798348 32096 vision_glog_benchmark.cpp:262] [ALARM] ts:1543758957, id:1100, severity:CRITICAL, type:IMAGE_TIMEOUT, msg:Camera 4 failed to acquire image within timeout, code:9371
-E20260211 16:55:13.798348 32096 vision_glog_benchmark.cpp:263] [ALARM] ts:3233840610, id:9329, severity:ERROR, type:DETECTION_FAILED, msg:Detection model failed to process image 241, code:6783
-E20260211 16:55:13.798348 32096 vision_glog_benchmark.cpp:264] [ALARM] ts:5768355231, id:3353, severity:ERROR, type:SENSOR_DISCONNECTED, msg:Sensor 242 disconnected from system, code:2053
-E20260211 16:55:13.798348 32096 vision_glog_benchmark.cpp:265] [ALARM] ts:1539822605, id:1318, severity:INFO, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 78.0°C, code:2731
-E20260211 16:55:13.798348 32096 vision_glog_benchmark.cpp:266] [ALARM] ts:1058685881, id:7198, severity:ERROR, type:LOW_LIGHT, msg:Light intensity too low: 144.00 lux, code:5422
-E20260211 16:55:13.798348 32096 vision_glog_benchmark.cpp:267] [ALARM] ts:2062243791, id:5938, severity:INFO, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:8683
-E20260211 16:55:13.798348 32096 vision_glog_benchmark.cpp:268] [ALARM] ts:2711400766, id:7837, severity:ERROR, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:546
-E20260211 16:55:13.798348 32096 vision_glog_benchmark.cpp:269] [ALARM] ts:4157871246, id:9828, severity:ERROR, type:PLC_TIMEOUT, msg:PLC response timeout after 5047 ms, code:2977
-E20260211 16:55:13.798348 32096 vision_glog_benchmark.cpp:270] [ALARM] ts:8999942019, id:9711, severity:WARNING, type:IMAGE_TIMEOUT, msg:Camera 4 failed to acquire image within timeout, code:5698
-E20260211 16:55:13.798348 32096 vision_glog_benchmark.cpp:271] [ALARM] ts:2927837302, id:5844, severity:ERROR, type:DETECTION_FAILED, msg:Detection model failed to process image 249, code:3006
-VisionGlogFixture/alarm_log/iterations:50/repeats:5/threads:1                     41730 ns       312500 ns           50
-VisionGlogFixture/alarm_log/iterations:50/repeats:5/threads:1                     13554 ns        0.000 ns           50
-VisionGlogFixture/alarm_log/iterations:50/repeats:5/threads:1                     13046 ns        0.000 ns           50
-VisionGlogFixture/alarm_log/iterations:50/repeats:5/threads:1                     13460 ns        0.000 ns           50
-VisionGlogFixture/alarm_log/iterations:50/repeats:5/threads:1                     12932 ns        0.000 ns           50
-VisionGlogFixture/alarm_log/iterations:50/repeats:5/threads:1_mean                18944 ns        62500 ns            5
-VisionGlogFixture/alarm_log/iterations:50/repeats:5/threads:1_median              13460 ns        0.000 ns            5
-VisionGlogFixture/alarm_log/iterations:50/repeats:5/threads:1_stddev              12740 ns       139754 ns            5
-VisionGlogFixture/alarm_log/iterations:50/repeats:5/threads:1_cv                  67.25 %        223.61 %             5
-VisionGlogFixture/production_stats/iterations:25/repeats:5/threads:1               5064 ns        0.000 ns           25
-VisionGlogFixture/production_stats/iterations:25/repeats:5/threads:1               4784 ns        0.000 ns           25
-VisionGlogFixture/production_stats/iterations:25/repeats:5/threads:1               4676 ns        0.000 ns           25
-VisionGlogFixture/production_stats/iterations:25/repeats:5/threads:1               4588 ns        0.000 ns           25
-VisionGlogFixture/production_stats/iterations:25/repeats:5/threads:1               4656 ns        0.000 ns           25
-VisionGlogFixture/production_stats/iterations:25/repeats:5/threads:1_mean          4754 ns        0.000 ns            5
-VisionGlogFixture/production_stats/iterations:25/repeats:5/threads:1_median        4676 ns        0.000 ns            5
-VisionGlogFixture/production_stats/iterations:25/repeats:5/threads:1_stddev         187 ns        0.000 ns            5
-VisionGlogFixture/production_stats/iterations:25/repeats:5/threads:1_cv            3.94 %     -nan(ind) %             5
+VisionGlogFixture/image_acquisition/min_time:3.000/threads:1                       3800 ns         3795 ns      1120000
+VisionGlogFixture/image_acquisition/min_time:3.000/threads:2                       4589 ns         9191 ns       455594
+VisionGlogFixture/image_acquisition/min_time:3.000/threads:4                       8649 ns        34529 ns       122180
+VisionGlogFixture/image_acquisition/min_time:3.000/threads:8                      11362 ns        90250 ns        47784
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:1              4356 ns        0.000 ns          500
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:1              4228 ns        0.000 ns          500
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:1              4333 ns        0.000 ns          500
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:1              4234 ns        0.000 ns          500
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:1              4331 ns        0.000 ns          500
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:1_mean         4296 ns        0.000 ns            5
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:1_median       4331 ns        0.000 ns            5
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:1_stddev       60.8 ns        0.000 ns            5
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:1_cv           1.42 %     -nan(ind) %             5
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:2              4634 ns        0.000 ns         1000
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:2              4570 ns        31250 ns         1000
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:2              4527 ns        0.000 ns         1000
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:2              4258 ns        0.000 ns         1000
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:2              4501 ns        31250 ns         1000
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:2_mean         4498 ns        12500 ns            5
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:2_median       4527 ns        0.000 ns            5
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:2_stddev        143 ns        17116 ns            5
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:2_cv           3.18 %        136.93 %             5
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:4              8174 ns        31250 ns         2000
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:4              8264 ns        31250 ns         2000
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:4              8344 ns        31250 ns         2000
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:4              8289 ns        31250 ns         2000
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:4              8318 ns        31250 ns         2000
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:4_mean         8278 ns        31250 ns            5
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:4_median       8289 ns        31250 ns            5
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:4_stddev       65.6 ns        0.000 ns            5
+VisionGlogFixture/detection_result/iterations:500/repeats:5/threads:4_cv           0.79 %          0.00 %             5
+VisionGlogFixture/device_status/iterations:500/repeats:5/threads:1                 4286 ns        0.000 ns          500
+VisionGlogFixture/device_status/iterations:500/repeats:5/threads:1                 4151 ns        0.000 ns          500
+VisionGlogFixture/device_status/iterations:500/repeats:5/threads:1                 4183 ns        0.000 ns          500
+VisionGlogFixture/device_status/iterations:500/repeats:5/threads:1                 4145 ns        31250 ns          500
+VisionGlogFixture/device_status/iterations:500/repeats:5/threads:1                 4147 ns        0.000 ns          500
+VisionGlogFixture/device_status/iterations:500/repeats:5/threads:1_mean            4182 ns         6250 ns            5
+VisionGlogFixture/device_status/iterations:500/repeats:5/threads:1_median          4151 ns        0.000 ns            5
+VisionGlogFixture/device_status/iterations:500/repeats:5/threads:1_stddev          60.1 ns        13975 ns            5
+VisionGlogFixture/device_status/iterations:500/repeats:5/threads:1_cv              1.44 %        223.61 %             5
+E20260211 18:59:25.765509 34436 vision_glog_benchmark.cpp:222] [ALARM] ts:1505586091, id:2006, severity:CRITICAL, type:IMAGE_TIMEOUT, msg:Camera 2 failed to acquire image within timeout, code:2014
+E20260211 18:59:25.766505 34436 vision_glog_benchmark.cpp:223] [ALARM] ts:1596497722, id:4331, severity:CRITICAL, type:DETECTION_FAILED, msg:Detection model failed to process image 1, code:4684
+E20260211 18:59:25.766505 34436 vision_glog_benchmark.cpp:224] [ALARM] ts:8227581504, id:5356, severity:CRITICAL, type:SENSOR_DISCONNECTED, msg:Sensor 2 disconnected from system, code:4808
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:225] [ALARM] ts:4301633187, id:2750, severity:INFO, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 78.0°C, code:327
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:226] [ALARM] ts:5677757241, id:7517, severity:INFO, type:LOW_LIGHT, msg:Light intensity too low: 104.00 lux, code:460
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:227] [ALARM] ts:5170255112, id:1211, severity:WARNING, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:2274
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:228] [ALARM] ts:8887302772, id:4868, severity:ERROR, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:8806
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:229] [ALARM] ts:7109406157, id:8799, severity:ERROR, type:PLC_TIMEOUT, msg:PLC response timeout after 5007 ms, code:9920
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:230] [ALARM] ts:8808073877, id:1564, severity:ERROR, type:IMAGE_TIMEOUT, msg:Camera 2 failed to acquire image within timeout, code:4415
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:231] [ALARM] ts:3292188412, id:9292, severity:WARNING, type:DETECTION_FAILED, msg:Detection model failed to process image 9, code:7498
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:232] [ALARM] ts:4549717197, id:7630, severity:WARNING, type:SENSOR_DISCONNECTED, msg:Sensor 10 disconnected from system, code:8412
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:233] [ALARM] ts:1888264020, id:3519, severity:INFO, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 76.0°C, code:8461
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:234] [ALARM] ts:1464552495, id:4129, severity:WARNING, type:LOW_LIGHT, msg:Light intensity too low: 112.00 lux, code:3044
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:235] [ALARM] ts:8535921687, id:7120, severity:INFO, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:2501
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:236] [ALARM] ts:2196609606, id:8403, severity:WARNING, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:2913
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:237] [ALARM] ts:5023187618, id:3724, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5015 ms, code:3677
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:238] [ALARM] ts:5946207405, id:1677, severity:WARNING, type:IMAGE_TIMEOUT, msg:Camera 1 failed to acquire image within timeout, code:7745
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:239] [ALARM] ts:8874482689, id:6065, severity:ERROR, type:DETECTION_FAILED, msg:Detection model failed to process image 17, code:9607
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:240] [ALARM] ts:6219506629, id:3836, severity:INFO, type:SENSOR_DISCONNECTED, msg:Sensor 18 disconnected from system, code:1381
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:241] [ALARM] ts:1407092475, id:8536, severity:INFO, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 84.0°C, code:5544
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:242] [ALARM] ts:3732488979, id:3438, severity:WARNING, type:LOW_LIGHT, msg:Light intensity too low: 120.00 lux, code:1713
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:243] [ALARM] ts:3251563537, id:5146, severity:ERROR, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:4788
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:244] [ALARM] ts:6778665561, id:4965, severity:WARNING, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:5041
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:245] [ALARM] ts:6734340191, id:9980, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5023 ms, code:9332
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:246] [ALARM] ts:5632530449, id:8553, severity:WARNING, type:IMAGE_TIMEOUT, msg:Camera 4 failed to acquire image within timeout, code:4344
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:247] [ALARM] ts:4202372541, id:6379, severity:INFO, type:DETECTION_FAILED, msg:Detection model failed to process image 25, code:6194
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:248] [ALARM] ts:6869218935, id:1102, severity:CRITICAL, type:SENSOR_DISCONNECTED, msg:Sensor 26 disconnected from system, code:4963
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:249] [ALARM] ts:9573156141, id:9123, severity:ERROR, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 82.0°C, code:8630
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:250] [ALARM] ts:3691808227, id:6625, severity:INFO, type:LOW_LIGHT, msg:Light intensity too low: 128.00 lux, code:4241
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:251] [ALARM] ts:8719577809, id:2218, severity:CRITICAL, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:9492
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:252] [ALARM] ts:8149149163, id:5801, severity:INFO, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:1836
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:253] [ALARM] ts:5515219668, id:6996, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5031 ms, code:99
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:254] [ALARM] ts:6685874360, id:3750, severity:ERROR, type:IMAGE_TIMEOUT, msg:Camera 1 failed to acquire image within timeout, code:6350
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:255] [ALARM] ts:3689773093, id:9715, severity:INFO, type:DETECTION_FAILED, msg:Detection model failed to process image 33, code:5681
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:256] [ALARM] ts:1272481329, id:8623, severity:WARNING, type:SENSOR_DISCONNECTED, msg:Sensor 34 disconnected from system, code:7936
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:257] [ALARM] ts:4233128876, id:1693, severity:CRITICAL, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 80.0°C, code:8612
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:258] [ALARM] ts:6052298975, id:6031, severity:ERROR, type:LOW_LIGHT, msg:Light intensity too low: 136.00 lux, code:4852
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:259] [ALARM] ts:5061714056, id:8239, severity:CRITICAL, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:3255
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:260] [ALARM] ts:6082906203, id:6103, severity:INFO, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:6267
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:261] [ALARM] ts:4840718910, id:4197, severity:CRITICAL, type:PLC_TIMEOUT, msg:PLC response timeout after 5039 ms, code:814
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:262] [ALARM] ts:8752467726, id:5490, severity:INFO, type:IMAGE_TIMEOUT, msg:Camera 8 failed to acquire image within timeout, code:2310
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:263] [ALARM] ts:3081284905, id:8487, severity:CRITICAL, type:DETECTION_FAILED, msg:Detection model failed to process image 41, code:3802
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:264] [ALARM] ts:7018495623, id:2052, severity:ERROR, type:SENSOR_DISCONNECTED, msg:Sensor 42 disconnected from system, code:6541
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:265] [ALARM] ts:6047157228, id:1759, severity:WARNING, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 78.0°C, code:305
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:266] [ALARM] ts:8571103244, id:5386, severity:INFO, type:LOW_LIGHT, msg:Light intensity too low: 144.00 lux, code:4697
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:267] [ALARM] ts:6413421864, id:9665, severity:WARNING, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:9029
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:268] [ALARM] ts:5511372979, id:4582, severity:ERROR, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:8729
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:269] [ALARM] ts:3657369982, id:8349, severity:ERROR, type:PLC_TIMEOUT, msg:PLC response timeout after 5047 ms, code:6881
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:270] [ALARM] ts:3587638676, id:5707, severity:ERROR, type:IMAGE_TIMEOUT, msg:Camera 5 failed to acquire image within timeout, code:5885
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:271] [ALARM] ts:6330336804, id:3895, severity:INFO, type:DETECTION_FAILED, msg:Detection model failed to process image 49, code:5512
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:222] [ALARM] ts:7414203635, id:4516, severity:CRITICAL, type:SENSOR_DISCONNECTED, msg:Sensor 50 disconnected from system, code:9549
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:223] [ALARM] ts:4597831399, id:5413, severity:INFO, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 76.0°C, code:5878
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:224] [ALARM] ts:1914179902, id:5336, severity:CRITICAL, type:LOW_LIGHT, msg:Light intensity too low: 102.00 lux, code:5430
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:225] [ALARM] ts:5437347033, id:2302, severity:WARNING, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:8729
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:226] [ALARM] ts:6929048028, id:4438, severity:INFO, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:1392
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:227] [ALARM] ts:2267075386, id:8934, severity:CRITICAL, type:PLC_TIMEOUT, msg:PLC response timeout after 5055 ms, code:5088
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:228] [ALARM] ts:2594769567, id:7751, severity:WARNING, type:IMAGE_TIMEOUT, msg:Camera 7 failed to acquire image within timeout, code:392
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:229] [ALARM] ts:9304333924, id:5134, severity:CRITICAL, type:DETECTION_FAILED, msg:Detection model failed to process image 57, code:954
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:230] [ALARM] ts:1279441336, id:6651, severity:CRITICAL, type:SENSOR_DISCONNECTED, msg:Sensor 58 disconnected from system, code:2246
+E20260211 18:59:25.767503 34436 vision_glog_benchmark.cpp:231] [ALARM] ts:8030515249, id:9308, severity:CRITICAL, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 84.0°C, code:7343
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:232] [ALARM] ts:9298062596, id:9852, severity:ERROR, type:LOW_LIGHT, msg:Light intensity too low: 110.00 lux, code:9115
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:233] [ALARM] ts:5159921705, id:2252, severity:WARNING, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:7221
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:234] [ALARM] ts:8483840499, id:9247, severity:ERROR, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:4447
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:235] [ALARM] ts:1891387372, id:5446, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5063 ms, code:5567
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:236] [ALARM] ts:3836694970, id:7345, severity:CRITICAL, type:IMAGE_TIMEOUT, msg:Camera 2 failed to acquire image within timeout, code:4951
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:237] [ALARM] ts:7512486454, id:2185, severity:CRITICAL, type:DETECTION_FAILED, msg:Detection model failed to process image 65, code:5170
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:238] [ALARM] ts:8404353863, id:6198, severity:WARNING, type:SENSOR_DISCONNECTED, msg:Sensor 66 disconnected from system, code:8442
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:239] [ALARM] ts:8083741089, id:1626, severity:WARNING, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 82.0°C, code:4623
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:240] [ALARM] ts:6662201966, id:9642, severity:CRITICAL, type:LOW_LIGHT, msg:Light intensity too low: 118.00 lux, code:7778
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:241] [ALARM] ts:8868803936, id:4696, severity:INFO, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:6729
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:242] [ALARM] ts:3494530073, id:2492, severity:ERROR, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:9048
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:243] [ALARM] ts:8931675522, id:4838, severity:WARNING, type:PLC_TIMEOUT, msg:PLC response timeout after 5071 ms, code:7417
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:244] [ALARM] ts:4240860234, id:2782, severity:ERROR, type:IMAGE_TIMEOUT, msg:Camera 4 failed to acquire image within timeout, code:3708
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:245] [ALARM] ts:4947914553, id:4543, severity:ERROR, type:DETECTION_FAILED, msg:Detection model failed to process image 73, code:2067
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:246] [ALARM] ts:1507282560, id:4727, severity:INFO, type:SENSOR_DISCONNECTED, msg:Sensor 74 disconnected from system, code:5490
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:247] [ALARM] ts:6777833830, id:8235, severity:WARNING, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 80.0°C, code:1253
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:248] [ALARM] ts:5270909487, id:5637, severity:WARNING, type:LOW_LIGHT, msg:Light intensity too low: 126.00 lux, code:3111
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:249] [ALARM] ts:9465512789, id:1593, severity:CRITICAL, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:3509
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:250] [ALARM] ts:6408909946, id:7166, severity:WARNING, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:8391
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:251] [ALARM] ts:2500624025, id:3345, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5079 ms, code:9254
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:252] [ALARM] ts:2874578435, id:4213, severity:ERROR, type:IMAGE_TIMEOUT, msg:Camera 2 failed to acquire image within timeout, code:5589
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:253] [ALARM] ts:1640610433, id:6219, severity:INFO, type:DETECTION_FAILED, msg:Detection model failed to process image 81, code:4933
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:254] [ALARM] ts:2940557472, id:5116, severity:CRITICAL, type:SENSOR_DISCONNECTED, msg:Sensor 82 disconnected from system, code:1589
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:255] [ALARM] ts:8751888968, id:1312, severity:INFO, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 78.0°C, code:8377
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:256] [ALARM] ts:1872923862, id:3491, severity:INFO, type:LOW_LIGHT, msg:Light intensity too low: 134.00 lux, code:5216
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:257] [ALARM] ts:9559347240, id:4590, severity:ERROR, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:4298
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:258] [ALARM] ts:5575773439, id:1021, severity:INFO, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:3680
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:259] [ALARM] ts:5055838236, id:3230, severity:WARNING, type:PLC_TIMEOUT, msg:PLC response timeout after 5087 ms, code:8035
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:260] [ALARM] ts:6740923091, id:4633, severity:CRITICAL, type:IMAGE_TIMEOUT, msg:Camera 8 failed to acquire image within timeout, code:3187
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:261] [ALARM] ts:3848450741, id:5831, severity:INFO, type:DETECTION_FAILED, msg:Detection model failed to process image 89, code:1931
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:262] [ALARM] ts:8481545786, id:5173, severity:ERROR, type:SENSOR_DISCONNECTED, msg:Sensor 90 disconnected from system, code:9570
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:263] [ALARM] ts:1146595842, id:4118, severity:CRITICAL, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 76.0°C, code:1663
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:264] [ALARM] ts:5436868826, id:5302, severity:CRITICAL, type:LOW_LIGHT, msg:Light intensity too low: 142.00 lux, code:8929
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:265] [ALARM] ts:4456473967, id:1270, severity:WARNING, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:1498
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:266] [ALARM] ts:5312202812, id:1920, severity:INFO, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:8313
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:267] [ALARM] ts:1183876941, id:2545, severity:ERROR, type:PLC_TIMEOUT, msg:PLC response timeout after 5095 ms, code:9126
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:268] [ALARM] ts:1797872310, id:3874, severity:WARNING, type:IMAGE_TIMEOUT, msg:Camera 3 failed to acquire image within timeout, code:581
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:269] [ALARM] ts:1381829230, id:6719, severity:ERROR, type:DETECTION_FAILED, msg:Detection model failed to process image 97, code:6995
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:270] [ALARM] ts:8789435818, id:9729, severity:ERROR, type:SENSOR_DISCONNECTED, msg:Sensor 98 disconnected from system, code:8339
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:271] [ALARM] ts:5804800362, id:6129, severity:CRITICAL, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 84.0°C, code:7234
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:222] [ALARM] ts:9528038371, id:9805, severity:ERROR, type:LOW_LIGHT, msg:Light intensity too low: 100.00 lux, code:4716
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:223] [ALARM] ts:3446390770, id:4738, severity:ERROR, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:7158
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:224] [ALARM] ts:9206485748, id:3905, severity:CRITICAL, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:9232
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:225] [ALARM] ts:4624622227, id:3977, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5003 ms, code:4123
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:226] [ALARM] ts:5552283461, id:1093, severity:WARNING, type:IMAGE_TIMEOUT, msg:Camera 3 failed to acquire image within timeout, code:8993
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:227] [ALARM] ts:1984404163, id:1644, severity:CRITICAL, type:DETECTION_FAILED, msg:Detection model failed to process image 105, code:6509
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:228] [ALARM] ts:3456444082, id:4133, severity:ERROR, type:SENSOR_DISCONNECTED, msg:Sensor 106 disconnected from system, code:3254
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:229] [ALARM] ts:7410418454, id:7843, severity:CRITICAL, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 82.0°C, code:1924
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:230] [ALARM] ts:9908890481, id:9110, severity:ERROR, type:LOW_LIGHT, msg:Light intensity too low: 108.00 lux, code:5973
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:231] [ALARM] ts:3049556108, id:9214, severity:ERROR, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:455
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:232] [ALARM] ts:8561408318, id:8286, severity:WARNING, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:5795
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:233] [ALARM] ts:8775207103, id:2963, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5011 ms, code:4916
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:234] [ALARM] ts:1903765432, id:5108, severity:WARNING, type:IMAGE_TIMEOUT, msg:Camera 7 failed to acquire image within timeout, code:1314
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:235] [ALARM] ts:6780219988, id:4284, severity:CRITICAL, type:DETECTION_FAILED, msg:Detection model failed to process image 113, code:3870
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:236] [ALARM] ts:1738709562, id:1718, severity:ERROR, type:SENSOR_DISCONNECTED, msg:Sensor 114 disconnected from system, code:1609
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:237] [ALARM] ts:9625500783, id:9357, severity:INFO, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 80.0°C, code:403
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:238] [ALARM] ts:4923909988, id:9692, severity:INFO, type:LOW_LIGHT, msg:Light intensity too low: 116.00 lux, code:2835
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:239] [ALARM] ts:6379163460, id:5883, severity:CRITICAL, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:5638
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:240] [ALARM] ts:4548945690, id:6234, severity:ERROR, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:6086
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:241] [ALARM] ts:2962137816, id:2407, severity:ERROR, type:PLC_TIMEOUT, msg:PLC response timeout after 5019 ms, code:7865
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:242] [ALARM] ts:3796934456, id:5293, severity:INFO, type:IMAGE_TIMEOUT, msg:Camera 3 failed to acquire image within timeout, code:1709
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:243] [ALARM] ts:3330932890, id:1251, severity:WARNING, type:DETECTION_FAILED, msg:Detection model failed to process image 121, code:7932
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:244] [ALARM] ts:5570487799, id:9188, severity:ERROR, type:SENSOR_DISCONNECTED, msg:Sensor 122 disconnected from system, code:1644
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:245] [ALARM] ts:2356646556, id:3967, severity:CRITICAL, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 78.0°C, code:7560
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:246] [ALARM] ts:3899598510, id:3962, severity:CRITICAL, type:LOW_LIGHT, msg:Light intensity too low: 124.00 lux, code:1157
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:247] [ALARM] ts:1186713142, id:7249, severity:INFO, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:92
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:248] [ALARM] ts:6733106908, id:3885, severity:INFO, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:7347
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:249] [ALARM] ts:9733457319, id:1778, severity:CRITICAL, type:PLC_TIMEOUT, msg:PLC response timeout after 5027 ms, code:4722
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:250] [ALARM] ts:9830378259, id:2038, severity:ERROR, type:IMAGE_TIMEOUT, msg:Camera 3 failed to acquire image within timeout, code:7939
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:251] [ALARM] ts:9519512166, id:4246, severity:CRITICAL, type:DETECTION_FAILED, msg:Detection model failed to process image 129, code:7897
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:252] [ALARM] ts:6150328411, id:2763, severity:INFO, type:SENSOR_DISCONNECTED, msg:Sensor 130 disconnected from system, code:8473
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:253] [ALARM] ts:1395680911, id:2539, severity:CRITICAL, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 76.0°C, code:4439
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:254] [ALARM] ts:9694823120, id:4971, severity:ERROR, type:LOW_LIGHT, msg:Light intensity too low: 132.00 lux, code:3215
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:255] [ALARM] ts:1910425482, id:9449, severity:INFO, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:4468
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:256] [ALARM] ts:3576698186, id:8178, severity:INFO, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:5416
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:257] [ALARM] ts:2201415127, id:5704, severity:WARNING, type:PLC_TIMEOUT, msg:PLC response timeout after 5035 ms, code:6329
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:258] [ALARM] ts:7164221653, id:9406, severity:ERROR, type:IMAGE_TIMEOUT, msg:Camera 7 failed to acquire image within timeout, code:3290
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:259] [ALARM] ts:7656446353, id:6509, severity:CRITICAL, type:DETECTION_FAILED, msg:Detection model failed to process image 137, code:1700
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:260] [ALARM] ts:6247718205, id:4095, severity:WARNING, type:SENSOR_DISCONNECTED, msg:Sensor 138 disconnected from system, code:1199
+E20260211 18:59:25.768499 34436 vision_glog_benchmark.cpp:261] [ALARM] ts:9291756489, id:3905, severity:INFO, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 84.0°C, code:4125
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:262] [ALARM] ts:1227028407, id:6054, severity:CRITICAL, type:LOW_LIGHT, msg:Light intensity too low: 140.00 lux, code:6545
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:263] [ALARM] ts:7281411994, id:8528, severity:CRITICAL, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:5233
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:264] [ALARM] ts:3845374798, id:9608, severity:ERROR, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:9568
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:265] [ALARM] ts:8857906909, id:1270, severity:ERROR, type:PLC_TIMEOUT, msg:PLC response timeout after 5043 ms, code:6294
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:266] [ALARM] ts:1054171128, id:4653, severity:ERROR, type:IMAGE_TIMEOUT, msg:Camera 2 failed to acquire image within timeout, code:6461
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:267] [ALARM] ts:6904872688, id:4106, severity:CRITICAL, type:DETECTION_FAILED, msg:Detection model failed to process image 145, code:4415
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:268] [ALARM] ts:2315773443, id:5031, severity:WARNING, type:SENSOR_DISCONNECTED, msg:Sensor 146 disconnected from system, code:204
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:269] [ALARM] ts:4515859378, id:8765, severity:ERROR, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 82.0°C, code:5333
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:270] [ALARM] ts:8112808593, id:2674, severity:CRITICAL, type:LOW_LIGHT, msg:Light intensity too low: 148.00 lux, code:1569
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:271] [ALARM] ts:1444429425, id:5615, severity:INFO, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:4671
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:222] [ALARM] ts:3492969008, id:5261, severity:WARNING, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:9325
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:223] [ALARM] ts:3137857027, id:3297, severity:WARNING, type:PLC_TIMEOUT, msg:PLC response timeout after 5051 ms, code:5068
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:224] [ALARM] ts:4143218590, id:7360, severity:CRITICAL, type:IMAGE_TIMEOUT, msg:Camera 3 failed to acquire image within timeout, code:1260
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:225] [ALARM] ts:2239351117, id:7422, severity:INFO, type:DETECTION_FAILED, msg:Detection model failed to process image 153, code:436
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:226] [ALARM] ts:3335863924, id:5801, severity:CRITICAL, type:SENSOR_DISCONNECTED, msg:Sensor 154 disconnected from system, code:7025
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:227] [ALARM] ts:1206344522, id:2854, severity:INFO, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 80.0°C, code:5588
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:228] [ALARM] ts:3176188245, id:6783, severity:WARNING, type:LOW_LIGHT, msg:Light intensity too low: 106.00 lux, code:3948
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:229] [ALARM] ts:6345743397, id:3105, severity:ERROR, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:4909
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:230] [ALARM] ts:5471747654, id:5033, severity:INFO, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:5265
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:231] [ALARM] ts:7319942494, id:3718, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5059 ms, code:9783
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:232] [ALARM] ts:7719504887, id:4666, severity:ERROR, type:IMAGE_TIMEOUT, msg:Camera 3 failed to acquire image within timeout, code:8575
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:233] [ALARM] ts:7160038965, id:7935, severity:ERROR, type:DETECTION_FAILED, msg:Detection model failed to process image 161, code:3947
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:234] [ALARM] ts:4474874080, id:2629, severity:CRITICAL, type:SENSOR_DISCONNECTED, msg:Sensor 162 disconnected from system, code:9831
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:235] [ALARM] ts:5519054956, id:1843, severity:CRITICAL, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 78.0°C, code:1895
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:236] [ALARM] ts:1260734901, id:7159, severity:INFO, type:LOW_LIGHT, msg:Light intensity too low: 114.00 lux, code:5753
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:237] [ALARM] ts:5384044375, id:7492, severity:WARNING, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:1299
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:238] [ALARM] ts:3138638193, id:5334, severity:WARNING, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:7161
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:239] [ALARM] ts:4078752189, id:8900, severity:WARNING, type:PLC_TIMEOUT, msg:PLC response timeout after 5067 ms, code:8618
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:240] [ALARM] ts:5505919759, id:3740, severity:WARNING, type:IMAGE_TIMEOUT, msg:Camera 4 failed to acquire image within timeout, code:1352
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:241] [ALARM] ts:2458969623, id:2274, severity:ERROR, type:DETECTION_FAILED, msg:Detection model failed to process image 169, code:1741
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:242] [ALARM] ts:7819794315, id:2908, severity:ERROR, type:SENSOR_DISCONNECTED, msg:Sensor 170 disconnected from system, code:1634
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:243] [ALARM] ts:4875715752, id:9428, severity:ERROR, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 76.0°C, code:9313
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:244] [ALARM] ts:6200657874, id:6611, severity:CRITICAL, type:LOW_LIGHT, msg:Light intensity too low: 122.00 lux, code:2778
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:245] [ALARM] ts:1311679726, id:7754, severity:INFO, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:552
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:246] [ALARM] ts:9351171884, id:9256, severity:INFO, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:3799
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:247] [ALARM] ts:5289157887, id:7118, severity:ERROR, type:PLC_TIMEOUT, msg:PLC response timeout after 5075 ms, code:7335
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:248] [ALARM] ts:5046871586, id:6975, severity:CRITICAL, type:IMAGE_TIMEOUT, msg:Camera 7 failed to acquire image within timeout, code:634
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:249] [ALARM] ts:1701761676, id:5198, severity:ERROR, type:DETECTION_FAILED, msg:Detection model failed to process image 177, code:3901
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:250] [ALARM] ts:1641854228, id:6507, severity:CRITICAL, type:SENSOR_DISCONNECTED, msg:Sensor 178 disconnected from system, code:1263
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:251] [ALARM] ts:5942423250, id:5527, severity:CRITICAL, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 84.0°C, code:8130
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:252] [ALARM] ts:5821232421, id:9050, severity:WARNING, type:LOW_LIGHT, msg:Light intensity too low: 130.00 lux, code:9098
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:253] [ALARM] ts:2818894395, id:6385, severity:WARNING, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:8461
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:254] [ALARM] ts:4145240872, id:6898, severity:WARNING, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:1747
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:255] [ALARM] ts:4743212749, id:3356, severity:CRITICAL, type:PLC_TIMEOUT, msg:PLC response timeout after 5083 ms, code:9887
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:256] [ALARM] ts:6523574231, id:4889, severity:WARNING, type:IMAGE_TIMEOUT, msg:Camera 5 failed to acquire image within timeout, code:3793
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:257] [ALARM] ts:2663597072, id:1659, severity:CRITICAL, type:DETECTION_FAILED, msg:Detection model failed to process image 185, code:355
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:258] [ALARM] ts:6904118180, id:6531, severity:INFO, type:SENSOR_DISCONNECTED, msg:Sensor 186 disconnected from system, code:751
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:259] [ALARM] ts:7146532319, id:6424, severity:INFO, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 82.0°C, code:2461
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:260] [ALARM] ts:3471779426, id:9908, severity:ERROR, type:LOW_LIGHT, msg:Light intensity too low: 138.00 lux, code:8569
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:261] [ALARM] ts:5852410956, id:6823, severity:WARNING, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:6710
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:262] [ALARM] ts:9708448558, id:5261, severity:INFO, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:8239
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:263] [ALARM] ts:2779161120, id:5515, severity:CRITICAL, type:PLC_TIMEOUT, msg:PLC response timeout after 5091 ms, code:739
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:264] [ALARM] ts:5891332745, id:2785, severity:ERROR, type:IMAGE_TIMEOUT, msg:Camera 8 failed to acquire image within timeout, code:5711
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:265] [ALARM] ts:3026062272, id:9338, severity:INFO, type:DETECTION_FAILED, msg:Detection model failed to process image 193, code:5376
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:266] [ALARM] ts:9794385183, id:7444, severity:INFO, type:SENSOR_DISCONNECTED, msg:Sensor 194 disconnected from system, code:6674
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:267] [ALARM] ts:6124241450, id:1466, severity:CRITICAL, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 80.0°C, code:7693
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:268] [ALARM] ts:4183391428, id:3016, severity:ERROR, type:LOW_LIGHT, msg:Light intensity too low: 146.00 lux, code:1196
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:269] [ALARM] ts:4493978513, id:4293, severity:ERROR, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:7628
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:270] [ALARM] ts:8977871569, id:8815, severity:ERROR, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:2033
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:271] [ALARM] ts:6486175208, id:8937, severity:WARNING, type:PLC_TIMEOUT, msg:PLC response timeout after 5099 ms, code:2446
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:222] [ALARM] ts:3652925763, id:4484, severity:WARNING, type:IMAGE_TIMEOUT, msg:Camera 7 failed to acquire image within timeout, code:2823
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:223] [ALARM] ts:9876070304, id:2727, severity:INFO, type:DETECTION_FAILED, msg:Detection model failed to process image 201, code:8074
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:224] [ALARM] ts:1031095555, id:8390, severity:INFO, type:SENSOR_DISCONNECTED, msg:Sensor 202 disconnected from system, code:4606
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:225] [ALARM] ts:4010783503, id:2254, severity:INFO, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 78.0°C, code:423
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:226] [ALARM] ts:6906153091, id:8664, severity:WARNING, type:LOW_LIGHT, msg:Light intensity too low: 104.00 lux, code:7566
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:227] [ALARM] ts:5275010391, id:4250, severity:ERROR, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:4687
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:228] [ALARM] ts:1953367610, id:9818, severity:CRITICAL, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:3838
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:229] [ALARM] ts:5304853019, id:9185, severity:ERROR, type:PLC_TIMEOUT, msg:PLC response timeout after 5007 ms, code:5585
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:230] [ALARM] ts:1574562868, id:5874, severity:ERROR, type:IMAGE_TIMEOUT, msg:Camera 1 failed to acquire image within timeout, code:4988
+E20260211 18:59:25.769495 34436 vision_glog_benchmark.cpp:231] [ALARM] ts:2481725342, id:6517, severity:INFO, type:DETECTION_FAILED, msg:Detection model failed to process image 209, code:4372
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:232] [ALARM] ts:7196585421, id:1532, severity:CRITICAL, type:SENSOR_DISCONNECTED, msg:Sensor 210 disconnected from system, code:7950
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:233] [ALARM] ts:7070594564, id:8617, severity:WARNING, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 76.0°C, code:3336
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:234] [ALARM] ts:7727005706, id:9672, severity:CRITICAL, type:LOW_LIGHT, msg:Light intensity too low: 112.00 lux, code:7066
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:235] [ALARM] ts:4516155474, id:3484, severity:CRITICAL, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:8812
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:236] [ALARM] ts:1325017267, id:3805, severity:WARNING, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:3822
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:237] [ALARM] ts:7580853708, id:2815, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5015 ms, code:8075
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:238] [ALARM] ts:1702023818, id:9022, severity:CRITICAL, type:IMAGE_TIMEOUT, msg:Camera 6 failed to acquire image within timeout, code:9090
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:239] [ALARM] ts:2775094900, id:3289, severity:ERROR, type:DETECTION_FAILED, msg:Detection model failed to process image 217, code:1171
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:240] [ALARM] ts:8641071463, id:7818, severity:INFO, type:SENSOR_DISCONNECTED, msg:Sensor 218 disconnected from system, code:9777
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:241] [ALARM] ts:8228759315, id:8748, severity:CRITICAL, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 84.0°C, code:6303
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:242] [ALARM] ts:6765828707, id:7983, severity:CRITICAL, type:LOW_LIGHT, msg:Light intensity too low: 120.00 lux, code:3470
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:243] [ALARM] ts:7523222107, id:4548, severity:INFO, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:1007
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:244] [ALARM] ts:6225852000, id:3179, severity:ERROR, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:5412
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:245] [ALARM] ts:4976086597, id:9109, severity:WARNING, type:PLC_TIMEOUT, msg:PLC response timeout after 5023 ms, code:2766
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:246] [ALARM] ts:7631021104, id:3614, severity:CRITICAL, type:IMAGE_TIMEOUT, msg:Camera 5 failed to acquire image within timeout, code:6033
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:247] [ALARM] ts:2943324207, id:6824, severity:WARNING, type:DETECTION_FAILED, msg:Detection model failed to process image 225, code:3372
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:248] [ALARM] ts:8454828272, id:8220, severity:INFO, type:SENSOR_DISCONNECTED, msg:Sensor 226 disconnected from system, code:9670
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:249] [ALARM] ts:5032460780, id:6707, severity:CRITICAL, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 82.0°C, code:7613
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:250] [ALARM] ts:5840838843, id:9582, severity:INFO, type:LOW_LIGHT, msg:Light intensity too low: 128.00 lux, code:1044
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:251] [ALARM] ts:5991800250, id:3256, severity:WARNING, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:232
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:252] [ALARM] ts:3319040264, id:4347, severity:WARNING, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:4279
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:253] [ALARM] ts:6126286761, id:9623, severity:INFO, type:PLC_TIMEOUT, msg:PLC response timeout after 5031 ms, code:7613
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:254] [ALARM] ts:8035734092, id:2236, severity:WARNING, type:IMAGE_TIMEOUT, msg:Camera 2 failed to acquire image within timeout, code:6567
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:255] [ALARM] ts:7208075745, id:2753, severity:INFO, type:DETECTION_FAILED, msg:Detection model failed to process image 233, code:3524
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:256] [ALARM] ts:6547997571, id:8044, severity:WARNING, type:SENSOR_DISCONNECTED, msg:Sensor 234 disconnected from system, code:8165
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:257] [ALARM] ts:8730696556, id:5573, severity:ERROR, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 80.0°C, code:1906
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:258] [ALARM] ts:2514101574, id:9746, severity:ERROR, type:LOW_LIGHT, msg:Light intensity too low: 136.00 lux, code:2070
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:259] [ALARM] ts:8154530536, id:4932, severity:CRITICAL, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:8938
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:260] [ALARM] ts:6517792555, id:4593, severity:WARNING, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:8878
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:261] [ALARM] ts:1084833309, id:7532, severity:WARNING, type:PLC_TIMEOUT, msg:PLC response timeout after 5039 ms, code:3296
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:262] [ALARM] ts:4058629619, id:6370, severity:INFO, type:IMAGE_TIMEOUT, msg:Camera 2 failed to acquire image within timeout, code:9851
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:263] [ALARM] ts:3196774869, id:1596, severity:ERROR, type:DETECTION_FAILED, msg:Detection model failed to process image 241, code:3379
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:264] [ALARM] ts:9424693785, id:9027, severity:CRITICAL, type:SENSOR_DISCONNECTED, msg:Sensor 242 disconnected from system, code:9468
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:265] [ALARM] ts:9850953869, id:7452, severity:ERROR, type:OVER_TEMPERATURE, msg:Temperature exceeded threshold: 78.0°C, code:9830
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:266] [ALARM] ts:6505447280, id:8108, severity:CRITICAL, type:LOW_LIGHT, msg:Light intensity too low: 144.00 lux, code:7669
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:267] [ALARM] ts:3461554967, id:7661, severity:INFO, type:FOCUS_DRIFT, msg:Auto-focus system failed to converge, code:3237
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:268] [ALARM] ts:6172759812, id:1698, severity:INFO, type:COMMUNICATION_ERROR, msg:Communication with PLC device lost, code:534
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:269] [ALARM] ts:8116827615, id:6709, severity:CRITICAL, type:PLC_TIMEOUT, msg:PLC response timeout after 5047 ms, code:5852
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:270] [ALARM] ts:1733202063, id:9821, severity:WARNING, type:IMAGE_TIMEOUT, msg:Camera 5 failed to acquire image within timeout, code:1873
+E20260211 18:59:25.770493 34436 vision_glog_benchmark.cpp:271] [ALARM] ts:3600644627, id:8758, severity:ERROR, type:DETECTION_FAILED, msg:Detection model failed to process image 249, code:399
+VisionGlogFixture/alarm_log/iterations:50/repeats:5/threads:1                     37504 ns        0.000 ns           50
+VisionGlogFixture/alarm_log/iterations:50/repeats:5/threads:1                     12736 ns        0.000 ns           50
+VisionGlogFixture/alarm_log/iterations:50/repeats:5/threads:1                     12454 ns        0.000 ns           50
+VisionGlogFixture/alarm_log/iterations:50/repeats:5/threads:1                     14370 ns        0.000 ns           50
+VisionGlogFixture/alarm_log/iterations:50/repeats:5/threads:1                     13144 ns        0.000 ns           50
+VisionGlogFixture/alarm_log/iterations:50/repeats:5/threads:1_mean                18042 ns        0.000 ns            5
+VisionGlogFixture/alarm_log/iterations:50/repeats:5/threads:1_median              13144 ns        0.000 ns            5
+VisionGlogFixture/alarm_log/iterations:50/repeats:5/threads:1_stddev              10904 ns        0.000 ns            5
+VisionGlogFixture/alarm_log/iterations:50/repeats:5/threads:1_cv                  60.44 %     -nan(ind) %             5
+VisionGlogFixture/production_stats/iterations:25/repeats:5/threads:1               5128 ns        0.000 ns           25
+VisionGlogFixture/production_stats/iterations:25/repeats:5/threads:1               4584 ns        0.000 ns           25
+VisionGlogFixture/production_stats/iterations:25/repeats:5/threads:1               4528 ns        0.000 ns           25
+VisionGlogFixture/production_stats/iterations:25/repeats:5/threads:1               4500 ns        0.000 ns           25
+VisionGlogFixture/production_stats/iterations:25/repeats:5/threads:1               4432 ns        0.000 ns           25
+VisionGlogFixture/production_stats/iterations:25/repeats:5/threads:1_mean          4634 ns        0.000 ns            5
+VisionGlogFixture/production_stats/iterations:25/repeats:5/threads:1_median        4528 ns        0.000 ns            5
+VisionGlogFixture/production_stats/iterations:25/repeats:5/threads:1_stddev         281 ns        0.000 ns            5
+VisionGlogFixture/production_stats/iterations:25/repeats:5/threads:1_cv            6.07 %     -nan(ind) %             5

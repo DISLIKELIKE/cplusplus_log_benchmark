@@ -1,1 +1,12 @@
-bash: ./bin/Release/gbenchmark_vision_easyloggingpp: No such file or directory
+2026-02-11T19:02:21+08:00
+Running D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin\Release\gbenchmark_vision_easyloggingpp.exe
+Run on (20 X 2112 MHz CPU s)
+CPU Caches:
+  L1 Data 48 KiB (x10)
+  L1 Instruction 32 KiB (x10)
+  L2 Unified 1280 KiB (x10)
+  L3 Unified 25600 KiB (x1)
+--------------------------------------------------------------------------------------------------------------------------------
+Benchmark                                                                                      Time             CPU   Iterations
+--------------------------------------------------------------------------------------------------------------------------------
+VisionEasyLoggingPPFixture/image_acquisition/min_time:3.000/threads:1                       7973 ns         7952 ns       471579

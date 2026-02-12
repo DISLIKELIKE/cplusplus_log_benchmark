@@ -1,1 +1,69 @@
-bash: ./bin/Release/gbenchmark_vision_fmtlog_drop: No such file or directory
+2026-02-11T19:01:30+08:00
+Running D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin\Release\gbenchmark_vision_fmtlog_drop.exe
+Run on (20 X 2112 MHz CPU s)
+CPU Caches:
+  L1 Data 48 KiB (x10)
+  L1 Instruction 32 KiB (x10)
+  L2 Unified 1280 KiB (x10)
+  L3 Unified 25600 KiB (x1)
+-----------------------------------------------------------------------------------------------------------------------------
+Benchmark                                                                                   Time             CPU   Iterations
+-----------------------------------------------------------------------------------------------------------------------------
+VisionFmtlogDropFixture/image_acquisition/min_time:3.000/threads:1                       16.5 ns         16.5 ns    251214953
+VisionFmtlogDropFixture/image_acquisition/min_time:3.000/threads:2                       9.32 ns         18.6 ns    224000000
+VisionFmtlogDropFixture/image_acquisition/min_time:3.000/threads:4                       5.28 ns         21.2 ns    192000000
+VisionFmtlogDropFixture/image_acquisition/min_time:3.000/threads:8                       3.19 ns         25.3 ns    169322832
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:1              73.0 ns        0.000 ns          500
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:1              20.0 ns        0.000 ns          500
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:1              25.6 ns        0.000 ns          500
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:1              19.2 ns        0.000 ns          500
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:1              21.6 ns        0.000 ns          500
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:1_mean         31.9 ns        0.000 ns            5
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:1_median       21.6 ns        0.000 ns            5
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:1_stddev       23.1 ns        0.000 ns            5
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:1_cv          72.52 %     -nan(ind) %             5
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:2               116 ns        0.000 ns         1000
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:2               108 ns        0.000 ns         1000
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:2               114 ns        0.000 ns         1000
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:2               106 ns        0.000 ns         1000
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:2               116 ns        0.000 ns         1000
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:2_mean          112 ns        0.000 ns            5
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:2_median        114 ns        0.000 ns            5
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:2_stddev       4.89 ns        0.000 ns            5
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:2_cv           4.37 %     -nan(ind) %             5
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:4               197 ns        23438 ns         2000
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:4               150 ns        0.000 ns         2000
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:4               128 ns        0.000 ns         2000
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:4               155 ns        0.000 ns         2000
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:4               171 ns        0.000 ns         2000
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:4_mean          160 ns         4688 ns            5
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:4_median        155 ns        0.000 ns            5
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:4_stddev       25.5 ns        10482 ns            5
+VisionFmtlogDropFixture/detection_result/iterations:500/repeats:5/threads:4_cv          15.95 %        223.61 %             5
+VisionFmtlogDropFixture/device_status/iterations:500/repeats:5/threads:1                 77.6 ns        0.000 ns          500
+VisionFmtlogDropFixture/device_status/iterations:500/repeats:5/threads:1                 21.4 ns        0.000 ns          500
+VisionFmtlogDropFixture/device_status/iterations:500/repeats:5/threads:1                 18.0 ns        0.000 ns          500
+VisionFmtlogDropFixture/device_status/iterations:500/repeats:5/threads:1                 25.0 ns        0.000 ns          500
+VisionFmtlogDropFixture/device_status/iterations:500/repeats:5/threads:1                 19.6 ns        0.000 ns          500
+VisionFmtlogDropFixture/device_status/iterations:500/repeats:5/threads:1_mean            32.3 ns        0.000 ns            5
+VisionFmtlogDropFixture/device_status/iterations:500/repeats:5/threads:1_median          21.4 ns        0.000 ns            5
+VisionFmtlogDropFixture/device_status/iterations:500/repeats:5/threads:1_stddev          25.4 ns        0.000 ns            5
+VisionFmtlogDropFixture/device_status/iterations:500/repeats:5/threads:1_cv             78.73 %     -nan(ind) %             5
+VisionFmtlogDropFixture/alarm_log/iterations:50/repeats:5/threads:1                       542 ns        0.000 ns           50
+VisionFmtlogDropFixture/alarm_log/iterations:50/repeats:5/threads:1                       116 ns        0.000 ns           50
+VisionFmtlogDropFixture/alarm_log/iterations:50/repeats:5/threads:1                       102 ns        0.000 ns           50
+VisionFmtlogDropFixture/alarm_log/iterations:50/repeats:5/threads:1                      98.0 ns        0.000 ns           50
+VisionFmtlogDropFixture/alarm_log/iterations:50/repeats:5/threads:1                       106 ns        0.000 ns           50
+VisionFmtlogDropFixture/alarm_log/iterations:50/repeats:5/threads:1_mean                  193 ns        0.000 ns            5
+VisionFmtlogDropFixture/alarm_log/iterations:50/repeats:5/threads:1_median                106 ns        0.000 ns            5
+VisionFmtlogDropFixture/alarm_log/iterations:50/repeats:5/threads:1_stddev                195 ns        0.000 ns            5
+VisionFmtlogDropFixture/alarm_log/iterations:50/repeats:5/threads:1_cv                 101.31 %     -nan(ind) %             5
+VisionFmtlogDropFixture/production_stats/iterations:25/repeats:5/threads:1                208 ns        0.000 ns           25
+VisionFmtlogDropFixture/production_stats/iterations:25/repeats:5/threads:1               32.0 ns        0.000 ns           25
+VisionFmtlogDropFixture/production_stats/iterations:25/repeats:5/threads:1               16.0 ns        0.000 ns           25
+VisionFmtlogDropFixture/production_stats/iterations:25/repeats:5/threads:1               20.0 ns        0.000 ns           25
+VisionFmtlogDropFixture/production_stats/iterations:25/repeats:5/threads:1               16.0 ns        0.000 ns           25
+VisionFmtlogDropFixture/production_stats/iterations:25/repeats:5/threads:1_mean          58.4 ns        0.000 ns            5
+VisionFmtlogDropFixture/production_stats/iterations:25/repeats:5/threads:1_median        20.0 ns        0.000 ns            5
+VisionFmtlogDropFixture/production_stats/iterations:25/repeats:5/threads:1_stddev        83.9 ns        0.000 ns            5
+VisionFmtlogDropFixture/production_stats/iterations:25/repeats:5/threads:1_cv          143.64 %     -nan(ind) %             5

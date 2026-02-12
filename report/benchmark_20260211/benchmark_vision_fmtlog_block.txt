@@ -1,1 +1,69 @@
-bash: ./bin/Release/gbenchmark_vision_fmtlog_block: No such file or directory
+2026-02-11T19:01:56+08:00
+Running D:\VSProject\private_cpp_log_benchmark\cplusplus_log_benchmark\build\bin\Release\gbenchmark_vision_fmtlog_block.exe
+Run on (20 X 2112 MHz CPU s)
+CPU Caches:
+  L1 Data 48 KiB (x10)
+  L1 Instruction 32 KiB (x10)
+  L2 Unified 1280 KiB (x10)
+  L3 Unified 25600 KiB (x1)
+------------------------------------------------------------------------------------------------------------------------------
+Benchmark                                                                                    Time             CPU   Iterations
+------------------------------------------------------------------------------------------------------------------------------
+VisionFmtlogBlockFixture/image_acquisition/min_time:3.000/threads:1                        604 ns          603 ns      6400000
+VisionFmtlogBlockFixture/image_acquisition/min_time:3.000/threads:2                        625 ns         1244 ns      3278048
+VisionFmtlogBlockFixture/image_acquisition/min_time:3.000/threads:4                        605 ns         2415 ns      1792000
+VisionFmtlogBlockFixture/image_acquisition/min_time:3.000/threads:8                        657 ns         5254 ns       800000
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:1               116 ns        0.000 ns          500
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:1               560 ns        31250 ns          500
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:1               635 ns        0.000 ns          500
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:1               655 ns        0.000 ns          500
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:1               630 ns        0.000 ns          500
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:1_mean          519 ns         6250 ns            5
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:1_median        630 ns        0.000 ns            5
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:1_stddev        228 ns        13975 ns            5
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:1_cv          43.94 %        223.61 %             5
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:2               198 ns        0.000 ns         1000
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:2               230 ns        0.000 ns         1000
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:2               253 ns        0.000 ns         1000
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:2               258 ns        0.000 ns         1000
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:2               204 ns        0.000 ns         1000
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:2_mean          229 ns        0.000 ns            5
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:2_median        230 ns        0.000 ns            5
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:2_stddev       27.3 ns        0.000 ns            5
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:2_cv          11.94 %     -nan(ind) %             5
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:4               135 ns        0.000 ns         2000
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:4               124 ns        0.000 ns         2000
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:4               128 ns        0.000 ns         2000
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:4               125 ns        0.000 ns         2000
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:4               119 ns        0.000 ns         2000
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:4_mean          126 ns        0.000 ns            5
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:4_median        125 ns        0.000 ns            5
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:4_stddev       5.79 ns        0.000 ns            5
+VisionFmtlogBlockFixture/detection_result/iterations:500/repeats:5/threads:4_cv           4.58 %     -nan(ind) %             5
+VisionFmtlogBlockFixture/device_status/iterations:500/repeats:5/threads:1                 89.2 ns        0.000 ns          500
+VisionFmtlogBlockFixture/device_status/iterations:500/repeats:5/threads:1                 21.0 ns        0.000 ns          500
+VisionFmtlogBlockFixture/device_status/iterations:500/repeats:5/threads:1                 19.4 ns        0.000 ns          500
+VisionFmtlogBlockFixture/device_status/iterations:500/repeats:5/threads:1                  363 ns        0.000 ns          500
+VisionFmtlogBlockFixture/device_status/iterations:500/repeats:5/threads:1                  725 ns        0.000 ns          500
+VisionFmtlogBlockFixture/device_status/iterations:500/repeats:5/threads:1_mean             244 ns        0.000 ns            5
+VisionFmtlogBlockFixture/device_status/iterations:500/repeats:5/threads:1_median          89.2 ns        0.000 ns            5
+VisionFmtlogBlockFixture/device_status/iterations:500/repeats:5/threads:1_stddev           304 ns        0.000 ns            5
+VisionFmtlogBlockFixture/device_status/iterations:500/repeats:5/threads:1_cv            124.80 %     -nan(ind) %             5
+VisionFmtlogBlockFixture/alarm_log/iterations:50/repeats:5/threads:1                       660 ns        0.000 ns           50
+VisionFmtlogBlockFixture/alarm_log/iterations:50/repeats:5/threads:1                      1724 ns        0.000 ns           50
+VisionFmtlogBlockFixture/alarm_log/iterations:50/repeats:5/threads:1                      1010 ns        0.000 ns           50
+VisionFmtlogBlockFixture/alarm_log/iterations:50/repeats:5/threads:1                       948 ns        0.000 ns           50
+VisionFmtlogBlockFixture/alarm_log/iterations:50/repeats:5/threads:1                       728 ns        0.000 ns           50
+VisionFmtlogBlockFixture/alarm_log/iterations:50/repeats:5/threads:1_mean                 1014 ns        0.000 ns            5
+VisionFmtlogBlockFixture/alarm_log/iterations:50/repeats:5/threads:1_median                948 ns        0.000 ns            5
+VisionFmtlogBlockFixture/alarm_log/iterations:50/repeats:5/threads:1_stddev                423 ns        0.000 ns            5
+VisionFmtlogBlockFixture/alarm_log/iterations:50/repeats:5/threads:1_cv                  41.71 %     -nan(ind) %             5
+VisionFmtlogBlockFixture/production_stats/iterations:25/repeats:5/threads:1                164 ns        0.000 ns           25
+VisionFmtlogBlockFixture/production_stats/iterations:25/repeats:5/threads:1               80.0 ns        0.000 ns           25
+VisionFmtlogBlockFixture/production_stats/iterations:25/repeats:5/threads:1                672 ns        0.000 ns           25
+VisionFmtlogBlockFixture/production_stats/iterations:25/repeats:5/threads:1                292 ns        0.000 ns           25
+VisionFmtlogBlockFixture/production_stats/iterations:25/repeats:5/threads:1                692 ns        0.000 ns           25
+VisionFmtlogBlockFixture/production_stats/iterations:25/repeats:5/threads:1_mean           380 ns        0.000 ns            5
+VisionFmtlogBlockFixture/production_stats/iterations:25/repeats:5/threads:1_median         292 ns        0.000 ns            5
+VisionFmtlogBlockFixture/production_stats/iterations:25/repeats:5/threads:1_stddev         286 ns        0.000 ns            5
+VisionFmtlogBlockFixture/production_stats/iterations:25/repeats:5/threads:1_cv           75.24 %     -nan(ind) %             5
