@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日志库性能对比 - ECharts</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .chart-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+            padding: 20px;
+        }
+        .chart-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        #minTimeChart, #iterRepeatChart, #visionMinTimeChart, #visionIterRepeatChart {
+            width: 100%;
+            height: 500px;
+        }
+        .info {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>C/C++ 日志库性能对比测试</h1>
+
+        <div class="chart-container">
+            <div class="chart-title">场景1: 基准测试 - 最小时间测试 (min_time)</div>
+            <div id="minTimeChart"></div>
+            <div class="info">
+                <p><strong>说明：</strong>在固定最小时间内尽可能多地写入日志，主要反映日志库的吞吐量。y轴值为 Google Benchmark - Time (纳秒)。</p>
+                <p><strong>测试线程数：</strong><span id="minTimeThreadsInfo"></span></p>
+                <p><strong>日志库：</strong><span id="minTimeLibsInfo"></span></p>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-title">场景2: 视觉场景 - 最小时间测试 (min_time)</div>
+            <div id="visionMinTimeChart"></div>
+            <div class="info">
+                <p><strong>说明：</strong>视觉场景下的最小时间测试，模拟实际图像处理系统中的日志记录。y轴值为 Google Benchmark - Time (纳秒)。</p>
+                <p><strong>测试线程数：</strong><span id="visionMinTimeThreadsInfo"></span></p>
+                <p><strong>日志库：</strong><span id="visionMinTimeLibsInfo"></span></p>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-title">场景3: 基准测试 - 迭代重复测试 (iter_repeat)</div>
+            <div id="iterRepeatChart"></div>
+            <div class="info">
+                <p><strong>说明：</strong>固定迭代次数和重复次数，反映非压力情况下各日志库的表现。y轴值为 Google Benchmark - Time (纳秒)。</p>
+                <p><strong>测试线程数：</strong><span id="iterRepeatThreadsInfo"></span></p>
+                <p><strong>日志库：</strong><span id="iterRepeatLibsInfo"></span></p>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-title">场景4: 视觉场景 - 迭代重复测试 (iter_repeat)</div>
+            <div id="visionIterRepeatChart"></div>
+            <div class="info">
+                <p><strong>说明：</strong>视觉场景下的迭代重复测试，包括图像采集、检测结果、设备状态、异常告警、生产统计等场景。y轴值为 Google Benchmark - Time (纳秒)。</p>
+                <p><strong>测试线程数：</strong><span id="visionIterRepeatThreadsInfo"></span></p>
+                <p><strong>日志库：</strong><span id="visionIterRepeatLibsInfo"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="echarts_data.js"></script>
+    <script>
+        // 颜色配置
+        const colors = [
+            '#5470c6', '#91cc75', '#f39c12', '#e6a23c', '#2ecc71',
+            '#3498db', '#9b59b6', '#e74c3c', '#16a085', '#1abc9c',
+            '#e67e22', '#d35400', '#c0392b', '#27ae60', '#2980b9',
+            '#8e44ad', '#f1c40f', '#2c3e50', '#7f8c8d', '#95a5a6'
+        ];
+
+        // 分离视觉场景和非视觉场景的数据，并过滤掉数据不完整的库
+        function separateVisionData(data, expectedLength) {
+            const visionData = {};
+            const regularData = {};
+
+            for (const [name, values] of Object.entries(data)) {
+                if (values.length === expectedLength) {
+                    if (name.startsWith('vision_')) {
+                        visionData[name] = values;
+                    } else {
+                        regularData[name] = values;
+                    }
+                }
+            }
+
+            return { visionData, regularData };
+        }
+
+        function createChart(chartId, threads, data, title) {
+            const chartDom = document.getElementById(chartId);
+            if (!chartDom) {
+                console.error('找不到图表容器:', chartId);
+                return;
+            }
+
+            const myChart = echarts.init(chartDom);
+
+            // 准备系列数据 - 将字符串转换为数字
+            const series = [];
+            let colorIndex = 0;
+            for (const [name, values] of Object.entries(data)) {
+                const numericValues = values.map(v => parseFloat(v) || 0);
+                series.push({
+                    name: name,
+                    type: 'bar',
+                    data: numericValues,
+                    itemStyle: {
+                        color: colors[colorIndex % colors.length]
+                    }
+                });
+                colorIndex++;
+            }
+
+            const option = {
+                title: {
+                    text: title,
+                    left: 'center',
+                    textStyle: {
+                        fontSize: 16,
+                        fontWeight: 'bold'
+                    }
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'shadow'
+                    },
+                    formatter: function(params) {
+                        let result = params[0].name + '<br/>';
+                        params.forEach(item => {
+                            result += item.seriesName + ' (线程 ' + item.axisValue + '): ' + item.data + ' ns<br/>';
+                        });
+                        return result;
+                    }
+                },
+                legend: {
+                    data: Object.keys(data),
+                    top: 30,
+                    left: 'center',
+                    textStyle: {
+                        fontSize: 12
+                    }
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '15%',
+                    top: '15%'
+                },
+                xAxis: {
+                    type: 'category',
+                    data: threads,
+                    name: '线程数',
+                    axisLabel: {
+                        fontSize: 12
+                    },
+                    axisTick: {
+                        alignWithLabel: true
+                    }
+                },
+                yAxis: {
+                    type: 'value',
+                    name: 'Time (ns)',
+                    axisLabel: {
+                        fontSize: 11,
+                        formatter: function(value) {
+                            if (value >= 1000000) {
+                                return (value / 1000000).toFixed(0) + ' ms';
+                            } else if (value >= 1000) {
+                                return (value / 1000).toFixed(0) + ' us';
+                            }
+                            return value + ' ns';
+                        }
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#999'
+                        }
+                    }
+                },
+                series: series
+            };
+
+            myChart.setOption(option);
+            window.addEventListener('resize', function() {
+                myChart.resize();
+            });
+        }
+
+        // 显示线程信息
+        function displayThreadInfo(threads, elementId) {
+            const element = document.getElementById(elementId);
+            if (element && threads && threads.length > 0) {
+                element.textContent = threads.join(', ');
+            } else {
+                console.warn('无法显示线程信息:', elementId, threads);
+                if (element) element.textContent = '无数据';
+            }
+        }
+
+        // 显示日志库信息
+        function displayLibsInfo(data, elementId) {
+            const element = document.getElementById(elementId);
+            if (element && data) {
+                const libs = Object.keys(data);
+                element.textContent = libs.join(', ');
+            } else {
+                console.warn('无法显示日志库信息:', elementId, data);
+                if (element) element.textContent = '无数据';
+            }
+        }
+
+        // 初始化图表
+        // 等待 DOM 加载完成
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM 加载完成，开始初始化图表');
+            console.log('minTimeThreads:', typeof minTimeThreads !== 'undefined' ? minTimeThreads : 'undefined');
+            console.log('minTimeData:', typeof minTimeData !== 'undefined' ? '已加载' : 'undefined');
+            console.log('iterRepeatThreads:', typeof iterRepeatThreads !== 'undefined' ? iterRepeatThreads : 'undefined');
+            console.log('iterRepeatData:', typeof iterRepeatData !== 'undefined' ? '已加载' : 'undefined');
+
+            try {
+                // 场景1: 基准测试 - 最小时间测试
+                if (typeof minTimeThreads !== 'undefined' && typeof minTimeData !== 'undefined') {
+                    console.log('初始化场景1: 基准测试 min_time');
+                    const { visionData: visionMinTimeData, regularData: regularMinTimeData } = separateVisionData(minTimeData, minTimeThreads.length);
+                    console.log('场景1 - 基准库数量:', Object.keys(regularMinTimeData).length);
+                    console.log('场景1 - 视觉库数量:', Object.keys(visionMinTimeData).length);
+                    displayThreadInfo(minTimeThreads, 'minTimeThreadsInfo');
+                    displayLibsInfo(regularMinTimeData, 'minTimeLibsInfo');
+                    if (Object.keys(regularMinTimeData).length > 0) {
+                        createChart('minTimeChart', minTimeThreads, regularMinTimeData, '基准测试 - 最小时间测试');
+                        console.log('场景1 图表创建成功');
+                    } else {
+                        document.getElementById('minTimeChart').innerHTML =
+                            '<p style="text-align:center;color:#999;padding:100px;">暂无基准测试 min_time 数据</p>';
+                        console.log('场景1 无数据');
+                    }
+                } else {
+                    document.getElementById('minTimeChart').innerHTML =
+                        '<p style="text-align:center;color:#999;padding:100px;">暂无 min_time 数据</p>';
+                    console.error('场景1 数据未加载');
+                }
+
+                // 场景2: 视觉场景 - 最小时间测试
+                if (typeof minTimeThreads !== 'undefined' && typeof minTimeData !== 'undefined') {
+                    console.log('初始化场景2: 视觉场景 min_time');
+                    const { visionData: visionMinTimeData, regularData: regularMinTimeData } = separateVisionData(minTimeData, minTimeThreads.length);
+                    console.log('场景2 - 视觉库数量:', Object.keys(visionMinTimeData).length);
+                    displayThreadInfo(minTimeThreads, 'visionMinTimeThreadsInfo');
+                    displayLibsInfo(visionMinTimeData, 'visionMinTimeLibsInfo');
+
+                    if (Object.keys(visionMinTimeData).length > 0) {
+                        createChart('visionMinTimeChart', minTimeThreads, visionMinTimeData, '视觉场景 - 最小时间测试');
+                        console.log('场景2 图表创建成功');
+                    } else {
+                        document.getElementById('visionMinTimeChart').innerHTML =
+                            '<p style="text-align:center;color:#999;padding:100px;">暂无视觉场景 min_time 数据（数据不完整）</p>';
+                        console.log('场景2 无数据');
+                    }
+                } else {
+                    document.getElementById('visionMinTimeChart').innerHTML =
+                        '<p style="text-align:center;color:#999;padding:100px;">暂无 min_time 数据</p>';
+                    console.error('场景2 数据未加载');
+                }
+
+                // 场景3: 基准测试 - 迭代重复测试
+                if (typeof iterRepeatThreads !== 'undefined' && typeof iterRepeatData !== 'undefined') {
+                    console.log('初始化场景3: 基准测试 iter_repeat');
+                    const { visionData: visionIterRepeatData, regularData: regularIterRepeatData } = separateVisionData(iterRepeatData, iterRepeatThreads.length);
+                    console.log('场景3 - 基准库数量:', Object.keys(regularIterRepeatData).length);
+                    console.log('场景3 - 视觉库数量:', Object.keys(visionIterRepeatData).length);
+                    displayThreadInfo(iterRepeatThreads, 'iterRepeatThreadsInfo');
+                    displayLibsInfo(regularIterRepeatData, 'iterRepeatLibsInfo');
+                    if (Object.keys(regularIterRepeatData).length > 0) {
+                        createChart('iterRepeatChart', iterRepeatThreads, regularIterRepeatData, '基准测试 - 迭代重复测试');
+                        console.log('场景3 图表创建成功');
+                    } else {
+                        document.getElementById('iterRepeatChart').innerHTML =
+                            '<p style="text-align:center;color:#999;padding:100px;">暂无基准测试 iter_repeat 数据</p>';
+                        console.log('场景3 无数据');
+                    }
+                } else {
+                    document.getElementById('iterRepeatChart').innerHTML =
+                        '<p style="text-align:center;color:#999;padding:100px;">暂无 iter_repeat 数据</p>';
+                    console.error('场景3 数据未加载');
+                }
+
+                // 场景4: 视觉场景 - 迭代重复测试
+                if (typeof iterRepeatThreads !== 'undefined' && typeof iterRepeatData !== 'undefined') {
+                    console.log('初始化场景4: 视觉场景 iter_repeat');
+                    const { visionData: visionIterRepeatData, regularData: regularIterRepeatData } = separateVisionData(iterRepeatData, iterRepeatThreads.length);
+                    console.log('场景4 - 视觉库数量:', Object.keys(visionIterRepeatData).length);
+                    displayThreadInfo(iterRepeatThreads, 'visionIterRepeatThreadsInfo');
+                    displayLibsInfo(visionIterRepeatData, 'visionIterRepeatLibsInfo');
+
+                    if (Object.keys(visionIterRepeatData).length > 0) {
+                        createChart('visionIterRepeatChart', iterRepeatThreads, visionIterRepeatData, '视觉场景 - 迭代重复测试');
+                        console.log('场景4 图表创建成功');
+                    } else {
+                        document.getElementById('visionIterRepeatChart').innerHTML =
+                            '<p style="text-align:center;color:#999;padding:100px;">暂无视觉场景 iter_repeat 数据（数据不完整）</p>';
+                        console.log('场景4 无数据');
+                    }
+                } else {
+                    document.getElementById('visionIterRepeatChart').innerHTML =
+                        '<p style="text-align:center;color:#999;padding:100px;">暂无 iter_repeat 数据</p>';
+                    console.error('场景4 数据未加载');
+                }
+            } catch (error) {
+                console.error('图表初始化失败:', error);
+                alert('图表初始化失败: ' + error.message);
+            }
+        });
+    </script>
+</body>
+</html>
